@@ -24,7 +24,7 @@ class EnvironmentVariables {
   PORT: number;
 
   @IsString()
-  DATABASE_URL: string;
+  MONGO_URI: string;
 }
 
 export function validate(config: Record<string, unknown>) {
