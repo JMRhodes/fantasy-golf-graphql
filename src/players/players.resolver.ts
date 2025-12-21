@@ -1,6 +1,7 @@
 import { randomInt } from 'node:crypto';
 import { Player } from './models/player.model';
 import { Resolver, Query, Args, Int, Mutation } from '@nestjs/graphql';
+import { createPlayerDto } from './dtos/create-player.dto';
 
 @Resolver(() => Player)
 export class PlayersResolver {
@@ -22,12 +23,12 @@ export class PlayersResolver {
   ];
 
   @Query(() => [Player])
-  players() {
+  getAllPlayers() {
     return this.allPlayers;
   }
 
   @Query(() => Player)
-  player(@Args('id', { type: () => Int }) id: number) {
+  getPlayer(@Args('id', { type: () => Int }) id: number) {
     return {
       id,
       name: 'John Doe',
@@ -38,11 +39,8 @@ export class PlayersResolver {
   }
 
   @Mutation(() => Player)
-  createPlayer(
-    @Args('name') name: string,
-    @Args('pgaId', { type: () => Int }) pgaId: number,
-    @Args('salary', { type: () => Int }) salary: number,
-  ) {
+  createPlayer(@Args('createPlayer') { name, pgaId, salary }: createPlayerDto) {
+    console.log('createPlayerDto', { name, pgaId, salary });
     const player: Player = {
       id: randomInt(1, 1000),
       name,
@@ -50,7 +48,7 @@ export class PlayersResolver {
       salary,
       creationDate: new Date(),
     };
-    this.allPlayers.push(player);
+
     return player;
   }
 }
