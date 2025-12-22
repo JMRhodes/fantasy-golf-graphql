@@ -1,8 +1,8 @@
-import { IsString, IsInt, MinLength } from 'class-validator';
+import { IsString, IsInt, MinLength, IsOptional } from 'class-validator';
 import { InputType, Field, Int } from '@nestjs/graphql';
 
 @InputType()
-export class createPlayerDto {
+export class CreatePlayerInput {
   @Field(() => String)
   @IsString()
   @MinLength(3)
@@ -10,7 +10,8 @@ export class createPlayerDto {
 
   @Field(() => Int)
   @IsInt()
-  pgaId: number;
+  @IsOptional()
+  pgaId?: number | null;
 
   @Field(() => Int)
   @IsInt()

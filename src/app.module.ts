@@ -1,6 +1,4 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { validate } from 'env.validation';
 import { GraphQLModule } from '@nestjs/graphql';
@@ -28,7 +26,7 @@ import { MongooseModule } from '@nestjs/mongoose';
       autoSchemaFile: true,
     }),
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}

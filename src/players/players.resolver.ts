@@ -1,54 +1,33 @@
-import { randomInt } from 'node:crypto';
-import { Player } from './models/player.model';
-import { Resolver, Query, Args, Int, Mutation } from '@nestjs/graphql';
-import { createPlayerDto } from './dtos/create-player.dto';
+import { Player } from './schemas/player.schema';
+import { Resolver, Query, Args, Mutation, ID } from '@nestjs/graphql';
+import { CreatePlayerInput } from './dtos/create-player.input';
+import { PlayersService } from './players.service';
 
 @Resolver(() => Player)
 export class PlayersResolver {
-  allPlayers: Player[] = [
-    {
-      id: 1,
-      name: 'John Doe',
-      pgaId: 12345,
-      salary: 100000,
-      creationDate: new Date(),
-    },
-    {
-      id: 2,
-      name: 'Jane Doe',
-      pgaId: 12346,
-      salary: 90000,
-      creationDate: new Date(),
-    },
-  ];
+  constructor(private playersService: PlayersService) {}
 
   @Query(() => [Player])
-  getAllPlayers() {
-    return this.allPlayers;
+  async getAllPlayers(): Promise<Player[]> {
+    try {
+      const players = await this.playersService.getAllPlayers();
+      return players;
+    } catch {
+      throw new Error('Failed to fetch players');
+    }
   }
 
   @Query(() => Player)
-  getPlayer(@Args('id', { type: () => Int }) id: number) {
-    return {
-      id,
-      name: 'John Doe',
-      pgaId: 12345,
-      salary: 100000,
-      creationDate: new Date(),
-    };
+  async getPlayer(@Args('id', { type: () => ID }) id: string): Promise<Player> {
+    const player = await this.playersService.getPlayerById(id);
+    return player;
   }
 
   @Mutation(() => Player)
-  createPlayer(@Args('createPlayer') { name, pgaId, salary }: createPlayerDto) {
-    console.log('createPlayerDto', { name, pgaId, salary });
-    const player: Player = {
-      id: randomInt(1, 1000),
-      name,
-      pgaId,
-      salary,
-      creationDate: new Date(),
-    };
-
+  async createPlayer(
+    @Args('createPlayerData') createPlayerData: CreatePlayerInput,
+  ): Promise<Player> {
+    const player = await this.playersService.createPlayer(createPlayerData);
     return player;
   }
 }
