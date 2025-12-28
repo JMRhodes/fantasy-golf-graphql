@@ -8,7 +8,7 @@ export class CreatePlayerInput {
   @MinLength(3)
   name: string;
 
-  @Field(() => Int)
+  @Field(() => Int, { nullable: true, defaultValue: 0 })
   @IsInt()
   @IsOptional()
   pgaId?: number | null;

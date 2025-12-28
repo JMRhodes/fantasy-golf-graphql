@@ -1,0 +1,818 @@
+[
+  {
+    "name": "Scottie Scheffler",
+    "salary": 2700000
+  },
+  {
+    "name": "Rory McIlroy",
+    "salary": 2600000
+  },
+  {
+    "name": "Russell Henley",
+    "salary": 2500000
+  },
+  {
+    "name": "Patrick Cantlay",
+    "salary": 2450000
+  },
+  {
+    "name": "Xander Schauffele",
+    "salary": 2400000
+  },
+  {
+    "name": "J.J. Spaun",
+    "salary": 2350000
+  },
+  {
+    "name": "Collin Morikawa",
+    "salary": 2300000
+  },
+  {
+    "name": "Ludvig Aberg",
+    "salary": 2250000
+  },
+  {
+    "name": "Justin Rose",
+    "salary": 2200000
+  },
+  {
+    "name": "Harris English",
+    "salary": 2150000
+  },
+  {
+    "name": "Sepp Straka",
+    "salary": 2150000
+  },
+  {
+    "name": "Ben Griffin",
+    "salary": 2100000
+  },
+  {
+    "name": "Sam Burns",
+    "salary": 2049999
+  },
+  {
+    "name": "Robert MacIntyre",
+    "salary": 2000000
+  },
+  {
+    "name": "Wyndham Clark",
+    "salary": 1950000
+  },
+  {
+    "name": "Tommy Fleetwood",
+    "salary": 1900000
+  },
+  {
+    "name": "Matthew Fitzpatrick",
+    "salary": 1850000
+  },
+  {
+    "name": "Cameron Young",
+    "salary": 1800000
+  },
+  {
+    "name": "Viktor Hovland",
+    "salary": 1750000
+  },
+  {
+    "name": "Hideki Matsuyama",
+    "salary": 1700000
+  },
+  {
+    "name": "Sungjae Im",
+    "salary": 1650000
+  },
+  {
+    "name": "Maverick McNealy",
+    "salary": 1600000
+  },
+  {
+    "name": "Keegan Bradley",
+    "salary": 1550000
+  },
+  {
+    "name": "Justin Thomas",
+    "salary": 1500000
+  },
+  {
+    "name": "Corey Conners",
+    "salary": 1450000
+  },
+  {
+    "name": "Shane Lowry",
+    "salary": 1400000
+  },
+  {
+    "name": "Jake Knapp",
+    "salary": 1350000
+  },
+  {
+    "name": "Chris Kirk",
+    "salary": 1300000
+  },
+  {
+    "name": "Akshay Bhatia",
+    "salary": 1250000
+  },
+  {
+    "name": "Sahith Theegala",
+    "salary": 1200000
+  },
+  {
+    "name": "Brian Harman",
+    "salary": 1150000
+  },
+  {
+    "name": "Sam Stevens",
+    "salary": 1100000
+  },
+  {
+    "name": "Billy Horschel",
+    "salary": 1050000
+  },
+  {
+    "name": "Chris Gotterup",
+    "salary": 1050000
+  },
+  {
+    "name": "Erik van Rooyen",
+    "salary": 1000000
+  },
+  {
+    "name": "Jacob Bridgeman",
+    "salary": 1000000
+  },
+  {
+    "name": "Thomas Detry",
+    "salary": 1000000
+  },
+  {
+    "name": "Aldrich Potgieter",
+    "salary": 995000
+  },
+  {
+    "name": "Aaron Rai",
+    "salary": 990000
+  },
+  {
+    "name": "Tony Finau",
+    "salary": 985000
+  },
+  {
+    "name": "Jordan Spieth",
+    "salary": 980000
+  },
+  {
+    "name": "Min Woo Lee",
+    "salary": 980000
+  },
+  {
+    "name": "Taylor Pendrith",
+    "salary": 975000
+  },
+  {
+    "name": "Jason Day",
+    "salary": 970000
+  },
+  {
+    "name": "Denny McCarthy",
+    "salary": 970000
+  },
+  {
+    "name": "Ryan Gerard",
+    "salary": 965000
+  },
+  {
+    "name": "Brian Campbell",
+    "salary": 960000
+  },
+  {
+    "name": "Kevin Yu",
+    "salary": 955000
+  },
+  {
+    "name": "Ryan Fox",
+    "salary": 950000
+  },
+  {
+    "name": "Andrew Novak",
+    "salary": 950000
+  },
+  {
+    "name": "Bud Cauley",
+    "salary": 945000
+  },
+  {
+    "name": "Max Greyserman",
+    "salary": 945000
+  },
+  {
+    "name": "Alex Noren",
+    "salary": 940000
+  },
+  {
+    "name": "Stephan Jaeger",
+    "salary": 935000
+  },
+  {
+    "name": "Davis Riley",
+    "salary": 930000
+  },
+  {
+    "name": "Nick Taylor",
+    "salary": 925000
+  },
+  {
+    "name": "Matti Schmid",
+    "salary": 920000
+  },
+  {
+    "name": "Lucas Glover",
+    "salary": 915000
+  },
+  {
+    "name": "Mackenzie Hughes",
+    "salary": 910000
+  },
+  {
+    "name": "Jhonattan Vegas",
+    "salary": 905000
+  },
+  {
+    "name": "Kurt Kitayama",
+    "salary": 900000
+  },
+  {
+    "name": "Joe Highsmith",
+    "salary": 895000
+  },
+  {
+    "name": "William Mouw",
+    "salary": 890000
+  },
+  {
+    "name": "Michael Kim",
+    "salary": 885000
+  },
+  {
+    "name": "Karl Vilips",
+    "salary": 880000
+  },
+  {
+    "name": "Christiaan Bezuidenhout",
+    "salary": 875000
+  },
+  {
+    "name": "Max Homa",
+    "salary": 870000
+  },
+  {
+    "name": "J.T. Poston",
+    "salary": 865000
+  },
+  {
+    "name": "Tom Kim",
+    "salary": 860000
+  },
+  {
+    "name": "Davis Thompson",
+    "salary": 855000
+  },
+  {
+    "name": "Nick Dunlap",
+    "salary": 850000
+  },
+  {
+    "name": "Matthieu Pavon",
+    "salary": 845000
+  },
+  {
+    "name": "Cameron Davis",
+    "salary": 840000
+  },
+  {
+    "name": "Byeong-Hun An",
+    "salary": 835000
+  },
+  {
+    "name": "Will Zalatoris",
+    "salary": 830000
+  },
+  {
+    "name": "Adam Scott",
+    "salary": 825000
+  },
+  {
+    "name": "Adam Hadwin",
+    "salary": 820000
+  },
+  {
+    "name": "Joel Dahmen",
+    "salary": 815000
+  },
+  {
+    "name": "Sami Valimaki",
+    "salary": 810000
+  },
+  {
+    "name": "Kevin Roy",
+    "salary": 805000
+  },
+  {
+    "name": "Max McGreevy",
+    "salary": 800000
+  },
+  {
+    "name": "Michael Thorbjornsen",
+    "salary": 795000
+  },
+  {
+    "name": "Keith Mitchell",
+    "salary": 790000
+  },
+  {
+    "name": "Mark Hubbard",
+    "salary": 785000
+  },
+  {
+    "name": "Daniel Berger",
+    "salary": 780000
+  },
+  {
+    "name": "Si Woo Kim",
+    "salary": 775000
+  },
+  {
+    "name": "Nicolai Hojgaard",
+    "salary": 770000
+  },
+  {
+    "name": "Ryo Hisatsune",
+    "salary": 765000
+  },
+  {
+    "name": "Mac Meissner",
+    "salary": 760000
+  },
+  {
+    "name": "Alejandro Tosti",
+    "salary": 755000
+  },
+  {
+    "name": "Nico Echavarria",
+    "salary": 750000
+  },
+  {
+    "name": "Paul Peterson",
+    "salary": 745000
+  },
+  {
+    "name": "Jeremy Paul",
+    "salary": 740000
+  },
+  {
+    "name": "Marco Penge",
+    "salary": 730000
+  },
+  {
+    "name": "Rasmus Neergaard Petersen",
+    "salary": 720000
+  },
+  {
+    "name": "Rasmus Hojgaard",
+    "salary": 710000
+  },
+  {
+    "name": "Rickie Fowler",
+    "salary": 705000
+  },
+  {
+    "name": "Taylor Moore",
+    "salary": 690000
+  },
+  {
+    "name": "Patrick Fishburn",
+    "salary": 685000
+  },
+  {
+    "name": "Emiliano Grillo",
+    "salary": 680000
+  },
+  {
+    "name": "Tom Hoge",
+    "salary": 675000
+  },
+  {
+    "name": "Vincent Whaley",
+    "salary": 670000
+  },
+  {
+    "name": "David Lipsky",
+    "salary": 665000
+  },
+  {
+    "name": "Garrick Higgo",
+    "salary": 660000
+  },
+  {
+    "name": "Chan Kim",
+    "salary": 655000
+  },
+  {
+    "name": "Beau Hossler",
+    "salary": 650000
+  },
+  {
+    "name": "David Skinns",
+    "salary": 645000
+  },
+  {
+    "name": "Patrick Rodgers",
+    "salary": 640000
+  },
+  {
+    "name": "Eric Cole",
+    "salary": 630000
+  },
+  {
+    "name": "Alex Smalley",
+    "salary": 620000
+  },
+  {
+    "name": "Todd Clements",
+    "salary": 610000
+  },
+  {
+    "name": "Isaiah Salinda",
+    "salary": 600000
+  },
+  {
+    "name": "Haotong Li",
+    "salary": 590000
+  },
+  {
+    "name": "Chad Ramey",
+    "salary": 580000
+  },
+  {
+    "name": "Harry Higgs",
+    "salary": 570000
+  },
+  {
+    "name": "Harry Hall",
+    "salary": 560000
+  },
+  {
+    "name": "Matt McCarty",
+    "salary": 550000
+  },
+  {
+    "name": "Pierceson Coody",
+    "salary": 545000
+  },
+  {
+    "name": "Matt Wallace",
+    "salary": 540000
+  },
+  {
+    "name": "Thorbjorn Olesen",
+    "salary": 535000
+  },
+  {
+    "name": "Justin Lower",
+    "salary": 530000
+  },
+  {
+    "name": "Manuel Elvira",
+    "salary": 525000
+  },
+  {
+    "name": "Takumi Kanaya",
+    "salary": 520000
+  },
+  {
+    "name": "Kieron Van Wyk",
+    "salary": 515000
+  },
+  {
+    "name": "Kris Ventura",
+    "salary": 510000
+  },
+  {
+    "name": "Niklas Norgaard",
+    "salary": 505000
+  },
+  {
+    "name": "Carl Yuan",
+    "salary": 500000
+  },
+  {
+    "name": "Hayden Springer",
+    "salary": 495000
+  },
+  {
+    "name": "Austin Eckroat",
+    "salary": 490000
+  },
+  {
+    "name": "Rico Hoey",
+    "salary": 485000
+  },
+  {
+    "name": "Luke List",
+    "salary": 480000
+  },
+  {
+    "name": "Adam Schenk",
+    "salary": 475000
+  },
+  {
+    "name": "Matt Kuchar",
+    "salary": 470000
+  },
+  {
+    "name": "Andrew Putnam",
+    "salary": 465000
+  },
+  {
+    "name": "Carson Young",
+    "salary": 460000
+  },
+  {
+    "name": "K.H. Lee",
+    "salary": 455000
+  },
+  {
+    "name": "CT Pan",
+    "salary": 450000
+  },
+  {
+    "name": "Ben Kohles",
+    "salary": 445000
+  },
+  {
+    "name": "Nate Lashley",
+    "salary": 440000
+  },
+  {
+    "name": "Brice Garnett",
+    "salary": 435000
+  },
+  {
+    "name": "Taylor Montgomery",
+    "salary": 430000
+  },
+  {
+    "name": "Chesson Hadley",
+    "salary": 425000
+  },
+  {
+    "name": "S.H. Kim",
+    "salary": 420000
+  },
+  {
+    "name": "Chandler Phillips",
+    "salary": 415000
+  },
+  {
+    "name": "Hayden Buckley",
+    "salary": 410000
+  },
+  {
+    "name": "Jackson Suber",
+    "salary": 405000
+  },
+  {
+    "name": "Danny Walker",
+    "salary": 400000
+  },
+  {
+    "name": "Gary Woodland",
+    "salary": 395000
+  },
+  {
+    "name": "Joseph Bramlett",
+    "salary": 390000
+  },
+  {
+    "name": "Cameron Champ",
+    "salary": 385000
+  },
+  {
+    "name": "Doug Ghim",
+    "salary": 380000
+  },
+  {
+    "name": "Ben Martin",
+    "salary": 375000
+  },
+  {
+    "name": "Luke Clanton",
+    "salary": 370000
+  },
+  {
+    "name": "Brendon Todd",
+    "salary": 365000
+  },
+  {
+    "name": "Greyson Sigg",
+    "salary": 360000
+  },
+  {
+    "name": "Patton Kizzire",
+    "salary": 355000
+  },
+  {
+    "name": "Will Gordon",
+    "salary": 350000
+  },
+  {
+    "name": "Austin Cook",
+    "salary": 345000
+  },
+  {
+    "name": "Norman Xiong",
+    "salary": 340000
+  },
+  {
+    "name": "Thriston Lawrence",
+    "salary": 335000
+  },
+  {
+    "name": "Austin Smotherman",
+    "salary": 330000
+  },
+  {
+    "name": "Matthew NeSmith",
+    "salary": 325000
+  },
+  {
+    "name": "Ben Silverman",
+    "salary": 320000
+  },
+  {
+    "name": "Parker Coody",
+    "salary": 315000
+  },
+  {
+    "name": "Michael Brennan",
+    "salary": 310000
+  },
+  {
+    "name": "Ryan McCormick",
+    "salary": 305000
+  },
+  {
+    "name": "Will Chandler",
+    "salary": 300000
+  },
+  {
+    "name": "Jimmy Stanger",
+    "salary": 295000
+  },
+  {
+    "name": "Dylan Wu",
+    "salary": 290000
+  },
+  {
+    "name": "Martin Laird",
+    "salary": 285000
+  },
+  {
+    "name": "Ryan Moore",
+    "salary": 280000
+  },
+  {
+    "name": "Chez Reavie",
+    "salary": 275000
+  },
+  {
+    "name": "Zac Blair",
+    "salary": 270000
+  },
+  {
+    "name": "Kristoffer Reitan",
+    "salary": 265000
+  },
+  {
+    "name": "Lee Hodges",
+    "salary": 260000
+  },
+  {
+    "name": "Rafael Campos",
+    "salary": 255000
+  },
+  {
+    "name": "Seamus Power",
+    "salary": 250000
+  },
+  {
+    "name": "Nick Hardy",
+    "salary": 245000
+  },
+  {
+    "name": "Johnny Keefer",
+    "salary": 240000
+  },
+  {
+    "name": "Steven Fisk",
+    "salary": 235000
+  },
+  {
+    "name": "David Ford",
+    "salary": 230000
+  },
+  {
+    "name": "Gordon Sargent",
+    "salary": 225000
+  },
+  {
+    "name": "Justin Suh",
+    "salary": 220000
+  },
+  {
+    "name": "Adrien Dumont de Chassart",
+    "salary": 220000
+  },
+  {
+    "name": "Adam Svensson",
+    "salary": 215000
+  },
+  {
+    "name": "Matteo Manassero",
+    "salary": 215000
+  },
+  {
+    "name": "Angel Ayora",
+    "salary": 215000
+  },
+  {
+    "name": "Keita Nakajima",
+    "salary": 215000
+  },
+  {
+    "name": "Jesper Svensson",
+    "salary": 210000
+  },
+  {
+    "name": "Nicholas Lindheim",
+    "salary": 210000
+  },
+  {
+    "name": "Noah Goodwin",
+    "salary": 210000
+  },
+  {
+    "name": "Ryan Brehm",
+    "salary": 210000
+  },
+  {
+    "name": "Frankie Capan III",
+    "salary": 205000
+  },
+  {
+    "name": "Trace Crowe",
+    "salary": 205000
+  },
+  {
+    "name": "Christo Lamprecht",
+    "salary": 205000
+  },
+  {
+    "name": "Neal Shipley",
+    "salary": 205000
+  },
+  {
+    "name": "Chandler Blanchett",
+    "salary": 200000
+  },
+  {
+    "name": "Kensei Hirata",
+    "salary": 200000
+  },
+  {
+    "name": "Emilio Gonzalez",
+    "salary": 200000
+  },
+  {
+    "name": "Ricky Castillo",
+    "salary": 200000
+  },
+  {
+    "name": "Dan Brown",
+    "salary": 200000
+  },
+  {
+    "name": "Pontus Nyholm",
+    "salary": 200000
+  },
+  {
+    "name": "Sudarshan Yellamaraju",
+    "salary": 200000
+  },
+  {
+    "name": "Davis Chatfield",
+    "salary": 200000
+  }
+]

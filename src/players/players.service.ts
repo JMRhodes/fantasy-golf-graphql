@@ -17,11 +17,28 @@ export class PlayersService {
    * Creates a new player in the database.
    *
    * @param createPlayerInput - The input data for creating a new player.
-   * @returns
+   * @returns The newly created player.
    */
   async createPlayer(createPlayerInput: CreatePlayerInput): Promise<Player> {
     const player = new this.playerModel(createPlayerInput);
-    return player.save();
+    await player.save();
+
+    return player;
+  }
+
+  /**
+   * Creates multiple players in the database.
+   *
+   * @param createPlayerInputs - Array of input data for creating new players.
+   * @returns The newly created players.
+   */
+  async createPlayersBulk(
+    createPlayerInputs: CreatePlayerInput[],
+  ): Promise<Player[]> {
+    const createdPlayers =
+      await this.playerModel.insertMany(createPlayerInputs);
+
+    return createdPlayers as Player[];
   }
 
   /**

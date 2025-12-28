@@ -48,4 +48,19 @@ export class PlayersResolver {
     const player = await this.playersService.createPlayer(createPlayerData);
     return player;
   }
+
+  /**
+   * Creates multiple players in the database.
+   * @param createPlayerData - Array of data for the new players
+   * @returns
+   */
+  @Mutation(() => [Player])
+  async createPlayersBulk(
+    @Args({ name: 'createPlayerData', type: () => [CreatePlayerInput] })
+    createPlayerData: CreatePlayerInput[],
+  ): Promise<Player[]> {
+    const players =
+      await this.playersService.createPlayersBulk(createPlayerData);
+    return players;
+  }
 }
