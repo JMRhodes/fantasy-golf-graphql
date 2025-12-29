@@ -5,10 +5,12 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { PlayersModule } from './players/players.module';
 import { MongooseModule } from '@nestjs/mongoose';
+import { TournamentsModule } from './tournaments/tournaments.module';
 
 @Module({
   imports: [
     PlayersModule,
+    TournamentsModule,
     ConfigModule.forRoot({
       isGlobal: true,
       cache: true,
