@@ -6,10 +6,12 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { PlayersModule } from './players/players.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { TournamentsModule } from './tournaments/tournaments.module';
+import { ResultsModule } from './results/results.module';
 
 @Module({
   imports: [
     PlayersModule,
+    ResultsModule,
     TournamentsModule,
     ConfigModule.forRoot({
       isGlobal: true,
@@ -26,6 +28,7 @@ import { TournamentsModule } from './tournaments/tournaments.module';
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
       autoSchemaFile: true,
+      graphiql: true,
     }),
   ],
   controllers: [],
