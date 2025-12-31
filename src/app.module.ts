@@ -7,9 +7,11 @@ import { PlayersModule } from './players/players.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { TournamentsModule } from './tournaments/tournaments.module';
 import { ResultsModule } from './results/results.module';
+import { OwnersModule } from './owners/owners.module';
 
 @Module({
   imports: [
+    OwnersModule,
     PlayersModule,
     ResultsModule,
     TournamentsModule,

@@ -1,5 +1,5 @@
 import { Result } from './schemas/result.schema';
-import { Resolver, Query, Args, ID } from '@nestjs/graphql';
+import { Resolver, Query } from '@nestjs/graphql';
 import { ResultService } from './results.service';
 
 /**
@@ -23,20 +23,20 @@ export class ResultResolver {
     }
   }
 
-  /**
-   * Fetches a collection of results by tournament id
-   * @param Args id
-   * @returns
-   */
-  @Query(() => [Result])
-  async getResultByTournamentId(
-    @Args('id', { type: () => ID }) id: string,
-  ): Promise<Result[]> {
-    try {
-      const results = await this.resultService.getResultsByTournamentId(id);
-      return results;
-    } catch {
-      throw new Error('Failed to fetch results for the tournament');
-    }
-  }
+  // /**
+  //  * Fetches a collection of results by tournament id
+  //  * @param Args id - The id of the tournament to retrieve results for
+  //  * @returns
+  //  */
+  // @Query(() => [Result])
+  // async getResultByTournamentId(
+  //   @Args('id', { type: () => ID }) id: string,
+  // ): Promise<Result[]> {
+  //   try {
+  //     const results = await this.resultService.getResultsByTournamentId(id);
+  //     return results;
+  //   } catch {
+  //     throw new Error('Failed to fetch results for the tournament');
+  //   }
+  // }
 }

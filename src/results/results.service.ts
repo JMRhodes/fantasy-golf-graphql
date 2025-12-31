@@ -21,19 +21,19 @@ export class ResultService {
     return this.resultModel.find().exec();
   }
 
-  /**
-   * Retrieves a collection of results by their tournament ID.
-   *
-   * @param id - The ID of the tournament to retrieve.
-   * @throws Error if the tournament is not found.
-   * @returns
-   */
-  async getResultsByTournamentId(id: string): Promise<Result[]> {
-    const results = await this.resultModel.find({ tournamentId: id }).exec();
-    if (!results) {
-      throw new Error(`Results for tournament with ID ${id} not found`);
-    }
+  // /**
+  //  * Retrieves a collection of results by their tournament ID.
+  //  *
+  //  * @param id - The ID of the tournament to retrieve.
+  //  * @throws Error if the tournament is not found.
+  //  * @returns
+  //  */
+  // async getResultsByTournamentId(id: string): Promise<Result[]> {
+  //   const results = await this.resultModel.find({ tournamentId: id }).exec();
+  //   if (!results) {
+  //     throw new Error(`Results for tournament with ID ${id} not found`);
+  //   }
 
-    return results;
-  }
+  //   return results;
+  // }
 }
