@@ -8,12 +8,14 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { TournamentsModule } from './tournaments/tournaments.module';
 import { ResultsModule } from './results/results.module';
 import { OwnersModule } from './owners/owners.module';
+import { TeamsModule } from './teams/teams.module';
 
 @Module({
   imports: [
     OwnersModule,
     PlayersModule,
     ResultsModule,
+    TeamsModule,
     TournamentsModule,
     ConfigModule.forRoot({
       isGlobal: true,
