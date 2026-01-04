@@ -12,4 +12,17 @@ export class TeamsService {
     const team = new this.teamModel(createTeamInput);
     return (await team.save()).populate('ownerId');
   }
+
+  async getAllTeams(): Promise<Team[]> {
+    return this.teamModel.find().populate('ownerId').exec();
+  }
+
+  async getTeamById(id: string): Promise<Team> {
+    const team = await this.teamModel.findById(id).populate('ownerId').exec();
+    if (!team) {
+      throw new Error(`Team with ID ${id} not found`);
+    }
+
+    return team;
+  }
 }
