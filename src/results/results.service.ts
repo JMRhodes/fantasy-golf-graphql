@@ -18,7 +18,7 @@ export class ResultService {
    * @returns
    */
   async getAllResults(): Promise<Result[]> {
-    return this.resultModel.find().exec();
+    return this.resultModel.find().populate('player').exec();
   }
 
   // /**

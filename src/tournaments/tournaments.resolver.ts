@@ -2,6 +2,7 @@ import { Tournament } from './schemas/tournament.schema';
 import { Resolver, Query, Args, ID, Mutation } from '@nestjs/graphql';
 import { TournamentService } from './tournaments.service';
 import { CreateTournamentInput } from './dtos/create-tournament.dto';
+import { CreateResultInput } from 'src/results/dtos/create-result.input';
 
 /**
  * Resolver for the Tournament entity
@@ -49,5 +50,17 @@ export class TournamentResolver {
     const tournament =
       await this.tournamentService.createTournament(createTournamentData);
     return tournament;
+  }
+
+  /**
+   * Adds results to a single tournament.
+   */
+  @Mutation(() => Tournament)
+  async addResultsToTournament(
+    @Args('tournamentId', { type: () => ID }) tournamentId: string,
+    @Args({ name: 'results', type: () => [CreateResultInput] })
+    results: CreateResultInput[],
+  ): Promise<Tournament> {
+    return this.tournamentService.addResultsToTournament(tournamentId, results);
   }
 }

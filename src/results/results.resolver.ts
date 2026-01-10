@@ -1,6 +1,7 @@
 import { Result } from './schemas/result.schema';
 import { Resolver, Query } from '@nestjs/graphql';
 import { ResultService } from './results.service';
+import { GraphQLError } from 'graphql';
 
 /**
  * Resolver for the Result entity
@@ -19,7 +20,7 @@ export class ResultResolver {
       const results = await this.resultService.getAllResults();
       return results;
     } catch {
-      throw new Error('Failed to fetch results');
+      throw new GraphQLError('Failed to fetch results');
     }
   }
 

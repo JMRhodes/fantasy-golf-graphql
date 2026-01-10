@@ -2,6 +2,7 @@ import { Player } from './schemas/player.schema';
 import { Resolver, Query, Args, Mutation, ID } from '@nestjs/graphql';
 import { CreatePlayerInput } from './dtos/create-player.input';
 import { PlayersService } from './players.service';
+import { GraphQLError } from 'graphql/error';
 
 /**
  * Resolver for the Player entity
@@ -32,8 +33,14 @@ export class PlayersResolver {
    */
   @Query(() => Player)
   async getPlayer(@Args('id', { type: () => ID }) id: string): Promise<Player> {
-    const player = await this.playersService.getPlayerById(id);
-    return player;
+    try {
+      const player = await this.playersService.getPlayerById(id);
+      return player;
+    } catch {
+      throw new GraphQLError('Player not found', {
+        extensions: { code: 'NOT_FOUND' },
+      });
+    }
   }
 
   /**

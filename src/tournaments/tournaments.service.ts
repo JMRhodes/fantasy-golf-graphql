@@ -1,8 +1,10 @@
 import { Injectable } from '@nestjs/common';
 import { Tournament } from './schemas/tournament.schema';
 import { InjectModel } from '@nestjs/mongoose';
-import { Model } from 'mongoose';
+import { Model, Types } from 'mongoose';
 import { CreateTournamentInput } from './dtos/create-tournament.dto';
+import { CreateResultInput } from 'src/results/dtos/create-result.input';
+import { Result } from 'src/results/schemas/result.schema';
 
 /**
  * The service for managing tournaments.
@@ -13,6 +15,7 @@ import { CreateTournamentInput } from './dtos/create-tournament.dto';
 export class TournamentService {
   constructor(
     @InjectModel(Tournament.name) private tournamentModel: Model<Tournament>,
+    @InjectModel(Result.name) private resultModel: Model<Result>,
   ) {}
 
   /**
@@ -36,7 +39,10 @@ export class TournamentService {
    * @returns
    */
   async getAllTournaments(): Promise<Tournament[]> {
-    return this.tournamentModel.find().exec();
+    return this.tournamentModel
+      .find()
+      .populate({ path: 'results', populate: { path: 'player' } })
+      .exec();
   }
 
   /**
@@ -47,10 +53,60 @@ export class TournamentService {
    * @returns
    */
   async getTournamentById(id: string): Promise<Tournament> {
-    const tournament = await this.tournamentModel.findById(id).exec();
+    const tournament = await this.tournamentModel
+      .findById(id)
+      .populate({ path: 'results', populate: { path: 'player' } })
+      .exec();
     if (!tournament) {
       throw new Error(`Tournament with ID ${id} not found`);
     }
+
+    return tournament;
+  }
+
+  /**
+   * Adds one or more results to a tournament and stores them as referenced Result documents.
+   */
+  async addResultsToTournament(
+    id: string,
+    resultsInput: CreateResultInput[],
+  ): Promise<Tournament> {
+    const tournament = await this.tournamentModel.findById(id).exec();
+
+    if (!tournament) {
+      throw new Error(`Tournament with ID ${id} not found`);
+    }
+
+    // 1) Create Result documents
+    const createdResults = await this.resultModel.insertMany(
+      resultsInput.map((r) => ({
+        player: r.player,
+        position: r.position,
+        points: r.points ?? 0,
+      })),
+    );
+
+    const resultIds = createdResults.map((r) => r._id);
+
+    // 2) Ensure results is an array of ObjectId refs and append the new IDs
+    const currentResults = Array.isArray(tournament.results)
+      ? (tournament.results as unknown as Types.ObjectId[])
+      : [];
+
+    // At this point results is an array of ObjectId references; cast so TypeScript
+    // accepts the assignment while Mongoose continues to store refs correctly.
+    tournament.results = [
+      ...currentResults,
+      ...resultIds,
+    ] as unknown as Result[];
+
+    await tournament.save();
+
+    // 3) Populate results and nested players so GraphQL returns full objects
+    await tournament.populate({
+      path: 'results',
+      populate: { path: 'player' },
+    });
 
     return tournament;
   }
