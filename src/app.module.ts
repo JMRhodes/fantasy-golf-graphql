@@ -9,6 +9,8 @@ import { TournamentsModule } from './tournaments/tournaments.module';
 import { ResultsModule } from './results/results.module';
 import { OwnersModule } from './owners/owners.module';
 import { TeamsModule } from './teams/teams.module';
+import { ServeStaticModule } from '@nestjs/serve-static';
+import { join } from 'path';
 
 @Module({
   imports: [
@@ -28,6 +30,10 @@ import { TeamsModule } from './teams/teams.module';
         uri: configService.get<string>('MONGO_URI'),
       }),
       inject: [ConfigService],
+    }),
+    ServeStaticModule.forRoot({
+      rootPath: join(process.cwd(), 'frontend', 'dist'),
+      exclude: ['graphql', '/graphql/', '/graphql/*'],
     }),
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,

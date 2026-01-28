@@ -1,0 +1,302 @@
+---
+import { fetchGraphQL } from '../lib/graphql';
+
+const GET_TEAMS = `
+  query GetTeams {
+    getAllTeams {
+      id
+      name
+      ownerId {
+        id
+        name
+      }
+    }
+  }
+`;
+
+interface Owner {
+  id: string;
+  name: string | null;
+}
+
+interface Team {
+  id: string;
+  name: string | null;
+  ownerId: Owner | null;
+}
+
+interface GetTeamsResponse {
+  getAllTeams: Team[];
+}
+
+interface LeaderboardRow {
+  rank: number;
+  teamName: string;
+  ownerName: string;
+}
+
+let rows: LeaderboardRow[] = [];
+let error: string | null = null;
+
+try {
+  const data = await fetchGraphQL<GetTeamsResponse>(GET_TEAMS);
+  const teams = data.getAllTeams ?? [];
+
+  rows = teams.map((team, index) => ({
+    rank: index + 1,
+    teamName: team.name ?? `Team ${index + 1}`,
+    ownerName: team.ownerId?.name ?? 'Unknown owner',
+  }));
+} catch (err) {
+  error = err instanceof Error ? err.message : 'Failed to load leaderboard.';
+}
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Teams Leaderboard</title>
+  </head>
+  <body class="page">
+    <main class="shell">
+      <section class="card">
+        <header class="card-header">
+          <div>
+            <p class="eyebrow">Standings</p>
+            <h1 class="title">Teams leaderboard</h1>
+            <p class="subtitle">Overview of all fantasy teams and their owners.</p>
+          </div>
+        </header>
+
+        {error && (
+          <div class="state state-error">
+            <p>We couldn't load the leaderboard.</p>
+            <p class="state-detail">{error}</p>
+          </div>
+        )}
+
+        {!error && rows.length === 0 && (
+          <div class="state">
+            <p>No teams found yet.</p>
+            <p class="state-detail">Create a team in the app to see it appear here.</p>
+          </div>
+        )}
+
+        {!error && rows.length > 0 && (
+          <div class="table">
+            <div class="table-head">
+              <span class="col-rank">#</span>
+              <span class="col-team">Team</span>
+              <span class="col-points">Points</span>
+              <span class="col-wins">Wins</span>
+            </div>
+
+            <ul class="rows" aria-label="Team standings">
+              {rows.map((row) => (
+                <li class="row">
+                  <span class="col-rank">{row.rank}</span>
+
+                  <div class="col-team">
+                    <div class="avatar" aria-hidden="true">
+                      {row.teamName.charAt(0).toUpperCase()}
+                    </div>
+                    <div class="team-meta">
+                      <span class="team-name">{row.teamName}</span>
+                      <span class="owner-name">{row.ownerName}</span>
+                    </div>
+                  </div>
+
+                  <span class="col-points">0</span>
+                  <span class="col-wins">0</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </section>
+    </main>
+  </body>
+</html>
+
+<style>
+  :root {
+    color-scheme: light;
+    --page-bg: #f3f4f6;
+    --card-bg: #ffffff;
+    --border-subtle: #e5e7eb;
+    --text-main: #111827;
+    --text-subtle: #6b7280;
+    --accent: #ef4444;
+  }
+
+  .page {
+    margin: 0;
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Text',
+      sans-serif;
+    background: var(--page-bg);
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .shell {
+    padding: 2rem 1rem;
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .card {
+    background: var(--card-bg);
+    border-radius: 1rem;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.15);
+    overflow: hidden;
+  }
+
+  .card-header {
+    padding: 1.5rem 1.25rem 1rem;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .eyebrow {
+    margin: 0 0 0.25rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+  }
+
+  .title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .subtitle {
+    margin: 0.25rem 0 0;
+    font-size: 0.8rem;
+    color: var(--text-subtle);
+  }
+
+  .table-head {
+    display: grid;
+    grid-template-columns: 2rem minmax(0, 1.5fr) 0.9fr 0.8fr;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-subtle);
+    background: #f9fafb;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .rows {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: 2rem minmax(0, 1.5fr) 0.9fr 0.8fr;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.85rem;
+    align-items: center;
+  }
+
+  .row:nth-child(odd) {
+    background: #f9fafb;
+  }
+
+  .row:nth-child(even) {
+    background: #ffffff;
+  }
+
+  .col-rank {
+    font-weight: 600;
+    color: var(--text-subtle);
+  }
+
+  .col-team {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    min-width: 0;
+  }
+
+  .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    background: #fee2e2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent);
+  }
+
+  .team-meta {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  .team-name {
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .owner-name {
+    font-size: 0.75rem;
+    color: var(--text-subtle);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .col-points,
+  .col-wins {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .state {
+    padding: 1.5rem 1.25rem 1.75rem;
+    font-size: 0.9rem;
+    color: var(--text-subtle);
+  }
+
+  .state-error {
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .state-detail {
+    margin-top: 0.35rem;
+    font-size: 0.75rem;
+  }
+
+  @media (min-width: 640px) {
+    .shell {
+      padding: 3rem 1.5rem;
+      max-width: 480px;
+    }
+
+    .card-header {
+      padding-inline: 1.75rem;
+    }
+
+    .table-head,
+    .row {
+      padding-inline: 1.75rem;
+    }
+  }
+</style>

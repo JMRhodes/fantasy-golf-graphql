@@ -79,14 +79,16 @@ export class TournamentService {
 
     // 1) Create Result documents
     const createdResults = await this.resultModel.insertMany(
-      resultsInput.map((r) => ({
-        player: r.player,
-        position: r.position,
-        points: r.points ?? 0,
-      })),
+      resultsInput.map(
+        (result): CreateResultInput => ({
+          player: result.player,
+          position: result.position,
+          points: result.points ?? 0,
+        }),
+      ),
     );
 
-    const resultIds = createdResults.map((r) => r._id);
+    const resultIds = createdResults.map((result) => result._id);
 
     // 2) Ensure results is an array of ObjectId refs and append the new IDs
     const currentResults = Array.isArray(tournament.results)
