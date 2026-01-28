@@ -2,7 +2,7 @@
 import { fetchGraphQL } from '../lib/graphql';
 
 const GET_TEAMS = `
-  query GetTeams {
+  query GetLeaderboardData {
     getAllTeams {
       id
       name
@@ -10,6 +10,10 @@ const GET_TEAMS = `
         id
         name
       }
+    }
+    getAllPlayers {
+      id
+      name
     }
   }
 `;
@@ -25,8 +29,14 @@ interface Team {
   ownerId: Owner | null;
 }
 
+interface Player {
+  id: string;
+  name: string;
+}
+
 interface GetTeamsResponse {
   getAllTeams: Team[];
+  getAllPlayers: Player[];
 }
 interface LeaderboardRow {
   rank: number;
@@ -46,11 +56,22 @@ const pastelPalette: { bg: string; fg: string }[] = [
 ];
 
 let rows: LeaderboardRow[] = [];
+let samplePlayers: Player[] = [];
 let error: string | null = null;
 
 try {
   const data = await fetchGraphQL<GetTeamsResponse>(GET_TEAMS);
   const teams = data.getAllTeams ?? [];
+  const players = data.getAllPlayers ?? [];
+
+  if (players.length > 0) {
+    const shuffled = [...players];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    samplePlayers = shuffled.slice(0, Math.min(4, shuffled.length));
+  }
 
   rows = teams.map((team, index) => {
     const palette = pastelPalette[index % pastelPalette.length];
@@ -147,12 +168,21 @@ try {
                       class="players-stack"
                       aria-label={`Players for ${row.teamName}`}
                     >
-                      {Array.from({ length: 4 }).map((_, i) => (
-                        <span
-                          class="player-dot"
-                          title={`Player ${i + 1} • ${row.teamName}`}
-                        />
-                      ))}
+                      {samplePlayers.length > 0
+                        ? samplePlayers.map((player) => (
+                            <span
+                              class="player-dot"
+                              data-tooltip={player.name}
+                              aria-label={player.name}
+                            />
+                          ))
+                        : Array.from({ length: 4 }).map((_, i) => (
+                            <span
+                              class="player-dot"
+                              data-tooltip={`Player ${i + 1} • ${row.teamName}`}
+                              aria-label={`Player ${i + 1} for ${row.teamName}`}
+                            />
+                          ))}
                     </div>
                   </div>
 
@@ -332,6 +362,7 @@ try {
   }
 
   .player-dot {
+    position: relative;
     width: 22px;
     height: 22px;
     border-radius: 999px;
@@ -340,6 +371,29 @@ try {
     box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.05);
     margin-left: -8px;
     cursor: help;
+  }
+
+  .player-dot::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 50%;
+    bottom: 130%;
+    transform: translateX(-50%) translateY(4px);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+    background: #111827;
+    color: #f9fafb;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 120ms ease-out, transform 120ms ease-out;
+    z-index: 10;
+  }
+
+  .player-dot:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
   }
 
   .player-dot:first-child {
