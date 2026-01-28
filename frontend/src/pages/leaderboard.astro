@@ -33,7 +33,18 @@ interface LeaderboardRow {
   rank: number;
   teamName: string;
   ownerName: string;
+  avatarBg: string;
+  avatarFg: string;
 }
+
+const pastelPalette: { bg: string; fg: string }[] = [
+  { bg: '#fee2e2', fg: '#b91c1c' },
+  { bg: '#e0f2fe', fg: '#075985' },
+  { bg: '#ecfeff', fg: '#0e7490' },
+  { bg: '#fef3c7', fg: '#92400e' },
+  { bg: '#e0f2f1', fg: '#00695c' },
+  { bg: '#ede9fe', fg: '#5b21b6' },
+];
 
 let rows: LeaderboardRow[] = [];
 let error: string | null = null;
@@ -42,11 +53,17 @@ try {
   const data = await fetchGraphQL<GetTeamsResponse>(GET_TEAMS);
   const teams = data.getAllTeams ?? [];
 
-  rows = teams.map((team, index) => ({
-    rank: index + 1,
-    teamName: team.name ?? `Team ${index + 1}`,
-    ownerName: team.ownerId?.name ?? 'Unknown owner',
-  }));
+  rows = teams.map((team, index) => {
+    const palette = pastelPalette[index % pastelPalette.length];
+
+    return {
+      rank: index + 1,
+      teamName: team.name ?? `Team ${index + 1}`,
+      ownerName: team.ownerId?.name ?? 'Unknown owner',
+      avatarBg: palette.bg,
+      avatarFg: palette.fg,
+    };
+  });
 } catch (err) {
   error = err instanceof Error ? err.message : 'Failed to load leaderboard.';
 }
@@ -91,6 +108,7 @@ try {
             <div class="table-head">
               <span class="col-rank">#</span>
               <span class="col-team">Team</span>
+              <span class="col-players">Players</span>
               <span class="col-points">Points</span>
               <span class="col-wins">Wins</span>
             </div>
@@ -101,12 +119,30 @@ try {
                   <span class="col-rank">{row.rank}</span>
 
                   <div class="col-team">
-                    <div class="avatar" aria-hidden="true">
+                    <div
+                      class="avatar"
+                      style={`--avatar-bg: ${row.avatarBg}; --avatar-fg: ${row.avatarFg};`}
+                      aria-hidden="true"
+                    >
                       {row.teamName.charAt(0).toUpperCase()}
                     </div>
                     <div class="team-meta">
                       <span class="team-name">{row.teamName}</span>
                       <span class="owner-name">{row.ownerName}</span>
+                    </div>
+                  </div>
+
+                  <div class="col-players">
+                    <div
+                      class="players-stack"
+                      aria-label={`Players for ${row.teamName}`}
+                    >
+                      {Array.from({ length: 4 }).map((_, i) => (
+                        <span
+                          class="player-dot"
+                          title={`Player ${i + 1} • ${row.teamName}`}
+                        />
+                      ))}
                     </div>
                   </div>
 
@@ -185,7 +221,7 @@ try {
 
   .table-head {
     display: grid;
-    grid-template-columns: 2rem minmax(0, 1.5fr) 0.9fr 0.8fr;
+    grid-template-columns: 2rem minmax(0, 2fr) 1.4fr 0.9fr 0.8fr;
     padding: 0.75rem 1.25rem;
     font-size: 0.7rem;
     text-transform: uppercase;
@@ -203,7 +239,7 @@ try {
 
   .row {
     display: grid;
-    grid-template-columns: 2rem minmax(0, 1.5fr) 0.9fr 0.8fr;
+    grid-template-columns: 2rem minmax(0, 2fr) 1.4fr 0.9fr 0.8fr;
     padding: 0.75rem 1.25rem;
     font-size: 0.85rem;
     align-items: center;
@@ -229,17 +265,42 @@ try {
     min-width: 0;
   }
 
+  .col-players {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .players-stack {
+    display: flex;
+    align-items: center;
+  }
+
+  .player-dot {
+    width: 22px;
+    height: 22px;
+    border-radius: 999px;
+    background: #dbeafe;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.05);
+    margin-left: -8px;
+    cursor: help;
+  }
+
+  .player-dot:first-child {
+    margin-left: 0;
+  }
+
   .avatar {
     width: 32px;
     height: 32px;
     border-radius: 999px;
-    background: #fee2e2;
+    background: var(--avatar-bg, #fee2e2);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 0.8rem;
     font-weight: 600;
-    color: var(--accent);
+    color: var(--avatar-fg, var(--accent));
   }
 
   .team-meta {
@@ -287,7 +348,7 @@ try {
   @media (min-width: 640px) {
     .shell {
       padding: 3rem 1.5rem;
-      max-width: 480px;
+      max-width: 720px;
     }
 
     .card-header {
@@ -297,6 +358,12 @@ try {
     .table-head,
     .row {
       padding-inline: 1.75rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .shell {
+      max-width: 900px;
     }
   }
 </style>
