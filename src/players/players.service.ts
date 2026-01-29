@@ -65,4 +65,23 @@ export class PlayersService {
 
     return player;
   }
+
+  /**
+   * Updates a player's PGA Tour ID.
+   *
+   * @param id - The ID of the player to update.
+   * @param pgaId - The PGA Tour ID to set.
+   * @returns The updated player.
+   */
+  async updatePlayerPgaId(id: string, pgaId: number): Promise<Player> {
+    const player = await this.playerModel
+      .findByIdAndUpdate(id, { pgaId }, { new: true })
+      .exec();
+
+    if (!player) {
+      throw new Error(`Player with ID ${id} not found`);
+    }
+
+    return player;
+  }
 }

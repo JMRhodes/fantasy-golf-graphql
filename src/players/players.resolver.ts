@@ -70,4 +70,25 @@ export class PlayersResolver {
       await this.playersService.createPlayersBulk(createPlayerData);
     return players;
   }
+
+  /**
+   * Updates a player's PGA Tour ID
+   * @param id - The ID of the player to update
+   * @param pgaId - The PGA Tour ID to set
+   * @returns The updated player
+   */
+  @Mutation(() => Player)
+  async updatePlayerPgaId(
+    @Args('id', { type: () => ID }) id: string,
+    @Args('pgaId') pgaId: number,
+  ): Promise<Player> {
+    try {
+      const player = await this.playersService.updatePlayerPgaId(id, pgaId);
+      return player;
+    } catch {
+      throw new GraphQLError('Failed to update player PGA ID', {
+        extensions: { code: 'UPDATE_FAILED' },
+      });
+    }
+  }
 }
