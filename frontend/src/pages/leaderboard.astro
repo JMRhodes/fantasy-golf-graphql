@@ -552,8 +552,8 @@ try {
   }
 </style>
 
-<script is:inline>
-  (function () {
+<script>
+  function initTeamSearch() {
     const form = document.querySelector('.card-header-actions');
     const input = document.getElementById('team-search');
     const rows = Array.from(
@@ -608,5 +608,11 @@ try {
         applyFilter(input.value);
       });
     }
-  })();
+  }
+
+  // Initialize on page load
+  initTeamSearch();
+
+  // Re-initialize after view transitions
+  document.addEventListener('astro:page-load', initTeamSearch);
 </script>
