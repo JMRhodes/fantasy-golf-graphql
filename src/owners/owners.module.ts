@@ -9,5 +9,6 @@ import { OwnerResolver } from './owners.resolver';
     MongooseModule.forFeature([{ name: 'Owner', schema: OwnerSchema }]),
   ],
   providers: [OwnerService, OwnerResolver],
+  exports: [OwnerService],
 })
 export class OwnersModule {}
