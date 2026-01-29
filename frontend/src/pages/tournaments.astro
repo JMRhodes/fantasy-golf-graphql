@@ -205,13 +205,13 @@ try {
     --border-subtle: #e5e7eb;
     --text-main: #111827;
     --text-subtle: #6b7280;
-    --accent: #ef4444;
-    --chip-upcoming-bg: #ecfdf3;
-    --chip-upcoming-text: #166534;
-    --chip-in-progress-bg: #eff6ff;
-    --chip-in-progress-text: #1d4ed8;
+    --accent: #14b8a6;
+    --chip-upcoming-bg: #fef3c7;
+    --chip-upcoming-text: #92400e;
+    --chip-in-progress-bg: #14b8a6;
+    --chip-in-progress-text: #ffffff;
     --chip-completed-bg: #f3f4f6;
-    --chip-completed-text: #374151;
+    --chip-completed-text: #6b7280;
   }
 
   .page {
@@ -232,8 +232,8 @@ try {
 
   .card {
     background: var(--card-bg);
-    border-radius: 1rem;
-    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.15);
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
     overflow: hidden;
   }
 
@@ -261,8 +261,9 @@ try {
 
   .title {
     margin: 0;
-    font-size: 1.25rem;
-    font-weight: 600;
+    font-size: 1.375rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
   }
 
   .subtitle {
@@ -388,6 +389,7 @@ try {
   .chip-in-progress {
     background: var(--chip-in-progress-bg);
     color: var(--chip-in-progress-text);
+    box-shadow: 0 2px 4px rgba(20, 184, 166, 0.2);
   }
 
   .chip-completed {
