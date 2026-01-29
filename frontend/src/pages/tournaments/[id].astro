@@ -1,5 +1,6 @@
 ---
 import { fetchGraphQL } from '../../lib/graphql';
+import Navigation from '../../components/Navigation.astro';
 
 const GET_TOURNAMENT = `
   query GetTournament($id: ID!) {
@@ -147,6 +148,7 @@ try {
     <title>{tournament ? tournament.name : 'Tournament'}</title>
   </head>
   <body class="page">
+    <Navigation />
     <main class="shell">
       <section class="card">
         <header class="card-header">
@@ -198,10 +200,16 @@ try {
         )}
 
         {!error && tournament && (!tournament.results || tournament.results.length === 0) && (
-          <div class="state">
-            <p>No results yet.</p>
-            <p class="state-detail">
-              Once results are added to this tournament, they will appear here.
+          <div class="empty-state">
+            <div class="empty-state-icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                <path d="M9 12h6m-6 4h6" />
+              </svg>
+            </div>
+            <h2 class="empty-state-title">No results yet</h2>
+            <p class="empty-state-text">
+              Results will be displayed here once they're added to this tournament. Check back after the tournament concludes.
             </p>
           </div>
         )}
@@ -265,16 +273,13 @@ try {
       sans-serif;
     background: var(--page-bg);
     color: var(--text-main);
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding-top: 1.5rem;
   }
 
   .shell {
     padding: 1.5rem 1rem 2rem;
     width: 100%;
     max-width: 420px;
+    margin: 0 auto;
   }
 
   .card {
@@ -448,6 +453,42 @@ try {
     font-size: 0.75rem;
   }
 
+  .empty-state {
+    padding: 3rem 1.25rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .empty-state-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9ca3af;
+    margin-bottom: 0.5rem;
+  }
+
+  .empty-state-title {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-main);
+  }
+
+  .empty-state-text {
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--text-subtle);
+    max-width: 360px;
+  }
+
   .card-footer {
     padding: 0.9rem 1.25rem 1.25rem;
     border-top: 1px solid var(--border-subtle);
@@ -479,7 +520,8 @@ try {
 
     .table-head,
     .row,
-    .card-footer {
+    .card-footer,
+    .empty-state {
       padding-inline: 1.75rem;
     }
   }

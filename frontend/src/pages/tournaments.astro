@@ -1,5 +1,6 @@
 ---
 import { fetchGraphQL } from '../lib/graphql';
+import Navigation from '../components/Navigation.astro';
 
 const GET_TOURNAMENTS = `
   query GetAllTournaments {
@@ -118,6 +119,7 @@ try {
     <title>Tournaments</title>
   </head>
   <body class="page">
+    <Navigation />
     <main class="shell">
       <section class="card">
         <header class="card-header">
@@ -219,16 +221,13 @@ try {
       sans-serif;
     background: var(--page-bg);
     color: var(--text-main);
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding-top: 1.5rem;
   }
 
   .shell {
     padding: 1.5rem 1rem 2rem;
     width: 100%;
     max-width: 420px;
+    margin: 0 auto;
   }
 
   .card {
