@@ -1,6 +1,6 @@
 ---
 import { fetchGraphQL } from '../lib/graphql';
-import Navigation from '../components/Navigation.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 const GET_PLAYERS = `
   query GetAllPlayers {
@@ -33,19 +33,8 @@ try {
 }
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Players</title>
-  </head>
-  <body class="page">
-    <Navigation />
-    <main class="shell">
-      <section class="card">
+<BaseLayout title="Players">
+  <section class="card">
         <header class="card-header">
           <div class="card-header-main">
             <p class="eyebrow">Roster</p>
@@ -115,10 +104,8 @@ try {
             </ul>
           </div>
         )}
-      </section>
-    </main>
-  </body>
-</html>
+  </section>
+</BaseLayout>
 
 <style>
   :root {

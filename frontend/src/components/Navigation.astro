@@ -9,7 +9,7 @@ function isActive(path: string): boolean {
 }
 ---
 
-<nav class="nav">
+<nav class="nav" transition:persist>
   <div class="nav-container">
     <ul class="nav-links">
       <li>
@@ -95,3 +95,33 @@ function isActive(path: string): boolean {
     }
   }
 </style>
+
+<script>
+  function updateActiveLink() {
+    const currentPath = window.location.pathname;
+    const links = document.querySelectorAll('.nav-link');
+    
+    links.forEach((link) => {
+      if (!(link instanceof HTMLAnchorElement)) return;
+      
+      const href = link.getAttribute('href');
+      if (!href) return;
+      
+      const isActive = href === '/'
+        ? currentPath === '/'
+        : currentPath.startsWith(href);
+      
+      if (isActive) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }
+
+  // Update on initial load
+  updateActiveLink();
+
+  // Update after view transitions
+  document.addEventListener('astro:after-swap', updateActiveLink);
+</script>

@@ -1,6 +1,6 @@
 ---
 import { fetchGraphQL } from '../lib/graphql';
-import Navigation from '../components/Navigation.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 import PromoBanner from '../components/PromoBanner.astro';
 
 const GET_TEAMS = `
@@ -91,19 +91,8 @@ try {
 }
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Teams Leaderboard</title>
-  </head>
-  <body class="page">
-    <Navigation />
-    <main class="shell">
-      <section class="card">
+<BaseLayout title="Teams Leaderboard">
+  <section class="card">
         <header class="card-header">
           <div class="card-header-main">
             <p class="eyebrow">Standings</p>
@@ -237,10 +226,8 @@ try {
           </div>
           </>
         )}
-      </section>
-    </main>
-  </body>
-</html>
+  </section>
+</BaseLayout>
 
 <style>
   :root {

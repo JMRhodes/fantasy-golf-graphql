@@ -2,6 +2,30 @@
 
 This file provides guidance to WARP (warp.dev) when working with code in this repository.
 
+## Project overview
+
+This is a fullstack fantasy golf application consisting of two main components:
+
+- **Backend API** (root directory): A NestJS GraphQL API that handles data persistence and business logic for managing owners, players, teams, tournaments, and results. Built with NestJS, Apollo Server, Mongoose, and MongoDB.
+- **Frontend** (`/frontend`): An Astro static site that provides the user interface for the fantasy golf application. Built with Astro 5.x and configured for static site generation (`output: 'static'`).
+
+The API exposes a GraphQL endpoint that the frontend can consume to display and manage fantasy golf data.
+
+### Frontend architecture
+
+The Astro frontend uses:
+
+- **View Transitions API** – Smooth page transitions enabled via `<ViewTransitions />` in the `BaseLayout` component. The navigation persists across transitions using `transition:persist` for a seamless SPA-like experience.
+- **BaseLayout component** (`src/layouts/BaseLayout.astro`) – Shared layout that wraps all pages with navigation, view transitions, and global styles.
+- **Shared styles** (`src/styles/page.css`) – Common component styles (cards, tables, buttons, etc.) imported globally.
+- **Static generation** – All pages are pre-rendered at build time, fetching data from the GraphQL API during the build process.
+
+Frontend development commands (run from `/frontend`):
+
+- Development server: `yarn dev` (starts at `localhost:4321`)
+- Build for production: `yarn build`
+- Preview production build: `yarn preview`
+
 ## Development commands
 
 ### Install dependencies
