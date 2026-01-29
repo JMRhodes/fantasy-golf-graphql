@@ -1,0 +1,492 @@
+---
+import { fetchGraphQL } from '../../lib/graphql';
+
+const GET_TOURNAMENT = `
+  query GetTournament($id: ID!) {
+    getTournament(id: $id) {
+      id
+      name
+      description
+      status
+      start_date
+      end_date
+      results {
+        id
+        position
+        points
+        player {
+          id
+          name
+        }
+      }
+    }
+  }
+`;
+
+interface Player {
+  id: string;
+  name: string;
+}
+
+interface Result {
+  id: string;
+  position: string | null;
+  points: number;
+  player: Player;
+}
+
+interface Tournament {
+  id: string;
+  name: string;
+  description?: string | null;
+  status: 'UPCOMING' | 'IN-PROGRESS' | 'COMPLETED';
+  start_date: string;
+  end_date: string;
+  results?: Result[] | null;
+}
+
+interface GetTournamentResponse {
+  getTournament: Tournament;
+}
+
+interface GetTournamentIdsResponse {
+  getAllTournaments: { id: string }[];
+}
+
+export async function getStaticPaths() {
+  const GET_TOURNAMENT_IDS = `
+    query GetAllTournamentsForPaths {
+      getAllTournaments {
+        id
+      }
+    }
+  `;
+
+  try {
+    const data = await fetchGraphQL<GetTournamentIdsResponse>(GET_TOURNAMENT_IDS);
+    const tournaments = data.getAllTournaments ?? [];
+
+    return tournaments.map((tournament) => ({
+      params: { id: tournament.id },
+    }));
+  } catch (error) {
+    console.error('Error fetching tournament paths:', error);
+    return [];
+  }
+}
+
+const { id } = Astro.params;
+
+let tournament: Tournament | null = null;
+let error: string | null = null;
+
+function formatDateRange(start: string, end: string): string {
+  const startDate = new Date(start);
+  const endDate = new Date(end);
+
+  if (isNaN(startDate.getTime()) || isNaN(endDate.getTime())) {
+    return 'TBD';
+  }
+
+  const sameMonth = startDate.getMonth() === endDate.getMonth();
+  const sameYear = startDate.getFullYear() === endDate.getFullYear();
+
+  const monthFormatter = new Intl.DateTimeFormat('en-US', {
+    month: 'short',
+  });
+
+  const fullFormatter = new Intl.DateTimeFormat('en-US', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+  });
+
+  if (sameMonth && sameYear) {
+    return `${monthFormatter.format(startDate)} ${startDate.getDate()}–${endDate.getDate()}, ${startDate.getFullYear()}`;
+  }
+
+  if (sameYear) {
+    return `${fullFormatter.format(startDate)} – ${monthFormatter.format(endDate)} ${endDate.getDate()}`;
+  }
+
+  return `${fullFormatter.format(startDate)} – ${fullFormatter.format(endDate)}`;
+}
+
+function mapStatus(status: Tournament['status']): {
+  label: string;
+  tone: 'upcoming' | 'in-progress' | 'completed';
+} {
+  switch (status) {
+    case 'UPCOMING':
+      return { label: 'Upcoming', tone: 'upcoming' };
+    case 'IN-PROGRESS':
+      return { label: 'In progress', tone: 'in-progress' };
+    case 'COMPLETED':
+    default:
+      return { label: 'Completed', tone: 'completed' };
+  }
+}
+
+try {
+  const data = await fetchGraphQL<GetTournamentResponse>(GET_TOURNAMENT, {
+    id,
+  });
+  tournament = data.getTournament ?? null;
+} catch (err) {
+  error = err instanceof Error ? err.message : 'Failed to load tournament.';
+}
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{tournament ? tournament.name : 'Tournament'}</title>
+  </head>
+  <body class="page">
+    <main class="shell">
+      <section class="card">
+        <header class="card-header">
+          <div class="card-header-main">
+            <p class="eyebrow">Tournament</p>
+            <h1 class="title">
+              {tournament ? tournament.name : 'Tournament details'}
+            </h1>
+            {tournament && (
+              <p class="subtitle">
+                {tournament.description || 'Overview and results for this tournament.'}
+              </p>
+            )}
+            {!tournament && !error && (
+              <p class="subtitle">Loading tournament…</p>
+            )}
+          </div>
+          {tournament && (
+            <div class="card-header-aside">
+              <span
+                class:list={{
+                  'chip': true,
+                  'chip-upcoming': mapStatus(tournament.status).tone === 'upcoming',
+                  'chip-in-progress': mapStatus(tournament.status).tone === 'in-progress',
+                  'chip-completed': mapStatus(tournament.status).tone === 'completed',
+                }}
+              >
+                {mapStatus(tournament.status).label}
+              </span>
+              <p class="dates">{formatDateRange(
+                tournament.start_date as unknown as string,
+                tournament.end_date as unknown as string,
+              )}</p>
+            </div>
+          )}
+        </header>
+
+        {error && (
+          <div class="state state-error">
+            <p>We couldn't load this tournament.</p>
+            <p class="state-detail">{error}</p>
+          </div>
+        )}
+
+        {!error && !tournament && (
+          <div class="state">
+            <p>Loading tournament…</p>
+          </div>
+        )}
+
+        {!error && tournament && (!tournament.results || tournament.results.length === 0) && (
+          <div class="state">
+            <p>No results yet.</p>
+            <p class="state-detail">
+              Once results are added to this tournament, they will appear here.
+            </p>
+          </div>
+        )}
+
+        {!error && tournament && tournament.results && tournament.results.length > 0 && (
+          <div class="table">
+            <div class="table-head">
+              <span class="col-pos">Pos</span>
+              <span class="col-player">Player</span>
+              <span class="col-points">Points</span>
+            </div>
+
+            <ul class="rows" aria-label="Tournament results">
+              {tournament.results.map((result) => (
+                <li class="row">
+                  <span class="col-pos">{result.position ?? '-'}</span>
+                  <div class="col-player">
+                    <div class="avatar" aria-hidden="true">
+                      {result.player?.name?.charAt(0).toUpperCase() ?? '?'}
+                    </div>
+                    <div class="player-meta">
+                      <span class="player-name">{result.player?.name ?? 'Unknown player'}</span>
+                    </div>
+                  </div>
+                  <span class="col-points">{result.points}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        <footer class="card-footer">
+          <a class="back-link" href="/tournaments">← Back to tournaments</a>
+        </footer>
+      </section>
+    </main>
+  </body>
+</html>
+
+<style>
+  :root {
+    color-scheme: light;
+    --page-bg: #f3f4f6;
+    --card-bg: #ffffff;
+    --border-subtle: #e5e7eb;
+    --text-main: #111827;
+    --text-subtle: #6b7280;
+    --accent: #ef4444;
+    --chip-upcoming-bg: #ecfdf3;
+    --chip-upcoming-text: #166534;
+    --chip-in-progress-bg: #eff6ff;
+    --chip-in-progress-text: #1d4ed8;
+    --chip-completed-bg: #f3f4f6;
+    --chip-completed-text: #374151;
+  }
+
+  .page {
+    margin: 0;
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Text',
+      sans-serif;
+    background: var(--page-bg);
+    color: var(--text-main);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 1.5rem;
+  }
+
+  .shell {
+    padding: 1.5rem 1rem 2rem;
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .card {
+    background: var(--card-bg);
+    border-radius: 1rem;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.15);
+    overflow: hidden;
+  }
+
+  .card-header {
+    padding: 1.5rem 1.25rem 1rem;
+    border-bottom: 1px solid var(--border-subtle);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .card-header-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .card-header-aside {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    align-items: flex-start;
+  }
+
+  .eyebrow {
+    margin: 0 0 0.25rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+  }
+
+  .title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .subtitle {
+    margin: 0.25rem 0 0;
+    font-size: 0.8rem;
+    color: var(--text-subtle);
+  }
+
+  .dates {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--text-subtle);
+  }
+
+  .table-head {
+    display: grid;
+    grid-template-columns: 3rem minmax(0, 2.5fr) 1fr;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-subtle);
+    background: #f9fafb;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .rows {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: 3rem minmax(0, 2.5fr) 1fr;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.85rem;
+    align-items: center;
+  }
+
+  .row:nth-child(odd) {
+    background: #f9fafb;
+  }
+
+  .row:nth-child(even) {
+    background: #ffffff;
+  }
+
+  .col-pos {
+    font-weight: 600;
+    color: var(--text-subtle);
+  }
+
+  .col-player {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    min-width: 0;
+  }
+
+  .player-meta {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  .player-name {
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .col-points {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    background: #eef2ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #4f46e5;
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+
+  .chip-upcoming {
+    background: var(--chip-upcoming-bg);
+    color: var(--chip-upcoming-text);
+  }
+
+  .chip-in-progress {
+    background: var(--chip-in-progress-bg);
+    color: var(--chip-in-progress-text);
+  }
+
+  .chip-completed {
+    background: var(--chip-completed-bg);
+    color: var(--chip-completed-text);
+  }
+
+  .state {
+    padding: 1.5rem 1.25rem 1.75rem;
+    font-size: 0.9rem;
+    color: var(--text-subtle);
+  }
+
+  .state-error {
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .state-detail {
+    margin-top: 0.35rem;
+    font-size: 0.75rem;
+  }
+
+  .card-footer {
+    padding: 0.9rem 1.25rem 1.25rem;
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .back-link {
+    font-size: 0.8rem;
+    color: #2563eb;
+    text-decoration: none;
+  }
+
+  .back-link:hover {
+    text-decoration: underline;
+  }
+
+  @media (min-width: 640px) {
+    .shell {
+      padding: 2.5rem 1.5rem 3rem;
+      max-width: 720px;
+    }
+
+    .card-header {
+      padding-inline: 1.75rem;
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .table-head,
+    .row,
+    .card-footer {
+      padding-inline: 1.75rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .shell {
+      max-width: 900px;
+    }
+  }
+</style>
