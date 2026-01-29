@@ -278,9 +278,8 @@ try {
   }
 
   .shell {
-    padding: 1.5rem 1rem 2rem;
+    padding: 0;
     width: 100%;
-    max-width: 420px;
     margin: 0 auto;
     position: relative;
   }
@@ -291,7 +290,7 @@ try {
     justify-content: center;
     width: 40px;
     height: 40px;
-    margin-bottom: 1rem;
+    margin: 1rem 0 1rem 1rem;
     color: #374151;
     text-decoration: none;
     transition: all 0.2s ease;
@@ -305,8 +304,8 @@ try {
 
   .card {
     background: var(--card-bg);
-    border-radius: 1.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+    border-radius: 0;
+    box-shadow: none;
     overflow: hidden;
   }
 
@@ -512,10 +511,19 @@ try {
     max-width: 360px;
   }
 
-  @media (min-width: 640px) {
+  @media (min-width: 768px) {
     .shell {
-      padding: 2.5rem 1.5rem 3rem;
-      max-width: 720px;
+      padding: 1rem;
+      max-width: calc(100% - 2rem);
+    }
+
+    .back-button {
+      margin-left: 0;
+    }
+
+    .card {
+      border-radius: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
     }
 
     .card-header {
@@ -535,7 +543,7 @@ try {
 
   @media (min-width: 1024px) {
     .shell {
-      max-width: 900px;
+      max-width: calc(1200px - 2rem);
     }
   }
 </style>
