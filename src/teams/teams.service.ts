@@ -15,12 +15,12 @@ export class TeamsService {
   async createTeam(createTeamInput: CreateTeamInput): Promise<Team> {
     let ownerId: string;
 
-    // If owner data is provided, create the owner first
+    // If owner data is provided, find or create the owner
     if (createTeamInput.owner) {
-      const newOwner = await this.ownerService.createOwner(
+      const owner = await this.ownerService.findOrCreateOwner(
         createTeamInput.owner,
       );
-      ownerId = newOwner.id;
+      ownerId = owner.id;
     } else if (createTeamInput.ownerId) {
       ownerId = createTeamInput.ownerId;
     } else {

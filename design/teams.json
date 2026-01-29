@@ -1,0 +1,3698 @@
+[
+  {
+    "name": "Texas Wedge (2)",
+    "owner": {
+      "name": "Gunnar Bordeaux",
+      "email": "gunnar.bordeaux@example.com"
+    }
+  },
+  {
+    "name": "D and D 1",
+    "owner": {
+      "name": "Donovan Morrison",
+      "email": "donovan.morrison@example.com"
+    }
+  },
+  {
+    "name": "JSNR #1",
+    "owner": {
+      "name": "Steve Oczak",
+      "email": "steve.oczak@example.com"
+    }
+  },
+  {
+    "name": "Scottie & Lee",
+    "owner": {
+      "name": "Drew Southcott",
+      "email": "drew.southcott@example.com"
+    }
+  },
+  {
+    "name": "TJ ROEKER 4",
+    "owner": {
+      "name": "Tim Scherkenbach",
+      "email": "tim.scherkenbach@example.com"
+    }
+  },
+  {
+    "name": "Donovan 2",
+    "owner": {
+      "name": "Donovan Morrison",
+      "email": "donovan.morrison@example.com"
+    }
+  },
+  {
+    "name": "Goldy's Crew",
+    "owner": {
+      "name": "Pat McGrath",
+      "email": "pat.mcgrath@example.com"
+    }
+  },
+  {
+    "name": "Hot Sauce Mark 2",
+    "owner": {
+      "name": "Mark Petersen",
+      "email": "mark.petersen@example.com"
+    }
+  },
+  {
+    "name": "Prestige Worldwide IV",
+    "owner": {
+      "name": "Michael Longwell",
+      "email": "michael.longwell@example.com"
+    }
+  },
+  {
+    "name": "GIMMIE_PUTZ 2",
+    "owner": {
+      "name": "Ben Lofgren",
+      "email": "ben.lofgren@example.com"
+    }
+  },
+  {
+    "name": "Chad Bartron 1",
+    "owner": {
+      "name": "Chad Bartron",
+      "email": "chad.bartron@example.com"
+    }
+  },
+  {
+    "name": "Cart Jockeys",
+    "owner": {
+      "name": "Edward Haubrich",
+      "email": "edward.haubrich@example.com"
+    }
+  },
+  {
+    "name": "Fore Left 3",
+    "owner": {
+      "name": "Trent Waterman",
+      "email": "trent.waterman@example.com"
+    }
+  },
+  {
+    "name": "DaytonFlyerLie 1",
+    "owner": {
+      "name": "Sam Girouard",
+      "email": "sam.girouard@example.com"
+    }
+  },
+  {
+    "name": "Pool or Pond 5",
+    "owner": {
+      "name": "Mike Murphy",
+      "email": "mike.murphy@example.com"
+    }
+  },
+  {
+    "name": "Matt Rules #1",
+    "owner": {
+      "name": "Mark Hickson",
+      "email": "mark.hickson@example.com"
+    }
+  },
+  {
+    "name": "LFT4Life 2",
+    "owner": {
+      "name": "James Fronek",
+      "email": "james.fronek@example.com"
+    }
+  },
+  {
+    "name": "Don M 3",
+    "owner": {
+      "name": "Donovan Morrison",
+      "email": "donovan.morrison@example.com"
+    }
+  },
+  {
+    "name": "Cowley1",
+    "owner": {
+      "name": "Bob Cowley",
+      "email": "bob.cowley@example.com"
+    }
+  },
+  {
+    "name": "KB2",
+    "owner": {
+      "name": "Kristi Bement",
+      "email": "kristi.bement@example.com"
+    }
+  },
+  {
+    "name": "ZAZMANIA #3",
+    "owner": {
+      "name": "Mark Parupsky",
+      "email": "mark.parupsky@example.com"
+    }
+  },
+  {
+    "name": "Four Putt 7",
+    "owner": {
+      "name": "Jim Giroux",
+      "email": "jim.giroux@example.com"
+    }
+  },
+  {
+    "name": "Matt Hendrickson 2",
+    "owner": {
+      "name": "Mark Cotton",
+      "email": "mark.cotton@example.com"
+    }
+  },
+  {
+    "name": "Fore Left 10",
+    "owner": {
+      "name": "Trent Waterman",
+      "email": "trent.waterman@example.com"
+    }
+  },
+  {
+    "name": "Agent AA7",
+    "owner": {
+      "name": "Alan Andert",
+      "email": "alan.andert@example.com"
+    }
+  },
+  {
+    "name": "Saint Funska",
+    "owner": {
+      "name": "Tom Folska",
+      "email": "tom.folska@example.com"
+    }
+  },
+  {
+    "name": "Jud Moore",
+    "owner": {
+      "name": "Judson Moore",
+      "email": "judson.moore@example.com"
+    }
+  },
+  {
+    "name": "Mingus 3",
+    "owner": {
+      "name": "Zach Mingus",
+      "email": "zach.mingus@example.com"
+    }
+  },
+  {
+    "name": "Ben Walston",
+    "owner": {
+      "name": "Ben Walston",
+      "email": "ben.walston@example.com"
+    }
+  },
+  {
+    "name": "Highlands 3",
+    "owner": {
+      "name": "Denis Vontz",
+      "email": "denis.vontz@example.com"
+    }
+  },
+  {
+    "name": "Diva Las Vegaz",
+    "owner": {
+      "name": "Greg Bowen",
+      "email": "greg.bowen@example.com"
+    }
+  },
+  {
+    "name": "DaytonFlyerLie 2",
+    "owner": {
+      "name": "Sam Girouard",
+      "email": "sam.girouard@example.com"
+    }
+  },
+  {
+    "name": "Hi Pro 2",
+    "owner": {
+      "name": "Denis Vontz",
+      "email": "denis.vontz@example.com"
+    }
+  },
+  {
+    "name": "Max's Team 1",
+    "owner": {
+      "name": "Max Jensen",
+      "email": "max.jensen@example.com"
+    }
+  },
+  {
+    "name": "Prestige Worldwide",
+    "owner": {
+      "name": "Michael Longwell",
+      "email": "michael.longwell@example.com"
+    }
+  },
+  {
+    "name": "Play 2 Win!",
+    "owner": {
+      "name": "Bryce Menk",
+      "email": "bryce.menk@example.com"
+    }
+  },
+  {
+    "name": "BigCJames#2",
+    "owner": {
+      "name": "Craig DeBerg",
+      "email": "craig.deberg@example.com"
+    }
+  },
+  {
+    "name": "Prescott Day1",
+    "owner": {
+      "name": "Craig DeBerg",
+      "email": "craig.deberg@example.com"
+    }
+  },
+  {
+    "name": "DeegChalinni #4",
+    "owner": {
+      "name": "Pete Spoden",
+      "email": "pete.spoden@example.com"
+    }
+  },
+  {
+    "name": "DaytonFlyerLie 3",
+    "owner": {
+      "name": "Sam Girouard",
+      "email": "sam.girouard@example.com"
+    }
+  },
+  {
+    "name": "Anthony LaTour 1",
+    "owner": {
+      "name": "Eric Wenzel",
+      "email": "eric.wenzel@example.com"
+    }
+  },
+  {
+    "name": "Don M 4",
+    "owner": {
+      "name": "Donovan Morrison",
+      "email": "donovan.morrison@example.com"
+    }
+  },
+  {
+    "name": "Pureballstrikers 1",
+    "owner": {
+      "name": "Bruce Bryngelson",
+      "email": "bruce.bryngelson@example.com"
+    }
+  },
+  {
+    "name": "Hot Sauce Mark 1",
+    "owner": {
+      "name": "Mark Petersen",
+      "email": "mark.petersen@example.com"
+    }
+  },
+  {
+    "name": "Three Putt 9",
+    "owner": {
+      "name": "Jim Giroux",
+      "email": "jim.giroux@example.com"
+    }
+  },
+  {
+    "name": "Where's The Beer Cart",
+    "owner": {
+      "name": "MTR",
+      "email": "mtr@example.com"
+    }
+  },
+  {
+    "name": "DuffScruff's #2",
+    "owner": {
+      "name": "Tim Scherkenbach",
+      "email": "tim.scherkenbach@example.com"
+    }
+  },
+  {
+    "name": "Edison 2",
+    "owner": {
+      "name": "Matt Edison",
+      "email": "matt.edison@example.com"
+    }
+  },
+  {
+    "name": "Prestige Worldwide III",
+    "owner": {
+      "name": "Michael Longwell",
+      "email": "michael.longwell@example.com"
+    }
+  },
+  {
+    "name": "DeegChalinni #2",
+    "owner": {
+      "name": "Pete Spoden",
+      "email": "pete.spoden@example.com"
+    }
+  },
+  {
+    "name": "CohensCornerAZ-2",
+    "owner": {
+      "name": "Eric Cohen",
+      "email": "eric.cohen@example.com"
+    }
+  },
+  {
+    "name": "Always Newlyweds",
+    "owner": {
+      "name": "Amy Petersen",
+      "email": "amy.petersen@example.com"
+    }
+  },
+  {
+    "name": "Four Putt 4",
+    "owner": {
+      "name": "Jim Giroux",
+      "email": "jim.giroux@example.com"
+    }
+  },
+  {
+    "name": "I Love Brownies",
+    "owner": {
+      "name": "LJR",
+      "email": "ljr@example.com"
+    }
+  },
+  {
+    "name": "CohensCornerAZ-5",
+    "owner": {
+      "name": "Eric Cohen",
+      "email": "eric.cohen@example.com"
+    }
+  },
+  {
+    "name": "Hoey Rollerz",
+    "owner": {
+      "name": "Ladd Lyngaas",
+      "email": "ladd.lyngaas@example.com"
+    }
+  },
+  {
+    "name": "IVO 1",
+    "owner": {
+      "name": "Mike Ivester",
+      "email": "mike.ivester@example.com"
+    }
+  },
+  {
+    "name": "Caddyshack Rejects2",
+    "owner": {
+      "name": "Scott Chapko",
+      "email": "scott.chapko@example.com"
+    }
+  },
+  {
+    "name": "Jake Funska",
+    "owner": {
+      "name": "Tom Folska",
+      "email": "tom.folska@example.com"
+    }
+  },
+  {
+    "name": "Andert",
+    "owner": {
+      "name": "Alan Andert",
+      "email": "alan.andert@example.com"
+    }
+  },
+  {
+    "name": "CohensCornerAZ-1",
+    "owner": {
+      "name": "Eric Cohen",
+      "email": "eric.cohen@example.com"
+    }
+  },
+  {
+    "name": "Hi Pro 1",
+    "owner": {
+      "name": "Denis Vontz",
+      "email": "denis.vontz@example.com"
+    }
+  },
+  {
+    "name": "Former Greenskeeper",
+    "owner": {
+      "name": "Ben Rikhus",
+      "email": "ben.rikhus@example.com"
+    }
+  },
+  {
+    "name": "Slice of Life",
+    "owner": {
+      "name": "Bob Dougherty",
+      "email": "bob.dougherty@example.com"
+    }
+  },
+  {
+    "name": "King Blades",
+    "owner": {
+      "name": "Bob Dougherty",
+      "email": "bob.dougherty@example.com"
+    }
+  },
+  {
+    "name": "KB3",
+    "owner": {
+      "name": "Kristi Bement",
+      "email": "kristi.bement@example.com"
+    }
+  },
+  {
+    "name": "KingPutt 1",
+    "owner": {
+      "name": "Alan Doan",
+      "email": "alan.doan@example.com"
+    }
+  },
+  {
+    "name": "Chris Mullen # 3",
+    "owner": {
+      "name": "Chris Mullen",
+      "email": "chris.mullen@example.com"
+    }
+  },
+  {
+    "name": "Hand me my Tree Iron",
+    "owner": {
+      "name": "MTR",
+      "email": "mtr@example.com"
+    }
+  },
+  {
+    "name": "Double S",
+    "owner": {
+      "name": "Mike Smith",
+      "email": "mike.smith@example.com"
+    }
+  },
+  {
+    "name": "Froggy's Guyz",
+    "owner": {
+      "name": "Ladd Lyngaas",
+      "email": "ladd.lyngaas@example.com"
+    }
+  },
+  {
+    "name": "Fore Left 9",
+    "owner": {
+      "name": "Trent Waterman",
+      "email": "trent.waterman@example.com"
+    }
+  },
+  {
+    "name": "M-Doc's Squad #1",
+    "owner": {
+      "name": "Kellen Dockter",
+      "email": "kellen.dockter@example.com"
+    }
+  },
+  {
+    "name": "JK2",
+    "owner": {
+      "name": "Jennifer Kahlbaugh",
+      "email": "jennifer.kahlbaugh@example.com"
+    }
+  },
+  {
+    "name": "Battles # 2",
+    "owner": {
+      "name": "Rick Battles",
+      "email": "rick.battles@example.com"
+    }
+  },
+  {
+    "name": "Battles # 3",
+    "owner": {
+      "name": "Rick Battles",
+      "email": "rick.battles@example.com"
+    }
+  },
+  {
+    "name": "Texas Wedge (1)",
+    "owner": {
+      "name": "Gunnar Bordeaux",
+      "email": "gunnar.bordeaux@example.com"
+    }
+  },
+  {
+    "name": "SR Golf 1",
+    "owner": {
+      "name": "Jim Brestel",
+      "email": "jim.brestel@example.com"
+    }
+  },
+  {
+    "name": "D Merch #1",
+    "owner": {
+      "name": "Brian Merchant",
+      "email": "brian.merchant@example.com"
+    }
+  },
+  {
+    "name": "Doc's Swingers #1",
+    "owner": {
+      "name": "Kellen Dockter",
+      "email": "kellen.dockter@example.com"
+    }
+  },
+  {
+    "name": "BigToadLake 1",
+    "owner": {
+      "name": "Terry Hanson",
+      "email": "terry.hanson@example.com"
+    }
+  },
+  {
+    "name": "Four Putt 8",
+    "owner": {
+      "name": "Jim Giroux",
+      "email": "jim.giroux@example.com"
+    }
+  },
+  {
+    "name": "TJ ROEKER 3",
+    "owner": {
+      "name": "Tim Scherkenbach",
+      "email": "tim.scherkenbach@example.com"
+    }
+  },
+  {
+    "name": "Greg Parupsky 1",
+    "owner": {
+      "name": "Greg Parupsky",
+      "email": "greg.parupsky@example.com"
+    }
+  },
+  {
+    "name": "Rico Suave",
+    "owner": {
+      "name": "Mike Smith",
+      "email": "mike.smith@example.com"
+    }
+  },
+  {
+    "name": "DeegChalinni #1",
+    "owner": {
+      "name": "Pete Spoden",
+      "email": "pete.spoden@example.com"
+    }
+  },
+  {
+    "name": "Pool or Pond 4",
+    "owner": {
+      "name": "Mike Murphy",
+      "email": "mike.murphy@example.com"
+    }
+  },
+  {
+    "name": "Cowboys 21",
+    "owner": {
+      "name": "Bruce Bryngelson",
+      "email": "bruce.bryngelson@example.com"
+    }
+  },
+  {
+    "name": "JSNR #3",
+    "owner": {
+      "name": "Steve Oczak",
+      "email": "steve.oczak@example.com"
+    }
+  },
+  {
+    "name": "JB - CR#1",
+    "owner": {
+      "name": "Chris Bell",
+      "email": "chris.bell@example.com"
+    }
+  },
+  {
+    "name": "The A-Team",
+    "owner": {
+      "name": "Amy Petersen",
+      "email": "amy.petersen@example.com"
+    }
+  },
+  {
+    "name": "Mark Cotton 2",
+    "owner": {
+      "name": "Mark Cotton",
+      "email": "mark.cotton@example.com"
+    }
+  },
+  {
+    "name": "Jason Parupsky",
+    "owner": {
+      "name": "Greg Parupsky",
+      "email": "greg.parupsky@example.com"
+    }
+  },
+  {
+    "name": "Austin Schultz",
+    "owner": {
+      "name": "Austin Schultz",
+      "email": "austin.schultz@example.com"
+    }
+  },
+  {
+    "name": "Scottie & Tom",
+    "owner": {
+      "name": "Drew Southcott",
+      "email": "drew.southcott@example.com"
+    }
+  },
+  {
+    "name": "UACATSFB26",
+    "owner": {
+      "name": "John Ryan",
+      "email": "john.ryan@example.com"
+    }
+  },
+  {
+    "name": "SUNSCHAMPS26",
+    "owner": {
+      "name": "John Ryan",
+      "email": "john.ryan@example.com"
+    }
+  },
+  {
+    "name": "Scott's Bots #2",
+    "owner": {
+      "name": "Peter Tountas",
+      "email": "peter.tountas@example.com"
+    }
+  },
+  {
+    "name": "KD19 Squad",
+    "owner": {
+      "name": "Kellen Dockter",
+      "email": "kellen.dockter@example.com"
+    }
+  },
+  {
+    "name": "NattyIce",
+    "owner": {
+      "name": "Jennifer Kahlbaugh",
+      "email": "jennifer.kahlbaugh@example.com"
+    }
+  },
+  {
+    "name": "STROEKER",
+    "owner": {
+      "name": "Tim Scherkenbach",
+      "email": "tim.scherkenbach@example.com"
+    }
+  },
+  {
+    "name": "Jolly1",
+    "owner": {
+      "name": "Justin Rhodes",
+      "email": "justin.rhodes@example.com"
+    }
+  },
+  {
+    "name": "Mingus 1",
+    "owner": {
+      "name": "Zach Mingus",
+      "email": "zach.mingus@example.com"
+    }
+  },
+  {
+    "name": "BP 2",
+    "owner": {
+      "name": "Andy Phelps",
+      "email": "andy.phelps@example.com"
+    }
+  },
+  {
+    "name": "Another Agent",
+    "owner": {
+      "name": "Alan Andert",
+      "email": "alan.andert@example.com"
+    }
+  },
+  {
+    "name": "Don M 6",
+    "owner": {
+      "name": "Donovan Morrison",
+      "email": "donovan.morrison@example.com"
+    }
+  },
+  {
+    "name": "KingPutt 8",
+    "owner": {
+      "name": "Alan Doan",
+      "email": "alan.doan@example.com"
+    }
+  },
+  {
+    "name": "Team Lefty",
+    "owner": {
+      "name": "Andy Phelps",
+      "email": "andy.phelps@example.com"
+    }
+  },
+  {
+    "name": "Texas Wedge (3)",
+    "owner": {
+      "name": "Gunnar Bordeaux",
+      "email": "gunnar.bordeaux@example.com"
+    }
+  },
+  {
+    "name": "Sam Parupsky",
+    "owner": {
+      "name": "Greg Parupsky",
+      "email": "greg.parupsky@example.com"
+    }
+  },
+  {
+    "name": "Scottie & Kurt",
+    "owner": {
+      "name": "Drew Southcott",
+      "email": "drew.southcott@example.com"
+    }
+  },
+  {
+    "name": "Scottie & Sami",
+    "owner": {
+      "name": "Drew Southcott",
+      "email": "drew.southcott@example.com"
+    }
+  },
+  {
+    "name": "Scottie Berger",
+    "owner": {
+      "name": "Drew Southcott",
+      "email": "drew.southcott@example.com"
+    }
+  },
+  {
+    "name": "BP 1",
+    "owner": {
+      "name": "Andy Phelps",
+      "email": "andy.phelps@example.com"
+    }
+  },
+  {
+    "name": "Four Putt 2",
+    "owner": {
+      "name": "Jim Giroux",
+      "email": "jim.giroux@example.com"
+    }
+  },
+  {
+    "name": "Matt Hendrickson 1",
+    "owner": {
+      "name": "Mark Cotton",
+      "email": "mark.cotton@example.com"
+    }
+  },
+  {
+    "name": "Scottie to the Hall",
+    "owner": {
+      "name": "Mike Smith",
+      "email": "mike.smith@example.com"
+    }
+  },
+  {
+    "name": "LAZER 3",
+    "owner": {
+      "name": "Ben Loesel",
+      "email": "ben.loesel@example.com"
+    }
+  },
+  {
+    "name": "DC Malleck 1",
+    "owner": {
+      "name": "DC Malleck",
+      "email": "dc.malleck@example.com"
+    }
+  },
+  {
+    "name": "DC Malleck 2",
+    "owner": {
+      "name": "DC Malleck",
+      "email": "dc.malleck@example.com"
+    }
+  },
+  {
+    "name": "Greg Parupsky 2",
+    "owner": {
+      "name": "Greg Parupsky",
+      "email": "greg.parupsky@example.com"
+    }
+  },
+  {
+    "name": "CheeseTown Dirty Dogs 2",
+    "owner": {
+      "name": "Eric Wenzel",
+      "email": "eric.wenzel@example.com"
+    }
+  },
+  {
+    "name": "Braun 1",
+    "owner": {
+      "name": "John Braun",
+      "email": "john.braun@example.com"
+    }
+  },
+  {
+    "name": "SizeWickWave2",
+    "owner": {
+      "name": "Jon Szymanski",
+      "email": "jon.szymanski@example.com"
+    }
+  },
+  {
+    "name": "Pool or Pond 2",
+    "owner": {
+      "name": "Mike Murphy",
+      "email": "mike.murphy@example.com"
+    }
+  },
+  {
+    "name": "CohensCornerAZ-3",
+    "owner": {
+      "name": "Eric Cohen",
+      "email": "eric.cohen@example.com"
+    }
+  },
+  {
+    "name": "Battles # 1",
+    "owner": {
+      "name": "Rick Battles",
+      "email": "rick.battles@example.com"
+    }
+  },
+  {
+    "name": "Pass the Nerbo 2",
+    "owner": {
+      "name": "Andrew Wahlert",
+      "email": "andrew.wahlert@example.com"
+    }
+  },
+  {
+    "name": "Pass the Nerbo 5",
+    "owner": {
+      "name": "Andrew Wahlert",
+      "email": "andrew.wahlert@example.com"
+    }
+  },
+  {
+    "name": "Don M 5",
+    "owner": {
+      "name": "Donovan Morrison",
+      "email": "donovan.morrison@example.com"
+    }
+  },
+  {
+    "name": "Stags Up",
+    "owner": {
+      "name": "Bob Dougherty",
+      "email": "bob.dougherty@example.com"
+    }
+  },
+  {
+    "name": "Scottie & Drew",
+    "owner": {
+      "name": "Drew Southcott",
+      "email": "drew.southcott@example.com"
+    }
+  },
+  {
+    "name": "Hall & Goats",
+    "owner": {
+      "name": "Andrew Murphy",
+      "email": "andrew.murphy@example.com"
+    }
+  },
+  {
+    "name": "Double Gloved Sword",
+    "owner": {
+      "name": "Andrew Murphy",
+      "email": "andrew.murphy@example.com"
+    }
+  },
+  {
+    "name": "Chris Mullen # 1",
+    "owner": {
+      "name": "Chris Mullen",
+      "email": "chris.mullen@example.com"
+    }
+  },
+  {
+    "name": "Chris Mullen # 2",
+    "owner": {
+      "name": "Chris Mullen",
+      "email": "chris.mullen@example.com"
+    }
+  },
+  {
+    "name": "Andrew Novak 2028 pt2",
+    "owner": {
+      "name": "Ryan Smith",
+      "email": "ryan.smith@example.com"
+    }
+  },
+  {
+    "name": "JSNR #2",
+    "owner": {
+      "name": "Steve Oczak",
+      "email": "steve.oczak@example.com"
+    }
+  },
+  {
+    "name": "Bangert 1",
+    "owner": {
+      "name": "Jack Gadbois",
+      "email": "jack.gadbois@example.com"
+    }
+  },
+  {
+    "name": "Mark Cotton 1",
+    "owner": {
+      "name": "Mark Cotton",
+      "email": "mark.cotton@example.com"
+    }
+  },
+  {
+    "name": "Matt Cotton 3",
+    "owner": {
+      "name": "Mark Cotton",
+      "email": "mark.cotton@example.com"
+    }
+  },
+  {
+    "name": "GRIFFIN BOOTH 1",
+    "owner": {
+      "name": "Tim Scherkenbach",
+      "email": "tim.scherkenbach@example.com"
+    }
+  },
+  {
+    "name": "Foley 3",
+    "owner": {
+      "name": "Mark Foley",
+      "email": "mark.foley@example.com"
+    }
+  },
+  {
+    "name": "Chicken Dinner 1",
+    "owner": {
+      "name": "Tim McGlynn",
+      "email": "tim.mcglynn@example.com"
+    }
+  },
+  {
+    "name": "Jerry Parupsky 4",
+    "owner": {
+      "name": "Greg Parupsky",
+      "email": "greg.parupsky@example.com"
+    }
+  },
+  {
+    "name": "Dave Lomax",
+    "owner": {
+      "name": "Dave Lomax",
+      "email": "dave.lomax@example.com"
+    }
+  },
+  {
+    "name": "LAZER 2",
+    "owner": {
+      "name": "Ben Loesel",
+      "email": "ben.loesel@example.com"
+    }
+  },
+  {
+    "name": "Vinny Funska",
+    "owner": {
+      "name": "Tom Folska",
+      "email": "tom.folska@example.com"
+    }
+  },
+  {
+    "name": "Hawk4",
+    "owner": {
+      "name": "Steven Hakanson",
+      "email": "steven.hakanson@example.com"
+    }
+  },
+  {
+    "name": "Jean Parupsky",
+    "owner": {
+      "name": "Greg Parupsky",
+      "email": "greg.parupsky@example.com"
+    }
+  },
+  {
+    "name": "Anthony LaTour 2",
+    "owner": {
+      "name": "Eric Wenzel",
+      "email": "eric.wenzel@example.com"
+    }
+  },
+  {
+    "name": "LFT4Life 10",
+    "owner": {
+      "name": "James Fronek",
+      "email": "james.fronek@example.com"
+    }
+  },
+  {
+    "name": "Don M 7",
+    "owner": {
+      "name": "Donovan Morrison",
+      "email": "donovan.morrison@example.com"
+    }
+  },
+  {
+    "name": "LCW Team 4",
+    "owner": {
+      "name": "Lance Wahlert",
+      "email": "lance.wahlert@example.com"
+    }
+  },
+  {
+    "name": "Shanky McShankerson 2",
+    "owner": {
+      "name": "Phil Lombardi",
+      "email": "phil.lombardi@example.com"
+    }
+  },
+  {
+    "name": "Lord Abbett",
+    "owner": {
+      "name": "Ryan Smith",
+      "email": "ryan.smith@example.com"
+    }
+  },
+  {
+    "name": "Gadbois 2",
+    "owner": {
+      "name": "Jack Gadbois",
+      "email": "jack.gadbois@example.com"
+    }
+  },
+  {
+    "name": "RIPPER #2",
+    "owner": {
+      "name": "Chris Weiss",
+      "email": "chris.weiss@example.com"
+    }
+  },
+  {
+    "name": "ZAZMANIA #7",
+    "owner": {
+      "name": "Mark Parupsky",
+      "email": "mark.parupsky@example.com"
+    }
+  },
+  {
+    "name": "ZAZMANIA #10",
+    "owner": {
+      "name": "Mark Parupsky",
+      "email": "mark.parupsky@example.com"
+    }
+  },
+  {
+    "name": "Three Putt 8",
+    "owner": {
+      "name": "Jim Giroux",
+      "email": "jim.giroux@example.com"
+    }
+  },
+  {
+    "name": "Matt Cotton 1",
+    "owner": {
+      "name": "Mark Cotton",
+      "email": "mark.cotton@example.com"
+    }
+  },
+  {
+    "name": "Just Trying Me Hahdest",
+    "owner": {
+      "name": "Adam Gloudemans",
+      "email": "adam.gloudemans@example.com"
+    }
+  },
+  {
+    "name": "It's not the putter Dude",
+    "owner": {
+      "name": "MTR",
+      "email": "mtr@example.com"
+    }
+  },
+  {
+    "name": "Dayseeker",
+    "owner": {
+      "name": "Tim Scherkenbach",
+      "email": "tim.scherkenbach@example.com"
+    }
+  },
+  {
+    "name": "Fore Left 8",
+    "owner": {
+      "name": "Trent Waterman",
+      "email": "trent.waterman@example.com"
+    }
+  },
+  {
+    "name": "Everyday we Schauffel-ing",
+    "owner": {
+      "name": "Tim Scherkenbach",
+      "email": "tim.scherkenbach@example.com"
+    }
+  },
+  {
+    "name": "Little Shooters#2",
+    "owner": {
+      "name": "Adam Gloudemans",
+      "email": "adam.gloudemans@example.com"
+    }
+  },
+  {
+    "name": "DeegChalinni #3",
+    "owner": {
+      "name": "Pete Spoden",
+      "email": "pete.spoden@example.com"
+    }
+  },
+  {
+    "name": "Fore Left 1",
+    "owner": {
+      "name": "Trent Waterman",
+      "email": "trent.waterman@example.com"
+    }
+  },
+  {
+    "name": "Braun 3",
+    "owner": {
+      "name": "John Braun",
+      "email": "john.braun@example.com"
+    }
+  },
+  {
+    "name": "Swiss Family I",
+    "owner": {
+      "name": "Joel Robinson",
+      "email": "joel.robinson@example.com"
+    }
+  },
+  {
+    "name": "Pass the Nerbo 4",
+    "owner": {
+      "name": "Andrew Wahlert",
+      "email": "andrew.wahlert@example.com"
+    }
+  },
+  {
+    "name": "Don M 1",
+    "owner": {
+      "name": "Donovan Morrison",
+      "email": "donovan.morrison@example.com"
+    }
+  },
+  {
+    "name": "TURTLEPOWER26",
+    "owner": {
+      "name": "John Ryan",
+      "email": "john.ryan@example.com"
+    }
+  },
+  {
+    "name": "It\u2019s a Shardy Knapp",
+    "owner": {
+      "name": "Amy Petersen",
+      "email": "amy.petersen@example.com"
+    }
+  },
+  {
+    "name": "Max's Team 3",
+    "owner": {
+      "name": "Max Jensen",
+      "email": "max.jensen@example.com"
+    }
+  },
+  {
+    "name": "Prestige Worldwide II",
+    "owner": {
+      "name": "Michael Longwell",
+      "email": "michael.longwell@example.com"
+    }
+  },
+  {
+    "name": "Caddyshack Rejects1",
+    "owner": {
+      "name": "Scott Chapko",
+      "email": "scott.chapko@example.com"
+    }
+  },
+  {
+    "name": "Tim Jungers",
+    "owner": {
+      "name": "Tim Jungers",
+      "email": "tim.jungers@example.com"
+    }
+  },
+  {
+    "name": "Molly Jungers",
+    "owner": {
+      "name": "Tim Jungers",
+      "email": "tim.jungers@example.com"
+    }
+  },
+  {
+    "name": "Bombs Away",
+    "owner": {
+      "name": "Mike Smith",
+      "email": "mike.smith@example.com"
+    }
+  },
+  {
+    "name": "LAZER 1",
+    "owner": {
+      "name": "Ben Loesel",
+      "email": "ben.loesel@example.com"
+    }
+  },
+  {
+    "name": "GA Funska",
+    "owner": {
+      "name": "Tom Folska",
+      "email": "tom.folska@example.com"
+    }
+  },
+  {
+    "name": "Adam Funska",
+    "owner": {
+      "name": "Tom Folska",
+      "email": "tom.folska@example.com"
+    }
+  },
+  {
+    "name": "Knuckle Funska",
+    "owner": {
+      "name": "Tom Folska",
+      "email": "tom.folska@example.com"
+    }
+  },
+  {
+    "name": "Zeke Funska",
+    "owner": {
+      "name": "Tom Folska",
+      "email": "tom.folska@example.com"
+    }
+  },
+  {
+    "name": "BigCJames#1",
+    "owner": {
+      "name": "Craig DeBerg",
+      "email": "craig.deberg@example.com"
+    }
+  },
+  {
+    "name": "Prescott Day2",
+    "owner": {
+      "name": "Craig DeBerg",
+      "email": "craig.deberg@example.com"
+    }
+  },
+  {
+    "name": "Will DeBerg1",
+    "owner": {
+      "name": "Craig DeBerg",
+      "email": "craig.deberg@example.com"
+    }
+  },
+  {
+    "name": "Will DeBerg2",
+    "owner": {
+      "name": "Craig DeBerg",
+      "email": "craig.deberg@example.com"
+    }
+  },
+  {
+    "name": "Hawk1",
+    "owner": {
+      "name": "Steven Hakanson",
+      "email": "steven.hakanson@example.com"
+    }
+  },
+  {
+    "name": "Hawk3",
+    "owner": {
+      "name": "Steven Hakanson",
+      "email": "steven.hakanson@example.com"
+    }
+  },
+  {
+    "name": "Gog FG 1",
+    "owner": {
+      "name": "Chris Gougler",
+      "email": "chris.gougler@example.com"
+    }
+  },
+  {
+    "name": "Cookie",
+    "owner": {
+      "name": "Cookie Kaplan",
+      "email": "cookie.kaplan@example.com"
+    }
+  },
+  {
+    "name": "NDEPALMA",
+    "owner": {
+      "name": "Mark DePalma",
+      "email": "mark.depalma@example.com"
+    }
+  },
+  {
+    "name": "DRJ #1",
+    "owner": {
+      "name": "David Johnson",
+      "email": "david.johnson@example.com"
+    }
+  },
+  {
+    "name": "DRJ #2",
+    "owner": {
+      "name": "David Johnson",
+      "email": "david.johnson@example.com"
+    }
+  },
+  {
+    "name": "Chase Straw",
+    "owner": {
+      "name": "Chase Straw",
+      "email": "chase.straw@example.com"
+    }
+  },
+  {
+    "name": "Homa Sapiens",
+    "owner": {
+      "name": "Ladd Lyngaas",
+      "email": "ladd.lyngaas@example.com"
+    }
+  },
+  {
+    "name": "Wrong Hole Cole",
+    "owner": {
+      "name": "Ladd Lyngaas",
+      "email": "ladd.lyngaas@example.com"
+    }
+  },
+  {
+    "name": "No Snakes",
+    "owner": {
+      "name": "Ladd Lyngaas",
+      "email": "ladd.lyngaas@example.com"
+    }
+  },
+  {
+    "name": "Higgo's Hitters",
+    "owner": {
+      "name": "Ladd Lyngaas",
+      "email": "ladd.lyngaas@example.com"
+    }
+  },
+  {
+    "name": "GIMMIE_PUTZ 1",
+    "owner": {
+      "name": "Ben Lofgren",
+      "email": "ben.lofgren@example.com"
+    }
+  },
+  {
+    "name": "GIMMIE_PUTZ 6",
+    "owner": {
+      "name": "Ben Lofgren",
+      "email": "ben.lofgren@example.com"
+    }
+  },
+  {
+    "name": "Greg Parupsky 3",
+    "owner": {
+      "name": "Greg Parupsky",
+      "email": "greg.parupsky@example.com"
+    }
+  },
+  {
+    "name": "Crooked Arrow 4",
+    "owner": {
+      "name": "Mark Kalan",
+      "email": "mark.kalan@example.com"
+    }
+  },
+  {
+    "name": "CheeseTown Dirty Dogs 1",
+    "owner": {
+      "name": "Eric Wenzel",
+      "email": "eric.wenzel@example.com"
+    }
+  },
+  {
+    "name": "Metal Melters",
+    "owner": {
+      "name": "Edward Haubrich",
+      "email": "edward.haubrich@example.com"
+    }
+  },
+  {
+    "name": "Hobbers",
+    "owner": {
+      "name": "Edward Haubrich",
+      "email": "edward.haubrich@example.com"
+    }
+  },
+  {
+    "name": "Mr Golf",
+    "owner": {
+      "name": "Edward Haubrich",
+      "email": "edward.haubrich@example.com"
+    }
+  },
+  {
+    "name": "Fairway Luke",
+    "owner": {
+      "name": "Edward Haubrich",
+      "email": "edward.haubrich@example.com"
+    }
+  },
+  {
+    "name": "Scheffler Shuffle",
+    "owner": {
+      "name": "Edward Haubrich",
+      "email": "edward.haubrich@example.com"
+    }
+  },
+  {
+    "name": "Divot Devils",
+    "owner": {
+      "name": "Edward Haubrich",
+      "email": "edward.haubrich@example.com"
+    }
+  },
+  {
+    "name": "SR Golf 2",
+    "owner": {
+      "name": "Jim Brestel",
+      "email": "jim.brestel@example.com"
+    }
+  },
+  {
+    "name": "SR Golf 3",
+    "owner": {
+      "name": "Jim Brestel",
+      "email": "jim.brestel@example.com"
+    }
+  },
+  {
+    "name": "DeegChalinni #5",
+    "owner": {
+      "name": "Pete Spoden",
+      "email": "pete.spoden@example.com"
+    }
+  },
+  {
+    "name": "JoeSpo",
+    "owner": {
+      "name": "Pete Spoden",
+      "email": "pete.spoden@example.com"
+    }
+  },
+  {
+    "name": "Fore Left 2",
+    "owner": {
+      "name": "Trent Waterman",
+      "email": "trent.waterman@example.com"
+    }
+  },
+  {
+    "name": "D.W. #1",
+    "owner": {
+      "name": "Brian Merchant",
+      "email": "brian.merchant@example.com"
+    }
+  },
+  {
+    "name": "D Merch #2",
+    "owner": {
+      "name": "Brian Merchant",
+      "email": "brian.merchant@example.com"
+    }
+  },
+  {
+    "name": "B Merch #1",
+    "owner": {
+      "name": "Brian Merchant",
+      "email": "brian.merchant@example.com"
+    }
+  },
+  {
+    "name": "B Merch #2",
+    "owner": {
+      "name": "Brian Merchant",
+      "email": "brian.merchant@example.com"
+    }
+  },
+  {
+    "name": "Eric Myhre",
+    "owner": {
+      "name": "Eric Myhre",
+      "email": "eric.myhre@example.com"
+    }
+  },
+  {
+    "name": "SizeWickWave1",
+    "owner": {
+      "name": "Jon Szymanski",
+      "email": "jon.szymanski@example.com"
+    }
+  },
+  {
+    "name": "SizeWickWave3",
+    "owner": {
+      "name": "Jon Szymanski",
+      "email": "jon.szymanski@example.com"
+    }
+  },
+  {
+    "name": "SizeWickWave10",
+    "owner": {
+      "name": "Jon Szymanski",
+      "email": "jon.szymanski@example.com"
+    }
+  },
+  {
+    "name": "Pool or Pond 1",
+    "owner": {
+      "name": "Mike Murphy",
+      "email": "mike.murphy@example.com"
+    }
+  },
+  {
+    "name": "Pool or Pond 3",
+    "owner": {
+      "name": "Mike Murphy",
+      "email": "mike.murphy@example.com"
+    }
+  },
+  {
+    "name": "Lisovskis - 1",
+    "owner": {
+      "name": "Brian Lisovskis",
+      "email": "brian.lisovskis@example.com"
+    }
+  },
+  {
+    "name": "Highlands 1",
+    "owner": {
+      "name": "Denis Vontz",
+      "email": "denis.vontz@example.com"
+    }
+  },
+  {
+    "name": "Willok",
+    "owner": {
+      "name": "Greg Theroux",
+      "email": "greg.theroux@example.com"
+    }
+  },
+  {
+    "name": "&rusko",
+    "owner": {
+      "name": "Kent Andrusko",
+      "email": "kent.andrusko@example.com"
+    }
+  },
+  {
+    "name": "Patrick Wenzel 1",
+    "owner": {
+      "name": "Eric Wenzel",
+      "email": "eric.wenzel@example.com"
+    }
+  },
+  {
+    "name": "LFT4Life 1",
+    "owner": {
+      "name": "James Fronek",
+      "email": "james.fronek@example.com"
+    }
+  },
+  {
+    "name": "LFT4Life 3",
+    "owner": {
+      "name": "James Fronek",
+      "email": "james.fronek@example.com"
+    }
+  },
+  {
+    "name": "LFT4Life 4",
+    "owner": {
+      "name": "James Fronek",
+      "email": "james.fronek@example.com"
+    }
+  },
+  {
+    "name": "LFT4Life 5",
+    "owner": {
+      "name": "James Fronek",
+      "email": "james.fronek@example.com"
+    }
+  },
+  {
+    "name": "LFT4Life 6",
+    "owner": {
+      "name": "James Fronek",
+      "email": "james.fronek@example.com"
+    }
+  },
+  {
+    "name": "LFT4Life 7",
+    "owner": {
+      "name": "James Fronek",
+      "email": "james.fronek@example.com"
+    }
+  },
+  {
+    "name": "LFT4Life 8",
+    "owner": {
+      "name": "James Fronek",
+      "email": "james.fronek@example.com"
+    }
+  },
+  {
+    "name": "LFT4Life 9",
+    "owner": {
+      "name": "James Fronek",
+      "email": "james.fronek@example.com"
+    }
+  },
+  {
+    "name": "Pass the Nerbo 1",
+    "owner": {
+      "name": "Andrew Wahlert",
+      "email": "andrew.wahlert@example.com"
+    }
+  },
+  {
+    "name": "Pass the Nerbo 3",
+    "owner": {
+      "name": "Andrew Wahlert",
+      "email": "andrew.wahlert@example.com"
+    }
+  },
+  {
+    "name": "Pass the Nerbo 6",
+    "owner": {
+      "name": "Andrew Wahlert",
+      "email": "andrew.wahlert@example.com"
+    }
+  },
+  {
+    "name": "Pass the Nerbo 9",
+    "owner": {
+      "name": "Andrew Wahlert",
+      "email": "andrew.wahlert@example.com"
+    }
+  },
+  {
+    "name": "Pass the Nerbo 10",
+    "owner": {
+      "name": "Andrew Wahlert",
+      "email": "andrew.wahlert@example.com"
+    }
+  },
+  {
+    "name": "Don M 2",
+    "owner": {
+      "name": "Donovan Morrison",
+      "email": "donovan.morrison@example.com"
+    }
+  },
+  {
+    "name": "Donovan 1",
+    "owner": {
+      "name": "Donovan Morrison",
+      "email": "donovan.morrison@example.com"
+    }
+  },
+  {
+    "name": "Scottie & Luke",
+    "owner": {
+      "name": "Drew Southcott",
+      "email": "drew.southcott@example.com"
+    }
+  },
+  {
+    "name": "Scottie & Ricky",
+    "owner": {
+      "name": "Drew Southcott",
+      "email": "drew.southcott@example.com"
+    }
+  },
+  {
+    "name": "Mulligan Mingus",
+    "owner": {
+      "name": "Austin Mingus",
+      "email": "austin.mingus@example.com"
+    }
+  },
+  {
+    "name": "Cowley3",
+    "owner": {
+      "name": "Bob Cowley",
+      "email": "bob.cowley@example.com"
+    }
+  },
+  {
+    "name": "Team ICE",
+    "owner": {
+      "name": "Bob Cowley",
+      "email": "bob.cowley@example.com"
+    }
+  },
+  {
+    "name": "LCW Team 1",
+    "owner": {
+      "name": "Lance Wahlert",
+      "email": "lance.wahlert@example.com"
+    }
+  },
+  {
+    "name": "KB1",
+    "owner": {
+      "name": "Kristi Bement",
+      "email": "kristi.bement@example.com"
+    }
+  },
+  {
+    "name": "WB1",
+    "owner": {
+      "name": "Kristi Bement",
+      "email": "kristi.bement@example.com"
+    }
+  },
+  {
+    "name": "WB2",
+    "owner": {
+      "name": "Kristi Bement",
+      "email": "kristi.bement@example.com"
+    }
+  },
+  {
+    "name": "WB3",
+    "owner": {
+      "name": "Kristi Bement",
+      "email": "kristi.bement@example.com"
+    }
+  },
+  {
+    "name": "SWILLY 1",
+    "owner": {
+      "name": "Steve Williams",
+      "email": "steve.williams@example.com"
+    }
+  },
+  {
+    "name": "SWILLY 3",
+    "owner": {
+      "name": "Steve Williams",
+      "email": "steve.williams@example.com"
+    }
+  },
+  {
+    "name": "Akshay It Ain't So",
+    "owner": {
+      "name": "Andrew Murphy",
+      "email": "andrew.murphy@example.com"
+    }
+  },
+  {
+    "name": "Sheffler's Coody Call",
+    "owner": {
+      "name": "Andrew Murphy",
+      "email": "andrew.murphy@example.com"
+    }
+  },
+  {
+    "name": "KingPutt 3",
+    "owner": {
+      "name": "Alan Doan",
+      "email": "alan.doan@example.com"
+    }
+  },
+  {
+    "name": "It's Just Vibes Man (and Scottie)",
+    "owner": {
+      "name": "Stephen Ross",
+      "email": "stephen.ross@example.com"
+    }
+  },
+  {
+    "name": "Ty Webb",
+    "owner": {
+      "name": "Ryan Sawinski",
+      "email": "ryan.sawinski@example.com"
+    }
+  },
+  {
+    "name": "Scott's Bots #1",
+    "owner": {
+      "name": "Peter Tountas",
+      "email": "peter.tountas@example.com"
+    }
+  },
+  {
+    "name": "Martha Engel #2",
+    "owner": {
+      "name": "Chris Mullen",
+      "email": "chris.mullen@example.com"
+    }
+  },
+  {
+    "name": "Team Borgstahl",
+    "owner": {
+      "name": "Brandon Borgstahl",
+      "email": "brandon.borgstahl@example.com"
+    }
+  },
+  {
+    "name": "No bud, straight keef",
+    "owner": {
+      "name": "Ryan Smith",
+      "email": "ryan.smith@example.com"
+    }
+  },
+  {
+    "name": "2016 Cavs",
+    "owner": {
+      "name": "Ryan Smith",
+      "email": "ryan.smith@example.com"
+    }
+  },
+  {
+    "name": "Cowboys 22",
+    "owner": {
+      "name": "Bruce Bryngelson",
+      "email": "bruce.bryngelson@example.com"
+    }
+  },
+  {
+    "name": "Greedy Pitches 1",
+    "owner": {
+      "name": "Bruce Bryngelson",
+      "email": "bruce.bryngelson@example.com"
+    }
+  },
+  {
+    "name": "Greedy Pitches 4",
+    "owner": {
+      "name": "Bruce Bryngelson",
+      "email": "bruce.bryngelson@example.com"
+    }
+  },
+  {
+    "name": "Dead Money2",
+    "owner": {
+      "name": "Gary Bibeau",
+      "email": "gary.bibeau@example.com"
+    }
+  },
+  {
+    "name": "Gary Bibeau1",
+    "owner": {
+      "name": "Gary Bibeau",
+      "email": "gary.bibeau@example.com"
+    }
+  },
+  {
+    "name": "Gary Bibeau2",
+    "owner": {
+      "name": "Gary Bibeau",
+      "email": "gary.bibeau@example.com"
+    }
+  },
+  {
+    "name": "Connor Schmidt",
+    "owner": {
+      "name": "Casey Schmidt",
+      "email": "casey.schmidt@example.com"
+    }
+  },
+  {
+    "name": "JB - CR#3",
+    "owner": {
+      "name": "Chris Bell",
+      "email": "chris.bell@example.com"
+    }
+  },
+  {
+    "name": "We FORE Kings",
+    "owner": {
+      "name": "Amy Petersen",
+      "email": "amy.petersen@example.com"
+    }
+  },
+  {
+    "name": "Los Angeles de K",
+    "owner": {
+      "name": "Amy Petersen",
+      "email": "amy.petersen@example.com"
+    }
+  },
+  {
+    "name": "Tunie\u2019s Team",
+    "owner": {
+      "name": "Amy Petersen",
+      "email": "amy.petersen@example.com"
+    }
+  },
+  {
+    "name": "BigToadLake 2",
+    "owner": {
+      "name": "Terry Hanson",
+      "email": "terry.hanson@example.com"
+    }
+  },
+  {
+    "name": "Scotts Tots V4",
+    "owner": {
+      "name": "Connor Bowen",
+      "email": "connor.bowen@example.com"
+    }
+  },
+  {
+    "name": "Scotts Tots V5",
+    "owner": {
+      "name": "Connor Bowen",
+      "email": "connor.bowen@example.com"
+    }
+  },
+  {
+    "name": "The Crispy Brothers",
+    "owner": {
+      "name": "Eric Knipfer",
+      "email": "eric.knipfer@example.com"
+    }
+  },
+  {
+    "name": "RIPPER #1",
+    "owner": {
+      "name": "Chris Weiss",
+      "email": "chris.weiss@example.com"
+    }
+  },
+  {
+    "name": "CHER RIP #1",
+    "owner": {
+      "name": "Chris Weiss",
+      "email": "chris.weiss@example.com"
+    }
+  },
+  {
+    "name": "ZAZMANIA #1",
+    "owner": {
+      "name": "Mark Parupsky",
+      "email": "mark.parupsky@example.com"
+    }
+  },
+  {
+    "name": "ZAZMANIA #2",
+    "owner": {
+      "name": "Mark Parupsky",
+      "email": "mark.parupsky@example.com"
+    }
+  },
+  {
+    "name": "Four Putt 1",
+    "owner": {
+      "name": "Jim Giroux",
+      "email": "jim.giroux@example.com"
+    }
+  },
+  {
+    "name": "Four Putt 5",
+    "owner": {
+      "name": "Jim Giroux",
+      "email": "jim.giroux@example.com"
+    }
+  },
+  {
+    "name": "Four Putt 6",
+    "owner": {
+      "name": "Jim Giroux",
+      "email": "jim.giroux@example.com"
+    }
+  },
+  {
+    "name": "Three Putt 10",
+    "owner": {
+      "name": "Jim Giroux",
+      "email": "jim.giroux@example.com"
+    }
+  },
+  {
+    "name": "Matt Cotton 4",
+    "owner": {
+      "name": "Mark Cotton",
+      "email": "mark.cotton@example.com"
+    }
+  },
+  {
+    "name": "Eric Bratvold 2",
+    "owner": {
+      "name": "Mark Cotton",
+      "email": "mark.cotton@example.com"
+    }
+  },
+  {
+    "name": "TJ ROEKER 1",
+    "owner": {
+      "name": "Tim Scherkenbach",
+      "email": "tim.scherkenbach@example.com"
+    }
+  },
+  {
+    "name": "Dynamite Danish Duo",
+    "owner": {
+      "name": "Tim Scherkenbach",
+      "email": "tim.scherkenbach@example.com"
+    }
+  },
+  {
+    "name": "Vali-Making it Rain",
+    "owner": {
+      "name": "Tim Scherkenbach",
+      "email": "tim.scherkenbach@example.com"
+    }
+  },
+  {
+    "name": "DuffScruff's #1",
+    "owner": {
+      "name": "Tim Scherkenbach",
+      "email": "tim.scherkenbach@example.com"
+    }
+  },
+  {
+    "name": "Edison 1",
+    "owner": {
+      "name": "Matt Edison",
+      "email": "matt.edison@example.com"
+    }
+  },
+  {
+    "name": "Judge Smails #1",
+    "owner": {
+      "name": "Adam Gloudemans",
+      "email": "adam.gloudemans@example.com"
+    }
+  },
+  {
+    "name": "HOMAsexuals",
+    "owner": {
+      "name": "Adam Gloudemans",
+      "email": "adam.gloudemans@example.com"
+    }
+  },
+  {
+    "name": "The House of Bogies",
+    "owner": {
+      "name": "MTR",
+      "email": "mtr@example.com"
+    }
+  },
+  {
+    "name": "Banging The Bark",
+    "owner": {
+      "name": "MTR",
+      "email": "mtr@example.com"
+    }
+  },
+  {
+    "name": "Foley 1",
+    "owner": {
+      "name": "Mark Foley",
+      "email": "mark.foley@example.com"
+    }
+  },
+  {
+    "name": "Foley 2",
+    "owner": {
+      "name": "Mark Foley",
+      "email": "mark.foley@example.com"
+    }
+  },
+  {
+    "name": "GivenJustice",
+    "owner": {
+      "name": "Mark Christoffersen",
+      "email": "mark.christoffersen@example.com"
+    }
+  },
+  {
+    "name": "Scottie Doesn\u2019t Know I",
+    "owner": {
+      "name": "Justin Marable",
+      "email": "justin.marable@example.com"
+    }
+  },
+  {
+    "name": "Scottie Doesn\u2019t Know II",
+    "owner": {
+      "name": "Justin Marable",
+      "email": "justin.marable@example.com"
+    }
+  },
+  {
+    "name": "Scottie Doesn\u2019t Know III",
+    "owner": {
+      "name": "Justin Marable",
+      "email": "justin.marable@example.com"
+    }
+  },
+  {
+    "name": "Scottie Doesn\u2019t Know IV",
+    "owner": {
+      "name": "Justin Marable",
+      "email": "justin.marable@example.com"
+    }
+  },
+  {
+    "name": "Scottie Doesn't Know V",
+    "owner": {
+      "name": "Justin Marable",
+      "email": "justin.marable@example.com"
+    }
+  },
+  {
+    "name": "GIMMIE_PUTZ 5",
+    "owner": {
+      "name": "Ben Lofgren",
+      "email": "ben.lofgren@example.com"
+    }
+  },
+  {
+    "name": "SizeWickWave9",
+    "owner": {
+      "name": "Jon Szymanski",
+      "email": "jon.szymanski@example.com"
+    }
+  },
+  {
+    "name": "Eric Bratvold 3",
+    "owner": {
+      "name": "Mark Cotton",
+      "email": "mark.cotton@example.com"
+    }
+  },
+  {
+    "name": "Lisovskis - 2",
+    "owner": {
+      "name": "Brian Lisovskis",
+      "email": "brian.lisovskis@example.com"
+    }
+  },
+  {
+    "name": "LCW Team 2",
+    "owner": {
+      "name": "Lance Wahlert",
+      "email": "lance.wahlert@example.com"
+    }
+  },
+  {
+    "name": "Sawinski - 3",
+    "owner": {
+      "name": "Ryan Sawinski",
+      "email": "ryan.sawinski@example.com"
+    }
+  },
+  {
+    "name": "MDEPALMA",
+    "owner": {
+      "name": "Mark DePalma",
+      "email": "mark.depalma@example.com"
+    }
+  },
+  {
+    "name": "Jack Cotton 1",
+    "owner": {
+      "name": "Mark Cotton",
+      "email": "mark.cotton@example.com"
+    }
+  },
+  {
+    "name": "SR Golf 4",
+    "owner": {
+      "name": "Jim Brestel",
+      "email": "jim.brestel@example.com"
+    }
+  },
+  {
+    "name": "Hi Pro 3",
+    "owner": {
+      "name": "Denis Vontz",
+      "email": "denis.vontz@example.com"
+    }
+  },
+  {
+    "name": "Bunny # 2",
+    "owner": {
+      "name": "Rick Battles",
+      "email": "rick.battles@example.com"
+    }
+  },
+  {
+    "name": "Martha Engel #1",
+    "owner": {
+      "name": "Chris Mullen",
+      "email": "chris.mullen@example.com"
+    }
+  },
+  {
+    "name": "Cowboys 4",
+    "owner": {
+      "name": "Bruce Bryngelson",
+      "email": "bruce.bryngelson@example.com"
+    }
+  },
+  {
+    "name": "Lefty's Warriors",
+    "owner": {
+      "name": "Chris Bell",
+      "email": "chris.bell@example.com"
+    }
+  },
+  {
+    "name": "Matt Hendrickson 3",
+    "owner": {
+      "name": "Mark Cotton",
+      "email": "mark.cotton@example.com"
+    }
+  },
+  {
+    "name": "DuffScruff's #3",
+    "owner": {
+      "name": "Tim Scherkenbach",
+      "email": "tim.scherkenbach@example.com"
+    }
+  },
+  {
+    "name": "The Boyz",
+    "owner": {
+      "name": "Ladd Lyngaas",
+      "email": "ladd.lyngaas@example.com"
+    }
+  },
+  {
+    "name": "LFT4Life 11",
+    "owner": {
+      "name": "James Fronek",
+      "email": "james.fronek@example.com"
+    }
+  },
+  {
+    "name": "Greedy Pitches 2",
+    "owner": {
+      "name": "Bruce Bryngelson",
+      "email": "bruce.bryngelson@example.com"
+    }
+  },
+  {
+    "name": "Mingus 2",
+    "owner": {
+      "name": "Zach Mingus",
+      "email": "zach.mingus@example.com"
+    }
+  },
+  {
+    "name": "Braun 2",
+    "owner": {
+      "name": "John Braun",
+      "email": "john.braun@example.com"
+    }
+  },
+  {
+    "name": "Bunny # 1",
+    "owner": {
+      "name": "Rick Battles",
+      "email": "rick.battles@example.com"
+    }
+  },
+  {
+    "name": "UACATSBB26",
+    "owner": {
+      "name": "John Ryan",
+      "email": "john.ryan@example.com"
+    }
+  },
+  {
+    "name": "Foley 5",
+    "owner": {
+      "name": "Mark Foley",
+      "email": "mark.foley@example.com"
+    }
+  },
+  {
+    "name": "Hawk5",
+    "owner": {
+      "name": "Steven Hakanson",
+      "email": "steven.hakanson@example.com"
+    }
+  },
+  {
+    "name": "Justin The Nico Time",
+    "owner": {
+      "name": "Ladd Lyngaas",
+      "email": "ladd.lyngaas@example.com"
+    }
+  },
+  {
+    "name": "Jerry Parupsky 3",
+    "owner": {
+      "name": "Greg Parupsky",
+      "email": "greg.parupsky@example.com"
+    }
+  },
+  {
+    "name": "Pool or Pond 6",
+    "owner": {
+      "name": "Mike Murphy",
+      "email": "mike.murphy@example.com"
+    }
+  },
+  {
+    "name": "Cowley2",
+    "owner": {
+      "name": "Bob Cowley",
+      "email": "bob.cowley@example.com"
+    }
+  },
+  {
+    "name": "Fleetwood Mac",
+    "owner": {
+      "name": "Andrew Murphy",
+      "email": "andrew.murphy@example.com"
+    }
+  },
+  {
+    "name": "Dead Money1",
+    "owner": {
+      "name": "Gary Bibeau",
+      "email": "gary.bibeau@example.com"
+    }
+  },
+  {
+    "name": "Wayupnortder2",
+    "owner": {
+      "name": "Terry Hanson",
+      "email": "terry.hanson@example.com"
+    }
+  },
+  {
+    "name": "Miller #2",
+    "owner": {
+      "name": "Tom Miller",
+      "email": "tom.miller@example.com"
+    }
+  },
+  {
+    "name": "Morning Wood",
+    "owner": {
+      "name": "Ladd Lyngaas",
+      "email": "ladd.lyngaas@example.com"
+    }
+  },
+  {
+    "name": "Fore Left 6",
+    "owner": {
+      "name": "Trent Waterman",
+      "email": "trent.waterman@example.com"
+    }
+  },
+  {
+    "name": "The BLOB",
+    "owner": {
+      "name": "Greg Theroux",
+      "email": "greg.theroux@example.com"
+    }
+  },
+  {
+    "name": "Shanky McShankerson 1",
+    "owner": {
+      "name": "Phil Lombardi",
+      "email": "phil.lombardi@example.com"
+    }
+  },
+  {
+    "name": "Gotta Be Viktorious",
+    "owner": {
+      "name": "Tim Scherkenbach",
+      "email": "tim.scherkenbach@example.com"
+    }
+  },
+  {
+    "name": "BigCJames#3",
+    "owner": {
+      "name": "Craig DeBerg",
+      "email": "craig.deberg@example.com"
+    }
+  },
+  {
+    "name": "Gog FG 2",
+    "owner": {
+      "name": "Chris Gougler",
+      "email": "chris.gougler@example.com"
+    }
+  },
+  {
+    "name": "D and D 2",
+    "owner": {
+      "name": "Donovan Morrison",
+      "email": "donovan.morrison@example.com"
+    }
+  },
+  {
+    "name": "Steph's Squad",
+    "owner": {
+      "name": "Kellen Dockter",
+      "email": "kellen.dockter@example.com"
+    }
+  },
+  {
+    "name": "Four Putt 9",
+    "owner": {
+      "name": "Jim Giroux",
+      "email": "jim.giroux@example.com"
+    }
+  },
+  {
+    "name": "Three Putt 5",
+    "owner": {
+      "name": "Jim Giroux",
+      "email": "jim.giroux@example.com"
+    }
+  },
+  {
+    "name": "Three Putt 7",
+    "owner": {
+      "name": "Jim Giroux",
+      "email": "jim.giroux@example.com"
+    }
+  },
+  {
+    "name": "Edison 3",
+    "owner": {
+      "name": "Matt Edison",
+      "email": "matt.edison@example.com"
+    }
+  },
+  {
+    "name": "Buckshot",
+    "owner": {
+      "name": "Todd Thompson",
+      "email": "todd.thompson@example.com"
+    }
+  },
+  {
+    "name": "speith and crew",
+    "owner": {
+      "name": "Andy Phelps",
+      "email": "andy.phelps@example.com"
+    }
+  },
+  {
+    "name": "IVO 3",
+    "owner": {
+      "name": "Mike Ivester",
+      "email": "mike.ivester@example.com"
+    }
+  },
+  {
+    "name": "Jerry Parupsky 1",
+    "owner": {
+      "name": "Greg Parupsky",
+      "email": "greg.parupsky@example.com"
+    }
+  },
+  {
+    "name": "SizeWickWave5",
+    "owner": {
+      "name": "Jon Szymanski",
+      "email": "jon.szymanski@example.com"
+    }
+  },
+  {
+    "name": "Lisovskis - 4",
+    "owner": {
+      "name": "Brian Lisovskis",
+      "email": "brian.lisovskis@example.com"
+    }
+  },
+  {
+    "name": "CohensCornerAZ-4",
+    "owner": {
+      "name": "Eric Cohen",
+      "email": "eric.cohen@example.com"
+    }
+  },
+  {
+    "name": "Highlands 4",
+    "owner": {
+      "name": "Denis Vontz",
+      "email": "denis.vontz@example.com"
+    }
+  },
+  {
+    "name": "Matt Rules #2",
+    "owner": {
+      "name": "Mark Hickson",
+      "email": "mark.hickson@example.com"
+    }
+  },
+  {
+    "name": "SWILLY 2",
+    "owner": {
+      "name": "Steve Williams",
+      "email": "steve.williams@example.com"
+    }
+  },
+  {
+    "name": "Noonan",
+    "owner": {
+      "name": "Ryan Sawinski",
+      "email": "ryan.sawinski@example.com"
+    }
+  },
+  {
+    "name": "Three Putt 1",
+    "owner": {
+      "name": "Jim Giroux",
+      "email": "jim.giroux@example.com"
+    }
+  },
+  {
+    "name": "Three Putt 4",
+    "owner": {
+      "name": "Jim Giroux",
+      "email": "jim.giroux@example.com"
+    }
+  },
+  {
+    "name": "Mark Cotton 3",
+    "owner": {
+      "name": "Mark Cotton",
+      "email": "mark.cotton@example.com"
+    }
+  },
+  {
+    "name": "Mark Cotton 4",
+    "owner": {
+      "name": "Mark Cotton",
+      "email": "mark.cotton@example.com"
+    }
+  },
+  {
+    "name": "Jack Cotton 3",
+    "owner": {
+      "name": "Mark Cotton",
+      "email": "mark.cotton@example.com"
+    }
+  },
+  {
+    "name": "Little Shooters#1",
+    "owner": {
+      "name": "Adam Gloudemans",
+      "email": "adam.gloudemans@example.com"
+    }
+  },
+  {
+    "name": "Harry Balls",
+    "owner": {
+      "name": "Adam Gloudemans",
+      "email": "adam.gloudemans@example.com"
+    }
+  },
+  {
+    "name": "Gadbois 1",
+    "owner": {
+      "name": "Jack Gadbois",
+      "email": "jack.gadbois@example.com"
+    }
+  },
+  {
+    "name": "GivenJustice2",
+    "owner": {
+      "name": "Mark Christoffersen",
+      "email": "mark.christoffersen@example.com"
+    }
+  },
+  {
+    "name": "IVO 2",
+    "owner": {
+      "name": "Mike Ivester",
+      "email": "mike.ivester@example.com"
+    }
+  },
+  {
+    "name": "IVO 4",
+    "owner": {
+      "name": "Mike Ivester",
+      "email": "mike.ivester@example.com"
+    }
+  },
+  {
+    "name": "IVO5",
+    "owner": {
+      "name": "Mike Ivester",
+      "email": "mike.ivester@example.com"
+    }
+  },
+  {
+    "name": "Max's Team 2",
+    "owner": {
+      "name": "Max Jensen",
+      "email": "max.jensen@example.com"
+    }
+  },
+  {
+    "name": "Max's Team 4",
+    "owner": {
+      "name": "Max Jensen",
+      "email": "max.jensen@example.com"
+    }
+  },
+  {
+    "name": "Caddyshack Rejects3",
+    "owner": {
+      "name": "Scott Chapko",
+      "email": "scott.chapko@example.com"
+    }
+  },
+  {
+    "name": "Caddyshack Rejects4",
+    "owner": {
+      "name": "Scott Chapko",
+      "email": "scott.chapko@example.com"
+    }
+  },
+  {
+    "name": "Trust The Chuck #1",
+    "owner": {
+      "name": "Charles Lovelace",
+      "email": "charles.lovelace@example.com"
+    }
+  },
+  {
+    "name": "Trust The Chuck #2",
+    "owner": {
+      "name": "Charles Lovelace",
+      "email": "charles.lovelace@example.com"
+    }
+  },
+  {
+    "name": "LAZER 4",
+    "owner": {
+      "name": "Ben Loesel",
+      "email": "ben.loesel@example.com"
+    }
+  },
+  {
+    "name": "LAZER 5",
+    "owner": {
+      "name": "Ben Loesel",
+      "email": "ben.loesel@example.com"
+    }
+  },
+  {
+    "name": "LAZER 6",
+    "owner": {
+      "name": "Ben Loesel",
+      "email": "ben.loesel@example.com"
+    }
+  },
+  {
+    "name": "Donk Funska",
+    "owner": {
+      "name": "Tom Folska",
+      "email": "tom.folska@example.com"
+    }
+  },
+  {
+    "name": "BigCJames#4",
+    "owner": {
+      "name": "Craig DeBerg",
+      "email": "craig.deberg@example.com"
+    }
+  },
+  {
+    "name": "Will DeBerg3",
+    "owner": {
+      "name": "Craig DeBerg",
+      "email": "craig.deberg@example.com"
+    }
+  },
+  {
+    "name": "Hawk2",
+    "owner": {
+      "name": "Steven Hakanson",
+      "email": "steven.hakanson@example.com"
+    }
+  },
+  {
+    "name": "Texas Wedge (4)",
+    "owner": {
+      "name": "Gunnar Bordeaux",
+      "email": "gunnar.bordeaux@example.com"
+    }
+  },
+  {
+    "name": "George",
+    "owner": {
+      "name": "Cookie Kaplan",
+      "email": "cookie.kaplan@example.com"
+    }
+  },
+  {
+    "name": "SDEPALMA",
+    "owner": {
+      "name": "Mark DePalma",
+      "email": "mark.depalma@example.com"
+    }
+  },
+  {
+    "name": "JDEPALMA",
+    "owner": {
+      "name": "Mark DePalma",
+      "email": "mark.depalma@example.com"
+    }
+  },
+  {
+    "name": "DRJ #3",
+    "owner": {
+      "name": "David Johnson",
+      "email": "david.johnson@example.com"
+    }
+  },
+  {
+    "name": "DRJ #4",
+    "owner": {
+      "name": "David Johnson",
+      "email": "david.johnson@example.com"
+    }
+  },
+  {
+    "name": "One Hung Low",
+    "owner": {
+      "name": "Ladd Lyngaas",
+      "email": "ladd.lyngaas@example.com"
+    }
+  },
+  {
+    "name": "Willy's Willyz's",
+    "owner": {
+      "name": "Ladd Lyngaas",
+      "email": "ladd.lyngaas@example.com"
+    }
+  },
+  {
+    "name": "It Burns When I Tee",
+    "owner": {
+      "name": "Ladd Lyngaas",
+      "email": "ladd.lyngaas@example.com"
+    }
+  },
+  {
+    "name": "Skol Viktor!",
+    "owner": {
+      "name": "Ladd Lyngaas",
+      "email": "ladd.lyngaas@example.com"
+    }
+  },
+  {
+    "name": "GIMMIE_PUTZ 3",
+    "owner": {
+      "name": "Ben Lofgren",
+      "email": "ben.lofgren@example.com"
+    }
+  },
+  {
+    "name": "GIMMIE_PUTZ 4",
+    "owner": {
+      "name": "Ben Lofgren",
+      "email": "ben.lofgren@example.com"
+    }
+  },
+  {
+    "name": "Jerry Parupsky 2",
+    "owner": {
+      "name": "Greg Parupsky",
+      "email": "greg.parupsky@example.com"
+    }
+  },
+  {
+    "name": "Amy LeFebvre",
+    "owner": {
+      "name": "Greg Parupsky",
+      "email": "greg.parupsky@example.com"
+    }
+  },
+  {
+    "name": "Chad Bartron 2",
+    "owner": {
+      "name": "Chad Bartron",
+      "email": "chad.bartron@example.com"
+    }
+  },
+  {
+    "name": "Crooked Arrow 1",
+    "owner": {
+      "name": "Mark Kalan",
+      "email": "mark.kalan@example.com"
+    }
+  },
+  {
+    "name": "Crooked Arrow 2",
+    "owner": {
+      "name": "Mark Kalan",
+      "email": "mark.kalan@example.com"
+    }
+  },
+  {
+    "name": "Crooked Arrow 3",
+    "owner": {
+      "name": "Mark Kalan",
+      "email": "mark.kalan@example.com"
+    }
+  },
+  {
+    "name": "Anderski",
+    "owner": {
+      "name": "Alan Andert",
+      "email": "alan.andert@example.com"
+    }
+  },
+  {
+    "name": "Another AA",
+    "owner": {
+      "name": "Alan Andert",
+      "email": "alan.andert@example.com"
+    }
+  },
+  {
+    "name": "Agent 007",
+    "owner": {
+      "name": "Alan Andert",
+      "email": "alan.andert@example.com"
+    }
+  },
+  {
+    "name": "CheeseTown Dirty Dogs 3",
+    "owner": {
+      "name": "Eric Wenzel",
+      "email": "eric.wenzel@example.com"
+    }
+  },
+  {
+    "name": "CheeseTown Dirty Dogs 4",
+    "owner": {
+      "name": "Eric Wenzel",
+      "email": "eric.wenzel@example.com"
+    }
+  },
+  {
+    "name": "Team GT",
+    "owner": {
+      "name": "Edward Haubrich",
+      "email": "edward.haubrich@example.com"
+    }
+  },
+  {
+    "name": "SR Golf 5",
+    "owner": {
+      "name": "Jim Brestel",
+      "email": "jim.brestel@example.com"
+    }
+  },
+  {
+    "name": "SR Golf 6",
+    "owner": {
+      "name": "Jim Brestel",
+      "email": "jim.brestel@example.com"
+    }
+  },
+  {
+    "name": "DeegChalinni #6",
+    "owner": {
+      "name": "Pete Spoden",
+      "email": "pete.spoden@example.com"
+    }
+  },
+  {
+    "name": "Fore Left 4",
+    "owner": {
+      "name": "Trent Waterman",
+      "email": "trent.waterman@example.com"
+    }
+  },
+  {
+    "name": "Fore Left 5",
+    "owner": {
+      "name": "Trent Waterman",
+      "email": "trent.waterman@example.com"
+    }
+  },
+  {
+    "name": "Fore Left 7",
+    "owner": {
+      "name": "Trent Waterman",
+      "email": "trent.waterman@example.com"
+    }
+  },
+  {
+    "name": "D.W. #2",
+    "owner": {
+      "name": "Brian Merchant",
+      "email": "brian.merchant@example.com"
+    }
+  },
+  {
+    "name": "Team Matt R",
+    "owner": {
+      "name": "Matthew Robinson",
+      "email": "matthew.robinson@example.com"
+    }
+  },
+  {
+    "name": "Miller #1",
+    "owner": {
+      "name": "Tom Miller",
+      "email": "tom.miller@example.com"
+    }
+  },
+  {
+    "name": "SizeWickWave4",
+    "owner": {
+      "name": "Jon Szymanski",
+      "email": "jon.szymanski@example.com"
+    }
+  },
+  {
+    "name": "SizeWickWave6",
+    "owner": {
+      "name": "Jon Szymanski",
+      "email": "jon.szymanski@example.com"
+    }
+  },
+  {
+    "name": "SizeWickWave7",
+    "owner": {
+      "name": "Jon Szymanski",
+      "email": "jon.szymanski@example.com"
+    }
+  },
+  {
+    "name": "SizeWickWave8",
+    "owner": {
+      "name": "Jon Szymanski",
+      "email": "jon.szymanski@example.com"
+    }
+  },
+  {
+    "name": "Swiss Family II",
+    "owner": {
+      "name": "Joel Robinson",
+      "email": "joel.robinson@example.com"
+    }
+  },
+  {
+    "name": "Lisovskis - 3",
+    "owner": {
+      "name": "Brian Lisovskis",
+      "email": "brian.lisovskis@example.com"
+    }
+  },
+  {
+    "name": "CohensCornerAZ-6",
+    "owner": {
+      "name": "Eric Cohen",
+      "email": "eric.cohen@example.com"
+    }
+  },
+  {
+    "name": "Hi Pro 4",
+    "owner": {
+      "name": "Denis Vontz",
+      "email": "denis.vontz@example.com"
+    }
+  },
+  {
+    "name": "Highlands 2",
+    "owner": {
+      "name": "Denis Vontz",
+      "email": "denis.vontz@example.com"
+    }
+  },
+  {
+    "name": "51st State",
+    "owner": {
+      "name": "Greg Theroux",
+      "email": "greg.theroux@example.com"
+    }
+  },
+  {
+    "name": "Battles # 4",
+    "owner": {
+      "name": "Rick Battles",
+      "email": "rick.battles@example.com"
+    }
+  },
+  {
+    "name": "Patrick Wenzel 2",
+    "owner": {
+      "name": "Eric Wenzel",
+      "email": "eric.wenzel@example.com"
+    }
+  },
+  {
+    "name": "LFT4Life 12",
+    "owner": {
+      "name": "James Fronek",
+      "email": "james.fronek@example.com"
+    }
+  },
+  {
+    "name": "Pass the Nerbo 7",
+    "owner": {
+      "name": "Andrew Wahlert",
+      "email": "andrew.wahlert@example.com"
+    }
+  },
+  {
+    "name": "Pass the Nerbo 8",
+    "owner": {
+      "name": "Andrew Wahlert",
+      "email": "andrew.wahlert@example.com"
+    }
+  },
+  {
+    "name": "Casey Schmidt",
+    "owner": {
+      "name": "Casey Schmidt",
+      "email": "casey.schmidt@example.com"
+    }
+  },
+  {
+    "name": "Muggers Crew",
+    "owner": {
+      "name": "Pat McGrath",
+      "email": "pat.mcgrath@example.com"
+    }
+  },
+  {
+    "name": "Scottie's Best Team",
+    "owner": {
+      "name": "Drew Southcott",
+      "email": "drew.southcott@example.com"
+    }
+  },
+  {
+    "name": "Cowley4",
+    "owner": {
+      "name": "Bob Cowley",
+      "email": "bob.cowley@example.com"
+    }
+  },
+  {
+    "name": "LCW Team 3",
+    "owner": {
+      "name": "Lance Wahlert",
+      "email": "lance.wahlert@example.com"
+    }
+  },
+  {
+    "name": "SWILLY 4",
+    "owner": {
+      "name": "Steve Williams",
+      "email": "steve.williams@example.com"
+    }
+  },
+  {
+    "name": "Bunny",
+    "owner": {
+      "name": "Greg Bowen",
+      "email": "greg.bowen@example.com"
+    }
+  },
+  {
+    "name": "KingPutt 2",
+    "owner": {
+      "name": "Alan Doan",
+      "email": "alan.doan@example.com"
+    }
+  },
+  {
+    "name": "KingPutt 4",
+    "owner": {
+      "name": "Alan Doan",
+      "email": "alan.doan@example.com"
+    }
+  },
+  {
+    "name": "KingPutt 5",
+    "owner": {
+      "name": "Alan Doan",
+      "email": "alan.doan@example.com"
+    }
+  },
+  {
+    "name": "KingPutt 6",
+    "owner": {
+      "name": "Alan Doan",
+      "email": "alan.doan@example.com"
+    }
+  },
+  {
+    "name": "KingPutt 7",
+    "owner": {
+      "name": "Alan Doan",
+      "email": "alan.doan@example.com"
+    }
+  },
+  {
+    "name": "R & R - #4",
+    "owner": {
+      "name": "Ryan Sawinski",
+      "email": "ryan.sawinski@example.com"
+    }
+  },
+  {
+    "name": "SAND trap",
+    "owner": {
+      "name": "Peter Tountas",
+      "email": "peter.tountas@example.com"
+    }
+  },
+  {
+    "name": "Chris Mullen # 4",
+    "owner": {
+      "name": "Chris Mullen",
+      "email": "chris.mullen@example.com"
+    }
+  },
+  {
+    "name": "Pureballstrikers 2",
+    "owner": {
+      "name": "Bruce Bryngelson",
+      "email": "bruce.bryngelson@example.com"
+    }
+  },
+  {
+    "name": "Cowboys 9",
+    "owner": {
+      "name": "Bruce Bryngelson",
+      "email": "bruce.bryngelson@example.com"
+    }
+  },
+  {
+    "name": "Cowboys 88",
+    "owner": {
+      "name": "Bruce Bryngelson",
+      "email": "bruce.bryngelson@example.com"
+    }
+  },
+  {
+    "name": "Greedy Pitches 3",
+    "owner": {
+      "name": "Bruce Bryngelson",
+      "email": "bruce.bryngelson@example.com"
+    }
+  },
+  {
+    "name": "M-Doc's Squad #2",
+    "owner": {
+      "name": "Kellen Dockter",
+      "email": "kellen.dockter@example.com"
+    }
+  },
+  {
+    "name": "Doc's Swingers #2",
+    "owner": {
+      "name": "Kellen Dockter",
+      "email": "kellen.dockter@example.com"
+    }
+  },
+  {
+    "name": "JSNR #4",
+    "owner": {
+      "name": "Steve Oczak",
+      "email": "steve.oczak@example.com"
+    }
+  },
+  {
+    "name": "bp 3",
+    "owner": {
+      "name": "Andy Phelps",
+      "email": "andy.phelps@example.com"
+    }
+  },
+  {
+    "name": "Denny Mac",
+    "owner": {
+      "name": "Chris Bell",
+      "email": "chris.bell@example.com"
+    }
+  },
+  {
+    "name": "JB - CR#2",
+    "owner": {
+      "name": "Chris Bell",
+      "email": "chris.bell@example.com"
+    }
+  },
+  {
+    "name": "Bangert 2",
+    "owner": {
+      "name": "Jack Gadbois",
+      "email": "jack.gadbois@example.com"
+    }
+  },
+  {
+    "name": "That\u2019s So FORE-\u20185-\u20186",
+    "owner": {
+      "name": "Amy Petersen",
+      "email": "amy.petersen@example.com"
+    }
+  },
+  {
+    "name": "Cabo No Bad Shots",
+    "owner": {
+      "name": "Amy Petersen",
+      "email": "amy.petersen@example.com"
+    }
+  },
+  {
+    "name": "The B-Squad",
+    "owner": {
+      "name": "Amy Petersen",
+      "email": "amy.petersen@example.com"
+    }
+  },
+  {
+    "name": "The Velvet Squad",
+    "owner": {
+      "name": "Amy Petersen",
+      "email": "amy.petersen@example.com"
+    }
+  },
+  {
+    "name": "Tippy\u2019s Too Who\u2019s",
+    "owner": {
+      "name": "Amy Petersen",
+      "email": "amy.petersen@example.com"
+    }
+  },
+  {
+    "name": "Snippy\u2019s Snappers",
+    "owner": {
+      "name": "Amy Petersen",
+      "email": "amy.petersen@example.com"
+    }
+  },
+  {
+    "name": "Jk1",
+    "owner": {
+      "name": "Jennifer Kahlbaugh",
+      "email": "jennifer.kahlbaugh@example.com"
+    }
+  },
+  {
+    "name": "BigToadLake 3",
+    "owner": {
+      "name": "Terry Hanson",
+      "email": "terry.hanson@example.com"
+    }
+  },
+  {
+    "name": "BigToadLake 4",
+    "owner": {
+      "name": "Terry Hanson",
+      "email": "terry.hanson@example.com"
+    }
+  },
+  {
+    "name": "Wayupnortder1",
+    "owner": {
+      "name": "Terry Hanson",
+      "email": "terry.hanson@example.com"
+    }
+  },
+  {
+    "name": "The Crispy Brothers II",
+    "owner": {
+      "name": "Eric Knipfer",
+      "email": "eric.knipfer@example.com"
+    }
+  },
+  {
+    "name": "CHER RIP #2",
+    "owner": {
+      "name": "Chris Weiss",
+      "email": "chris.weiss@example.com"
+    }
+  },
+  {
+    "name": "Hot Sauce Auntie Amy",
+    "owner": {
+      "name": "Mark Petersen",
+      "email": "mark.petersen@example.com"
+    }
+  },
+  {
+    "name": "ZAZMANIA #4",
+    "owner": {
+      "name": "Mark Parupsky",
+      "email": "mark.parupsky@example.com"
+    }
+  },
+  {
+    "name": "ZAZMANIA #5",
+    "owner": {
+      "name": "Mark Parupsky",
+      "email": "mark.parupsky@example.com"
+    }
+  },
+  {
+    "name": "ZAZMANIA #6",
+    "owner": {
+      "name": "Mark Parupsky",
+      "email": "mark.parupsky@example.com"
+    }
+  },
+  {
+    "name": "ZAZMANIA #8",
+    "owner": {
+      "name": "Mark Parupsky",
+      "email": "mark.parupsky@example.com"
+    }
+  },
+  {
+    "name": "ZAZMANIA #9",
+    "owner": {
+      "name": "Mark Parupsky",
+      "email": "mark.parupsky@example.com"
+    }
+  },
+  {
+    "name": "Four Putt 3",
+    "owner": {
+      "name": "Jim Giroux",
+      "email": "jim.giroux@example.com"
+    }
+  },
+  {
+    "name": "Four Putt 10",
+    "owner": {
+      "name": "Jim Giroux",
+      "email": "jim.giroux@example.com"
+    }
+  },
+  {
+    "name": "Three Putt 2",
+    "owner": {
+      "name": "Jim Giroux",
+      "email": "jim.giroux@example.com"
+    }
+  },
+  {
+    "name": "Three Putt 3",
+    "owner": {
+      "name": "Jim Giroux",
+      "email": "jim.giroux@example.com"
+    }
+  },
+  {
+    "name": "Three Putt 6",
+    "owner": {
+      "name": "Jim Giroux",
+      "email": "jim.giroux@example.com"
+    }
+  },
+  {
+    "name": "Matt Cotton 2",
+    "owner": {
+      "name": "Mark Cotton",
+      "email": "mark.cotton@example.com"
+    }
+  },
+  {
+    "name": "Jack Cotton 2",
+    "owner": {
+      "name": "Mark Cotton",
+      "email": "mark.cotton@example.com"
+    }
+  },
+  {
+    "name": "Jack Cotton 4",
+    "owner": {
+      "name": "Mark Cotton",
+      "email": "mark.cotton@example.com"
+    }
+  },
+  {
+    "name": "Matt Hendrickson 4",
+    "owner": {
+      "name": "Mark Cotton",
+      "email": "mark.cotton@example.com"
+    }
+  },
+  {
+    "name": "Eric Bratvold 1",
+    "owner": {
+      "name": "Mark Cotton",
+      "email": "mark.cotton@example.com"
+    }
+  },
+  {
+    "name": "Eric Bratvold 4",
+    "owner": {
+      "name": "Mark Cotton",
+      "email": "mark.cotton@example.com"
+    }
+  },
+  {
+    "name": "TJ ROEKER 2",
+    "owner": {
+      "name": "Tim Scherkenbach",
+      "email": "tim.scherkenbach@example.com"
+    }
+  },
+  {
+    "name": "ALI ROEKER 1",
+    "owner": {
+      "name": "Tim Scherkenbach",
+      "email": "tim.scherkenbach@example.com"
+    }
+  },
+  {
+    "name": "ALI ROEKER 2",
+    "owner": {
+      "name": "Tim Scherkenbach",
+      "email": "tim.scherkenbach@example.com"
+    }
+  },
+  {
+    "name": "ALI ROEKER 3",
+    "owner": {
+      "name": "Tim Scherkenbach",
+      "email": "tim.scherkenbach@example.com"
+    }
+  },
+  {
+    "name": "ALI ROEKER 4",
+    "owner": {
+      "name": "Tim Scherkenbach",
+      "email": "tim.scherkenbach@example.com"
+    }
+  },
+  {
+    "name": "GRIFFIN BOOTH 2",
+    "owner": {
+      "name": "Tim Scherkenbach",
+      "email": "tim.scherkenbach@example.com"
+    }
+  },
+  {
+    "name": "Thors Hammer Burns Hot",
+    "owner": {
+      "name": "Tim Scherkenbach",
+      "email": "tim.scherkenbach@example.com"
+    }
+  },
+  {
+    "name": "Foreeeever Young",
+    "owner": {
+      "name": "Tim Scherkenbach",
+      "email": "tim.scherkenbach@example.com"
+    }
+  },
+  {
+    "name": "Body by Waffle House",
+    "owner": {
+      "name": "Tim Scherkenbach",
+      "email": "tim.scherkenbach@example.com"
+    }
+  },
+  {
+    "name": "DuffScruff's #4",
+    "owner": {
+      "name": "Tim Scherkenbach",
+      "email": "tim.scherkenbach@example.com"
+    }
+  },
+  {
+    "name": "One Hole to Rule Them All",
+    "owner": {
+      "name": "Tim Scherkenbach",
+      "email": "tim.scherkenbach@example.com"
+    }
+  },
+  {
+    "name": "Scr3w Ice",
+    "owner": {
+      "name": "Tim Scherkenbach",
+      "email": "tim.scherkenbach@example.com"
+    }
+  },
+  {
+    "name": "Will IM",
+    "owner": {
+      "name": "Tim Scherkenbach",
+      "email": "tim.scherkenbach@example.com"
+    }
+  },
+  {
+    "name": "Edison 4",
+    "owner": {
+      "name": "Matt Edison",
+      "email": "matt.edison@example.com"
+    }
+  },
+  {
+    "name": "Judge Smails #2",
+    "owner": {
+      "name": "Adam Gloudemans",
+      "email": "adam.gloudemans@example.com"
+    }
+  },
+  {
+    "name": "What Sweet Spot",
+    "owner": {
+      "name": "MTR",
+      "email": "mtr@example.com"
+    }
+  },
+  {
+    "name": "Foley 4",
+    "owner": {
+      "name": "Mark Foley",
+      "email": "mark.foley@example.com"
+    }
+  },
+  {
+    "name": "GivenJustice1",
+    "owner": {
+      "name": "Mark Christoffersen",
+      "email": "mark.christoffersen@example.com"
+    }
+  },
+  {
+    "name": "GivenJustice3",
+    "owner": {
+      "name": "Mark Christoffersen",
+      "email": "mark.christoffersen@example.com"
+    }
+  },
+  {
+    "name": "Chicken Dinner 2",
+    "owner": {
+      "name": "Tim McGlynn",
+      "email": "tim.mcglynn@example.com"
+    }
+  },
+  {
+    "name": "Chicken Dinner 3",
+    "owner": {
+      "name": "Tim McGlynn",
+      "email": "tim.mcglynn@example.com"
+    }
+  },
+  {
+    "name": "Jolly2",
+    "owner": {
+      "name": "Justin Rhodes",
+      "email": "justin.rhodes@example.com"
+    }
+  },
+  {
+    "name": "Tis the Season to be Rory",
+    "owner": {
+      "name": "Justin Marable",
+      "email": "justin.marable@example.com"
+    }
+  },
+  {
+    "name": "Tis the Season to be Rory II",
+    "owner": {
+      "name": "Justin Marable",
+      "email": "justin.marable@example.com"
+    }
+  },
+  {
+    "name": "Wyndam Beneath my Wings",
+    "owner": {
+      "name": "Justin Marable",
+      "email": "justin.marable@example.com"
+    }
+  },
+  {
+    "name": "Lego my Aberg",
+    "owner": {
+      "name": "Justin Marable",
+      "email": "justin.marable@example.com"
+    }
+  },
+  {
+    "name": "I am Im",
+    "owner": {
+      "name": "Justin Marable",
+      "email": "justin.marable@example.com"
+    }
+  },
+  {
+    "name": "Let My Cameron Go",
+    "owner": {
+      "name": "Justin Marable",
+      "email": "justin.marable@example.com"
+    }
+  },
+  {
+    "name": "Let My Cameron Go",
+    "owner": {
+      "name": "Justin Marable",
+      "email": "justin.marable@example.com"
+    }
+  },
+  {
+    "name": "Mingus 4",
+    "owner": {
+      "name": "Zach Mingus",
+      "email": "zach.mingus@example.com"
+    }
+  }
+]

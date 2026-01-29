@@ -42,4 +42,26 @@ export class OwnerService {
     await newOwner.save();
     return newOwner;
   }
+
+  /**
+   * Finds an owner by email, or creates a new one if it doesn't exist.
+   *
+   * @param input - The owner data (name and email)
+   * @returns The existing or newly created owner
+   */
+  async findOrCreateOwner(input: {
+    name?: string;
+    email: string;
+  }): Promise<Owner> {
+    // Try to find existing owner by email
+    let owner = await this.ownerModel.findOne({ email: input.email }).exec();
+
+    if (!owner) {
+      // Owner doesn't exist, create new one
+      owner = new this.ownerModel(input);
+      await owner.save();
+    }
+
+    return owner;
+  }
 }
