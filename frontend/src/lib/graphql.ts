@@ -1,6 +1,5 @@
 const GRAPHQL_ENDPOINT: string =
-  (import.meta.env.PUBLIC_GRAPHQL_ENDPOINT as string) ||
-  'http://localhost:3000/graphql';
+  import.meta.env.PUBLIC_GRAPHQL_ENDPOINT || 'http://localhost:3000/graphql';
 
 interface GraphQLErrorItem {
   message: string;
