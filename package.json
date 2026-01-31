@@ -7,7 +7,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "build": "nest build",
-    "build:frontend": "cd frontend && yarn build",
+    "build:frontend": "cd frontend && yarn install && yarn build",
     "build:all": "yarn build:frontend && nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
