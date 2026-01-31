@@ -7,7 +7,9 @@ const GET_PLAYERS = `
     getAllPlayers {
       id
       name
+      pgaId
       salary
+      totalPoints
     }
   }
 `;
@@ -15,7 +17,9 @@ const GET_PLAYERS = `
 interface Player {
   id: string;
   name: string;
+  pgaId?: number;
   salary?: number;
+  totalPoints: number;
 }
 
 interface GetPlayersResponse {
@@ -35,75 +39,106 @@ try {
 
 <BaseLayout title="Players">
   <section class="card">
-        <header class="card-header">
-          <div class="card-header-main">
-            <p class="eyebrow">Roster</p>
-            <h1 class="title">Players</h1>
-            <p class="subtitle">Browse all players in the fantasy golf league.</p>
+    <header class="card-header">
+      <div class="card-header-main">
+        <p class="eyebrow">Roster</p>
+        <h1 class="title">Players</h1>
+        <p class="subtitle">Browse all players in the fantasy golf league.</p>
+      </div>
+
+      <form class="card-header-actions" method="get" role="search">
+        <label class="sr-only" for="player-search">Search players</label>
+        <div class="search-wrapper">
+          <svg
+            class="search-icon"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+          <input
+            id="player-search"
+            class="search-input"
+            type="search"
+            name="q"
+            placeholder="Search players"
+          />
+        </div>
+      </form>
+    </header>
+
+    {
+      error && (
+        <div class="state state-error">
+          <p>We couldn't load players.</p>
+          <p class="state-detail">{error}</p>
+        </div>
+      )
+    }
+
+    {
+      !error && players.length === 0 && (
+        <div class="state">
+          <p>No players found yet.</p>
+          <p class="state-detail">
+            Players will appear here once they're added to the system.
+          </p>
+        </div>
+      )
+    }
+
+    {
+      !error && players.length > 0 && (
+        <div class="table">
+          <div class="table-head">
+            <span class="col-thumbnail" />
+            <span class="col-name">Player</span>
+            <span class="col-points">Total Points</span>
+            <span class="col-wins">Wins</span>
           </div>
 
-          <form class="card-header-actions" method="get" role="search">
-            <label class="sr-only" for="player-search">Search players</label>
-            <div class="search-wrapper">
-              <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="11" cy="11" r="8"/>
-                <path d="m21 21-4.35-4.35"/>
-              </svg>
-              <input
-                id="player-search"
-                class="search-input"
-                type="search"
-                name="q"
-                placeholder="Search players"
-              />
-            </div>
-          </form>
-        </header>
-
-        {error && (
-          <div class="state state-error">
-            <p>We couldn't load players.</p>
-            <p class="state-detail">{error}</p>
-          </div>
-        )}
-
-        {!error && players.length === 0 && (
-          <div class="state">
-            <p>No players found yet.</p>
-            <p class="state-detail">Players will appear here once they're added to the system.</p>
-          </div>
-        )}
-
-        {!error && players.length > 0 && (
-          <div class="table">
-            <div class="table-head">
-              <span class="col-thumbnail"></span>
-              <span class="col-name">Player</span>
-              <span class="col-points">Total Points</span>
-              <span class="col-wins">Wins</span>
-            </div>
-
-            <ul class="rows" aria-label="Players list">
-              {players.map((player) => (
-                <li class="row" data-player-row data-player-name={player.name}>
-                  <div class="col-thumbnail">
-                    <div class="avatar" aria-hidden="true">
-                      {player.name.charAt(0).toUpperCase()}
-                    </div>
-                  </div>
-                  <div class="col-name">
-                    <span class="player-name">{player.name}</span>
-                    {player.salary && (
-                      <span class="player-salary">${player.salary.toLocaleString()}</span>
+          <ul class="rows" aria-label="Players list">
+            {players.map((player) => (
+              <li class="row" data-player-row data-player-name={player.name}>
+                <div class="col-thumbnail">
+                  <div class="avatar" aria-hidden="true">
+                    {player.pgaId ? (
+                      <img
+                        src={`https://pga-tour-res.cloudinary.com/image/upload/c_thumb,g_face,z_0.7,q_auto,f_auto,dpr_2.0,w_80,h_80,b_rgb:F2F2F2,d_stub:default_avatar_light.webp/headshots_${player.pgaId}`}
+                        alt=""
+                        width="32"
+                        height="32"
+                        loading="lazy"
+                        style="border-radius: 999px;"
+                      />
+                    ) : (
+                      player.name.charAt(0).toUpperCase()
                     )}
                   </div>
-                  <span class="col-points">—</span>
-                  <span class="col-wins">—</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
+                </div>
+                <div class="col-name">
+                  <span class="player-name">{player.name}</span>
+                  {player.salary && (
+                    <span class="player-salary">
+                      ${player.salary.toLocaleString()}
+                    </span>
+                  )}
+                </div>
+                <span class="col-points">{player.totalPoints}</span>
+                <span class="col-wins">—</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )
+    }
   </section>
 </BaseLayout>
 
@@ -121,7 +156,11 @@ try {
   .page {
     margin: 0;
     min-height: 100vh;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Text',
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      'SF Pro Text',
       sans-serif;
     background: var(--page-bg);
     color: var(--text-main);
@@ -326,7 +365,9 @@ try {
 
     .card {
       border-radius: 1.5rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+      box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.08),
+        0 2px 4px rgba(0, 0, 0, 0.04);
     }
 
     .card-header {
@@ -355,9 +396,7 @@ try {
   function initPlayerSearch() {
     const form = document.querySelector('.card-header-actions');
     const input = document.getElementById('player-search');
-    const rows = Array.from(
-      document.querySelectorAll('[data-player-row]'),
-    );
+    const rows = Array.from(document.querySelectorAll('[data-player-row]'));
 
     if (!(input instanceof HTMLInputElement)) return;
 

@@ -56,6 +56,12 @@ export class PlayersResolver {
     }
   }
 
+  @ResolveField('totalPoints', () => Number)
+  async getTotalPoints(@Parent() player: Player): Promise<number> {
+    const results = await this.getResults(player);
+    return results.reduce((total, result) => total + result.points, 0);
+  }
+
   @ResolveField('results', () => [Result])
   async getResults(@Parent() player: Player): Promise<Result[]> {
     const results = await this.resultsService.getResultsByPlayerId(player.id);

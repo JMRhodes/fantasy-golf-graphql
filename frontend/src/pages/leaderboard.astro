@@ -12,10 +12,11 @@ const GET_TEAMS = `
         id
         name
       }
-    }
-    getAllPlayers {
-      id
-      name
+      players {
+        id
+        name
+        pgaId
+      }
     }
   }
 `;
@@ -29,16 +30,17 @@ interface Team {
   id: string;
   name: string | null;
   ownerId: Owner | null;
+  players: Player[] | null;
 }
 
 interface Player {
   id: string;
   name: string;
+  pgaId?: number | null;
 }
 
 interface GetTeamsResponse {
   getAllTeams: Team[];
-  getAllPlayers: Player[];
 }
 interface LeaderboardRow {
   rank: number;
@@ -46,6 +48,7 @@ interface LeaderboardRow {
   ownerName: string;
   avatarBg: string;
   avatarFg: string;
+  players: Player[];
 }
 
 const pastelPalette: { bg: string; fg: string }[] = [
@@ -58,22 +61,11 @@ const pastelPalette: { bg: string; fg: string }[] = [
 ];
 
 let rows: LeaderboardRow[] = [];
-let samplePlayers: Player[] = [];
 let error: string | null = null;
 
 try {
   const data = await fetchGraphQL<GetTeamsResponse>(GET_TEAMS);
   const teams = data.getAllTeams ?? [];
-  const players = data.getAllPlayers ?? [];
-
-  if (players.length > 0) {
-    const shuffled = [...players];
-    for (let i = shuffled.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-    }
-    samplePlayers = shuffled.slice(0, Math.min(4, shuffled.length));
-  }
 
   rows = teams.map((team, index) => {
     const palette = pastelPalette[index % pastelPalette.length];
@@ -84,6 +76,7 @@ try {
       ownerName: team.ownerId?.name ?? 'Unknown owner',
       avatarBg: palette.bg,
       avatarFg: palette.fg,
+      players: team.players ?? [],
     };
   });
 } catch (err) {
@@ -236,8 +229,8 @@ try {
                       class="players-stack"
                       aria-label={`Players for ${row.teamName}`}
                     >
-                      {samplePlayers.length > 0
-                        ? samplePlayers.map((player) => {
+                      {row.players.length > 0
+                        ? row.players.map((player) => {
                             const initials = player.name
                               .split(' ')
                               .map((part) => part.charAt(0))
@@ -250,17 +243,28 @@ try {
                                 data-tooltip={player.name}
                                 aria-label={player.name}
                               >
-                                {initials}
+                                {player.pgaId ? (
+                                  <img
+                                    src={`https://pga-tour-res.cloudinary.com/image/upload/c_thumb,g_face,z_0.7,q_auto,f_auto,dpr_2.0,w_80,h_80,b_rgb:F2F2F2,d_stub:default_avatar_light.webp/headshots_${player.pgaId}`}
+                                    alt=""
+                                    width="28"
+                                    height="28"
+                                    loading="lazy"
+                                    style="border-radius: 999px;"
+                                  />
+                                ) : (
+                                  initials
+                                )}
                               </span>
                             );
                           })
                         : Array.from({ length: 4 }).map((_, i) => (
                             <span
-                              class="player-dot"
-                              data-tooltip={`Player ${i + 1} • ${row.teamName}`}
-                              aria-label={`Player ${i + 1} for ${row.teamName}`}
+                              class="player-dot player-dot-placeholder"
+                              data-tooltip={`No players yet`}
+                              aria-label={`No players for ${row.teamName}`}
                             >
-                              P{i + 1}
+                              —
                             </span>
                           ))}
                     </div>
@@ -474,14 +478,14 @@ try {
 
   .player-dot {
     position: relative;
-    width: 22px;
-    height: 22px;
+    width: 28px;
+    height: 28px;
     border-radius: 999px;
     background: #eef2ff;
     border: 2px solid #ffffff;
     box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.05);
     margin-left: -8px;
-    cursor: help;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
