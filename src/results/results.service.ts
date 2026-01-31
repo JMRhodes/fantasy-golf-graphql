@@ -3,6 +3,10 @@ import { Result } from './schemas/result.schema';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 
+type playerQueryType = {
+  player: string;
+};
+
 /**
  * The service for managing results.
  * @constructor
@@ -21,6 +25,13 @@ export class ResultService {
     return this.resultModel.find().populate('player').exec();
   }
 
+  async getResultsByPlayerId(playerId: string): Promise<Result[]> {
+    const playerQuery: playerQueryType = {
+      player: playerId,
+    };
+
+    return this.resultModel.find(playerQuery).exec();
+  }
   // /**
   //  * Retrieves a collection of results by their tournament ID.
   //  *

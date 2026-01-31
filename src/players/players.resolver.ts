@@ -1,8 +1,18 @@
 import { Player } from './schemas/player.schema';
-import { Resolver, Query, Args, Mutation, ID } from '@nestjs/graphql';
+import {
+  Resolver,
+  Query,
+  Parent,
+  Args,
+  Mutation,
+  ID,
+  ResolveField,
+} from '@nestjs/graphql';
 import { CreatePlayerInput } from './dtos/create-player.input';
 import { PlayersService } from './players.service';
 import { GraphQLError } from 'graphql/error';
+import { Result } from 'src/results/schemas/result.schema';
+import { ResultService } from 'src/results/results.service';
 
 /**
  * Resolver for the Player entity
@@ -10,7 +20,10 @@ import { GraphQLError } from 'graphql/error';
  */
 @Resolver(() => Player)
 export class PlayersResolver {
-  constructor(private playersService: PlayersService) {}
+  constructor(
+    private playersService: PlayersService,
+    private resultsService: ResultService,
+  ) {}
 
   /**
    * Fetches all players from the database
@@ -41,6 +54,13 @@ export class PlayersResolver {
         extensions: { code: 'NOT_FOUND' },
       });
     }
+  }
+
+  @ResolveField('results', () => [Result])
+  async getResults(@Parent() player: Player): Promise<Result[]> {
+    const results = await this.resultsService.getResultsByPlayerId(player.id);
+
+    return results;
   }
 
   /**

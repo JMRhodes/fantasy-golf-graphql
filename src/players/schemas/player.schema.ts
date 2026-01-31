@@ -2,6 +2,7 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Field, ID, ObjectType } from '@nestjs/graphql';
 import { HydratedDocument } from 'mongoose';
 import { IsOptional } from 'class-validator';
+import { Result } from 'src/results/schemas/result.schema';
 
 export type PlayerDocument = HydratedDocument<Player>;
 
@@ -23,6 +24,10 @@ export class Player {
   @Field()
   @Prop()
   salary: number;
+
+  @Field(() => [Result], { nullable: true })
+  @Prop({ type: [Result] })
+  results: Result[];
 }
 
 export const PlayerSchema = SchemaFactory.createForClass(Player);

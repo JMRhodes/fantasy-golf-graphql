@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Field, ID, ObjectType } from '@nestjs/graphql';
-import { HydratedDocument } from 'mongoose';
+import { HydratedDocument, Types } from 'mongoose';
 import * as mongoose from 'mongoose';
 import { Player } from 'src/players/schemas/player.schema';
 
@@ -18,7 +18,7 @@ export class Result {
     ref: 'Player',
     required: true,
   })
-  player: Player;
+  player: Types.ObjectId | Player;
 
   @Field({ nullable: true })
   @Prop({ required: true })

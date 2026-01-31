@@ -8,6 +8,7 @@ import { ResultService } from './results.service';
   imports: [
     MongooseModule.forFeature([{ name: 'Result', schema: ResultSchema }]),
   ],
+  exports: [ResultService],
   providers: [ResultResolver, ResultService],
 })
 export class ResultsModule {}
