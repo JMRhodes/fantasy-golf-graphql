@@ -4,12 +4,14 @@ import { Model } from 'mongoose';
 import { Team } from './schemas/team.schema';
 import { CreateTeamInput } from './dtos/create-team.input';
 import { OwnerService } from '../owners/owners.service';
+import { PlayersService } from '../players/players.service';
 
 @Injectable()
 export class TeamsService {
   constructor(
     @InjectModel(Team.name) private teamModel: Model<Team>,
     private ownerService: OwnerService,
+    private playersService: PlayersService,
   ) {}
 
   async createTeam(createTeamInput: CreateTeamInput): Promise<Team> {
@@ -27,9 +29,39 @@ export class TeamsService {
       throw new Error('Either ownerId or owner must be provided');
     }
 
+    // Handle players if provided
+    const playerIds: string[] = [];
+    if (createTeamInput.players && createTeamInput.players.length > 0) {
+      for (const playerInput of createTeamInput.players) {
+        let playerId: string;
+
+        // If player ID is provided, use it directly
+        if (playerInput.playerId) {
+          playerId = playerInput.playerId;
+        } else if (playerInput.name) {
+          const playerInputType: {
+            name: string;
+          } = {
+            name: playerInput.name,
+          };
+          // Otherwise, find or create player by name
+          const player =
+            await this.playersService.findOrCreatePlayer(playerInputType);
+          playerId = (player as { id: string }).id;
+        } else {
+          throw new Error(
+            'Either playerId or name must be provided for each player',
+          );
+        }
+
+        playerIds.push(playerId);
+      }
+    }
+
     const team = new this.teamModel({
       name: createTeamInput.name,
       ownerId,
+      players: playerIds,
     });
     return (await team.save()).populate('ownerId');
   }
@@ -46,11 +78,15 @@ export class TeamsService {
   }
 
   async getAllTeams(): Promise<Team[]> {
-    return this.teamModel.find().populate('ownerId').exec();
+    return this.teamModel.find().populate('ownerId').populate('players').exec();
   }
 
   async getTeamById(id: string): Promise<Team> {
-    const team = await this.teamModel.findById(id).populate('ownerId').exec();
+    const team = await this.teamModel
+      .findById(id)
+      .populate('ownerId')
+      .populate('players')
+      .exec();
     if (!team) {
       throw new Error(`Team with ID ${id} not found`);
     }

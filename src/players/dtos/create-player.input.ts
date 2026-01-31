@@ -16,4 +16,9 @@ export class CreatePlayerInput {
   @Field(() => Int)
   @IsInt()
   salary: number;
+
+  @Field(() => String, { nullable: true })
+  @IsString()
+  @IsOptional()
+  avatarUrl?: string;
 }

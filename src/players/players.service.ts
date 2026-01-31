@@ -84,4 +84,23 @@ export class PlayersService {
 
     return player;
   }
+
+  /**
+   * Finds a player by name, or creates a new one if it doesn't exist.
+   *
+   * @param input - The player data (name)
+   * @returns The existing or newly created player
+   */
+  async findOrCreatePlayer(input: { name: string }): Promise<Player> {
+    // Try to find existing player by name
+    let player = await this.playerModel.findOne({ name: input.name }).exec();
+
+    if (!player) {
+      // Player doesn't exist, create new one with default salary of 0
+      player = new this.playerModel({ name: input.name, salary: 0 });
+      await player.save();
+    }
+
+    return player;
+  }
 }

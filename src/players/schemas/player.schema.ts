@@ -25,6 +25,11 @@ export class Player {
   @Prop()
   salary: number;
 
+  @Field(() => String, { nullable: true })
+  @IsOptional()
+  @Prop({ required: false, default: null, nullable: true })
+  avatarUrl: string;
+
   @Field(() => [Result], { nullable: true })
   @Prop({ type: [Result] })
   results: Result[];

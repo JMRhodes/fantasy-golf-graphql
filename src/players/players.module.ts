@@ -11,5 +11,6 @@ import { ResultsModule } from 'src/results/results.module';
     ResultsModule,
   ],
   providers: [PlayersResolver, PlayersService],
+  exports: [PlayersService],
 })
 export class PlayersModule {}

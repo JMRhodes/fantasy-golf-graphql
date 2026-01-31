@@ -1,6 +1,7 @@
 import { InputType, Field, ID } from '@nestjs/graphql';
 import { ValidateIf, ValidateNested } from 'class-validator';
 import { Type } from 'class-transformer';
+import { PlayerInput } from './player-input.dto';
 import { OwnerInput } from './owner-input.dto';
 
 @InputType()
@@ -17,4 +18,9 @@ export class CreateTeamInput {
   @ValidateNested()
   @Type(() => OwnerInput)
   owner?: OwnerInput;
+
+  @Field(() => [PlayerInput], { nullable: true })
+  @ValidateNested({ each: true })
+  @Type(() => PlayerInput)
+  players?: PlayerInput[];
 }
