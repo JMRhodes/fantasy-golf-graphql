@@ -1,0 +1,1052 @@
+[
+  {
+    "name": "Gotta Be Viktorious",
+    "owner": {
+      "name": "Tim Scherkenbach",
+      "email": "tim.scherkenbach@example.com"
+    },
+    "players": [
+      {
+        "name": "Tommy Fleetwood"
+      },
+      {
+        "name": "Viktor Hovland"
+      },
+      {
+        "name": "Haotong Li"
+      },
+      {
+        "name": "Johnny Keefer"
+      }
+    ]
+  },
+  {
+    "name": "BigCJames#3",
+    "owner": {
+      "name": "Craig DeBerg",
+      "email": "craig.deberg@example.com"
+    },
+    "players": [
+      {
+        "name": "Corey Conners"
+      },
+      {
+        "name": "Akshay Bhatia"
+      },
+      {
+        "name": "Min Woo Lee"
+      },
+      {
+        "name": "Daniel Berger"
+      }
+    ]
+  },
+  {
+    "name": "Gog FG 2",
+    "owner": {
+      "name": "Chris Gougler",
+      "email": "chris.gougler@example.com"
+    },
+    "players": [
+      {
+        "name": "Rory McIlroy"
+      },
+      {
+        "name": "Brian Campbell"
+      },
+      {
+        "name": "Garrick Higgo"
+      },
+      {
+        "name": "Lee Hodges"
+      }
+    ]
+  },
+  {
+    "name": "D and D 2",
+    "owner": {
+      "name": "Donovan Morrison",
+      "email": "donovan.morrison@example.com"
+    },
+    "players": [
+      {
+        "name": "Ben Griffin"
+      },
+      {
+        "name": "Corey Conners"
+      },
+      {
+        "name": "Vincent Whaley"
+      },
+      {
+        "name": "Lee Hodges"
+      }
+    ]
+  },
+  {
+    "name": "Steph's Squad",
+    "owner": {
+      "name": "Kellen Dockter",
+      "email": "kellen.dockter@example.com"
+    },
+    "players": [
+      {
+        "name": "Tommy Fleetwood"
+      },
+      {
+        "name": "Tony Finau"
+      },
+      {
+        "name": "Daniel Berger"
+      },
+      {
+        "name": "Beau Hossler"
+      }
+    ]
+  },
+  {
+    "name": "Four Putt 9",
+    "owner": {
+      "name": "Jim Giroux",
+      "email": "jim.giroux@example.com"
+    },
+    "players": [
+      {
+        "name": "Sam Burns"
+      },
+      {
+        "name": "Jordan Spieth"
+      },
+      {
+        "name": "Taylor Pendrith"
+      },
+      {
+        "name": "Rico Hoey"
+      }
+    ]
+  },
+  {
+    "name": "Three Putt 5",
+    "owner": {
+      "name": "Jim Giroux",
+      "email": "jim.giroux@example.com"
+    },
+    "players": [
+      {
+        "name": "Xander Schauffele"
+      },
+      {
+        "name": "Taylor Pendrith"
+      },
+      {
+        "name": "Nick Taylor"
+      },
+      {
+        "name": "Ricky Castillo"
+      }
+    ]
+  },
+  {
+    "name": "Three Putt 7",
+    "owner": {
+      "name": "Jim Giroux",
+      "email": "jim.giroux@example.com"
+    },
+    "players": [
+      {
+        "name": "J.J. Spaun"
+      },
+      {
+        "name": "Alex Noren"
+      },
+      {
+        "name": "Daniel Berger"
+      },
+      {
+        "name": "Luke Clanton"
+      }
+    ]
+  },
+  {
+    "name": "Edison 3",
+    "owner": {
+      "name": "Matt Edison",
+      "email": "matt.edison@example.com"
+    },
+    "players": [
+      {
+        "name": "J.J. Spaun"
+      },
+      {
+        "name": "Andrew Novak"
+      },
+      {
+        "name": "Daniel Berger"
+      },
+      {
+        "name": "Danny Walker"
+      }
+    ]
+  },
+  {
+    "name": "Buckshot",
+    "owner": {
+      "name": "Todd Thompson",
+      "email": "todd.thompson@example.com"
+    },
+    "players": [
+      {
+        "name": "Ben Griffin"
+      },
+      {
+        "name": "Taylor Pendrith"
+      },
+      {
+        "name": "Davis Thompson"
+      },
+      {
+        "name": "Harry Higgs"
+      }
+    ]
+  },
+  {
+    "name": "speith and crew",
+    "owner": {
+      "name": "Andy Phelps",
+      "email": "andy.phelps@example.com"
+    },
+    "players": [
+      {
+        "name": "Maverick McNealy"
+      },
+      {
+        "name": "Jake Knapp"
+      },
+      {
+        "name": "Jordan Spieth"
+      },
+      {
+        "name": "Harry Hall"
+      }
+    ]
+  },
+  {
+    "name": "IVO 3",
+    "owner": {
+      "name": "Mike Ivester",
+      "email": "mike.ivester@example.com"
+    },
+    "players": [
+      {
+        "name": "Ludvig Aberg"
+      },
+      {
+        "name": "Shane Lowry"
+      },
+      {
+        "name": "Harry Hall"
+      },
+      {
+        "name": "Neal Shipley"
+      }
+    ]
+  },
+  {
+    "name": "Jerry Parupsky 1",
+    "owner": {
+      "name": "Greg Parupsky",
+      "email": "greg.parupsky@example.com"
+    },
+    "players": [
+      {
+        "name": "Rory McIlroy"
+      },
+      {
+        "name": "Tony Finau"
+      },
+      {
+        "name": "Harry Hall"
+      },
+      {
+        "name": "Will Gordon"
+      }
+    ]
+  },
+  {
+    "name": "SizeWickWave5",
+    "owner": {
+      "name": "Jon Szymanski",
+      "email": "jon.szymanski@example.com"
+    },
+    "players": [
+      {
+        "name": "Ludvig Aberg"
+      },
+      {
+        "name": "Min Woo Lee"
+      },
+      {
+        "name": "Rasmus Hojgaard"
+      },
+      {
+        "name": "Harry Hall"
+      }
+    ]
+  },
+  {
+    "name": "Lisovskis - 4",
+    "owner": {
+      "name": "Brian Lisovskis",
+      "email": "brian.lisovskis@example.com"
+    },
+    "players": [
+      {
+        "name": "Matthew Fitzpatrick"
+      },
+      {
+        "name": "Viktor Hovland"
+      },
+      {
+        "name": "Harry Hall"
+      },
+      {
+        "name": "Dylan Wu"
+      }
+    ]
+  },
+  {
+    "name": "CohensCornerAZ-4",
+    "owner": {
+      "name": "Eric Cohen",
+      "email": "eric.cohen@example.com"
+    },
+    "players": [
+      {
+        "name": "Ben Griffin"
+      },
+      {
+        "name": "Andrew Novak"
+      },
+      {
+        "name": "Michael Kim"
+      },
+      {
+        "name": "Harry Hall"
+      }
+    ]
+  },
+  {
+    "name": "Highlands 4",
+    "owner": {
+      "name": "Denis Vontz",
+      "email": "denis.vontz@example.com"
+    },
+    "players": [
+      {
+        "name": "Sam Burns"
+      },
+      {
+        "name": "Akshay Bhatia"
+      },
+      {
+        "name": "Alex Smalley"
+      },
+      {
+        "name": "Harry Hall"
+      }
+    ]
+  },
+  {
+    "name": "Matt Rules #2",
+    "owner": {
+      "name": "Mark Hickson",
+      "email": "mark.hickson@example.com"
+    },
+    "players": [
+      {
+        "name": "Justin Thomas"
+      },
+      {
+        "name": "Corey Conners"
+      },
+      {
+        "name": "Nick Taylor"
+      },
+      {
+        "name": "Harry Hall"
+      }
+    ]
+  },
+  {
+    "name": "SWILLY 2",
+    "owner": {
+      "name": "Steve Williams",
+      "email": "steve.williams@example.com"
+    },
+    "players": [
+      {
+        "name": "Sam Burns"
+      },
+      {
+        "name": "Akshay Bhatia"
+      },
+      {
+        "name": "Harry Hall"
+      },
+      {
+        "name": "Pierceson Coody"
+      }
+    ]
+  },
+  {
+    "name": "Noonan",
+    "owner": {
+      "name": "Ryan Sawinski",
+      "email": "ryan.sawinski@example.com"
+    },
+    "players": [
+      {
+        "name": "Xander Schauffele"
+      },
+      {
+        "name": "Will Zalatoris"
+      },
+      {
+        "name": "Rickie Fowler"
+      },
+      {
+        "name": "Harry Hall"
+      }
+    ]
+  },
+  {
+    "name": "Three Putt 1",
+    "owner": {
+      "name": "Jim Giroux",
+      "email": "jim.giroux@example.com"
+    },
+    "players": [
+      {
+        "name": "Ben Griffin"
+      },
+      {
+        "name": "Maverick McNealy"
+      },
+      {
+        "name": "Harry Hall"
+      },
+      {
+        "name": "Johnny Keefer"
+      }
+    ]
+  },
+  {
+    "name": "Three Putt 4",
+    "owner": {
+      "name": "Jim Giroux",
+      "email": "jim.giroux@example.com"
+    },
+    "players": [
+      {
+        "name": "Tommy Fleetwood"
+      },
+      {
+        "name": "Cameron Young"
+      },
+      {
+        "name": "Harry Hall"
+      },
+      {
+        "name": "Johnny Keefer"
+      }
+    ]
+  },
+  {
+    "name": "Mark Cotton 3",
+    "owner": {
+      "name": "Mark Cotton",
+      "email": "mark.cotton@example.com"
+    },
+    "players": [
+      {
+        "name": "Rory McIlroy"
+      },
+      {
+        "name": "Alex Noren"
+      },
+      {
+        "name": "Harry Hall"
+      },
+      {
+        "name": "Luke Clanton"
+      }
+    ]
+  },
+  {
+    "name": "Mark Cotton 4",
+    "owner": {
+      "name": "Mark Cotton",
+      "email": "mark.cotton@example.com"
+    },
+    "players": [
+      {
+        "name": "Xander Schauffele"
+      },
+      {
+        "name": "Sami Valimaki"
+      },
+      {
+        "name": "Rasmus Hojgaard"
+      },
+      {
+        "name": "Harry Hall"
+      }
+    ]
+  },
+  {
+    "name": "Jack Cotton 3",
+    "owner": {
+      "name": "Mark Cotton",
+      "email": "mark.cotton@example.com"
+    },
+    "players": [
+      {
+        "name": "Tommy Fleetwood"
+      },
+      {
+        "name": "Akshay Bhatia"
+      },
+      {
+        "name": "Marco Penge"
+      },
+      {
+        "name": "Harry Hall"
+      }
+    ]
+  },
+  {
+    "name": "Little Shooters#1",
+    "owner": {
+      "name": "Adam Gloudemans",
+      "email": "adam.gloudemans@example.com"
+    },
+    "players": [
+      {
+        "name": "Tommy Fleetwood"
+      },
+      {
+        "name": "Viktor Hovland"
+      },
+      {
+        "name": "Harry Hall"
+      },
+      {
+        "name": "Johnny Keefer"
+      }
+    ]
+  },
+  {
+    "name": "Harry Balls",
+    "owner": {
+      "name": "Adam Gloudemans",
+      "email": "adam.gloudemans@example.com"
+    },
+    "players": [
+      {
+        "name": "Cameron Young"
+      },
+      {
+        "name": "Viktor Hovland"
+      },
+      {
+        "name": "Harry Hall"
+      },
+      {
+        "name": "Michael Brennan"
+      }
+    ]
+  },
+  {
+    "name": "Gadbois 1",
+    "owner": {
+      "name": "Jack Gadbois",
+      "email": "jack.gadbois@example.com"
+    },
+    "players": [
+      {
+        "name": "Ben Griffin"
+      },
+      {
+        "name": "Jake Knapp"
+      },
+      {
+        "name": "Marco Penge"
+      },
+      {
+        "name": "Seamus Power"
+      }
+    ]
+  },
+  {
+    "name": "GivenJustice2",
+    "owner": {
+      "name": "Mark Christoffersen",
+      "email": "mark.christoffersen@example.com"
+    },
+    "players": [
+      {
+        "name": "Rory McIlroy"
+      },
+      {
+        "name": "Jake Knapp"
+      },
+      {
+        "name": "Michael Brennan"
+      },
+      {
+        "name": "Johnny Keefer"
+      }
+    ]
+  },
+  {
+    "name": "IVO 2",
+    "owner": {
+      "name": "Mike Ivester",
+      "email": "mike.ivester@example.com"
+    },
+    "players": [
+      {
+        "name": "Rory McIlroy"
+      },
+      {
+        "name": "Marco Penge"
+      },
+      {
+        "name": "Rasmus Neergaard Petersen"
+      },
+      {
+        "name": "Christo Lamprecht"
+      }
+    ]
+  },
+  {
+    "name": "IVO 4",
+    "owner": {
+      "name": "Mike Ivester",
+      "email": "mike.ivester@example.com"
+    },
+    "players": [
+      {
+        "name": "Sam Burns"
+      },
+      {
+        "name": "Aldrich Potgieter"
+      },
+      {
+        "name": "Will Zalatoris"
+      },
+      {
+        "name": "Rico Hoey"
+      }
+    ]
+  },
+  {
+    "name": "IVO5",
+    "owner": {
+      "name": "Mike Ivester",
+      "email": "mike.ivester@example.com"
+    },
+    "players": [
+      {
+        "name": "Hideki Matsuyama"
+      },
+      {
+        "name": "Akshay Bhatia"
+      },
+      {
+        "name": "Aaron Rai"
+      },
+      {
+        "name": "Pierceson Coody"
+      }
+    ]
+  },
+  {
+    "name": "Max's Team 2",
+    "owner": {
+      "name": "Max Jensen",
+      "email": "max.jensen@example.com"
+    },
+    "players": [
+      {
+        "name": "Tommy Fleetwood"
+      },
+      {
+        "name": "Jordan Spieth"
+      },
+      {
+        "name": "Max Homa"
+      },
+      {
+        "name": "Rickie Fowler"
+      }
+    ]
+  },
+  {
+    "name": "Max's Team 4",
+    "owner": {
+      "name": "Max Jensen",
+      "email": "max.jensen@example.com"
+    },
+    "players": [
+      {
+        "name": "Rory McIlroy"
+      },
+      {
+        "name": "Min Woo Lee"
+      },
+      {
+        "name": "Thorbjorn Olesen"
+      },
+      {
+        "name": "Luke Clanton"
+      }
+    ]
+  },
+  {
+    "name": "Caddyshack Rejects3",
+    "owner": {
+      "name": "Scott Chapko",
+      "email": "scott.chapko@example.com"
+    },
+    "players": [
+      {
+        "name": "Justin Thomas"
+      },
+      {
+        "name": "Brian Harman"
+      },
+      {
+        "name": "Andrew Novak"
+      },
+      {
+        "name": "Garrick Higgo"
+      }
+    ]
+  },
+  {
+    "name": "Caddyshack Rejects4",
+    "owner": {
+      "name": "Scott Chapko",
+      "email": "scott.chapko@example.com"
+    },
+    "players": [
+      {
+        "name": "Cameron Young"
+      },
+      {
+        "name": "Shane Lowry"
+      },
+      {
+        "name": "Jordan Spieth"
+      },
+      {
+        "name": "Michael Brennan"
+      }
+    ]
+  },
+  {
+    "name": "Trust The Chuck #1",
+    "owner": {
+      "name": "Charles Lovelace",
+      "email": "charles.lovelace@example.com"
+    },
+    "players": [
+      {
+        "name": "Rory McIlroy"
+      },
+      {
+        "name": "Akshay Bhatia"
+      },
+      {
+        "name": "S.H. Kim"
+      },
+      {
+        "name": "Neal Shipley"
+      }
+    ]
+  },
+  {
+    "name": "Trust The Chuck #2",
+    "owner": {
+      "name": "Charles Lovelace",
+      "email": "charles.lovelace@example.com"
+    },
+    "players": [
+      {
+        "name": "Sam Burns"
+      },
+      {
+        "name": "Nick Taylor"
+      },
+      {
+        "name": "Sami Valimaki"
+      },
+      {
+        "name": "Pierceson Coody"
+      }
+    ]
+  },
+  {
+    "name": "LAZER 4",
+    "owner": {
+      "name": "Ben Loesel",
+      "email": "ben.loesel@example.com"
+    },
+    "players": [
+      {
+        "name": "Rory McIlroy"
+      },
+      {
+        "name": "Shane Lowry"
+      },
+      {
+        "name": "David Ford"
+      },
+      {
+        "name": "Neal Shipley"
+      }
+    ]
+  },
+  {
+    "name": "LAZER 5",
+    "owner": {
+      "name": "Ben Loesel",
+      "email": "ben.loesel@example.com"
+    },
+    "players": [
+      {
+        "name": "Ben Griffin"
+      },
+      {
+        "name": "Jordan Spieth"
+      },
+      {
+        "name": "Tom Kim"
+      },
+      {
+        "name": "Pierceson Coody"
+      }
+    ]
+  },
+  {
+    "name": "LAZER 6",
+    "owner": {
+      "name": "Ben Loesel",
+      "email": "ben.loesel@example.com"
+    },
+    "players": [
+      {
+        "name": "Justin Thomas"
+      },
+      {
+        "name": "Akshay Bhatia"
+      },
+      {
+        "name": "Jordan Spieth"
+      },
+      {
+        "name": "Rickie Fowler"
+      }
+    ]
+  },
+  {
+    "name": "Donk Funska",
+    "owner": {
+      "name": "Tom Folska",
+      "email": "tom.folska@example.com"
+    },
+    "players": [
+      {
+        "name": "J.J. Spaun"
+      },
+      {
+        "name": "Tony Finau"
+      },
+      {
+        "name": "Harry Higgs"
+      },
+      {
+        "name": "Taylor Montgomery"
+      }
+    ]
+  },
+  {
+    "name": "BigCJames#4",
+    "owner": {
+      "name": "Craig DeBerg",
+      "email": "craig.deberg@example.com"
+    },
+    "players": [
+      {
+        "name": "Ludvig Aberg"
+      },
+      {
+        "name": "Viktor Hovland"
+      },
+      {
+        "name": "Nick Hardy"
+      },
+      {
+        "name": "Frankie Capan III"
+      }
+    ]
+  },
+  {
+    "name": "Will DeBerg3",
+    "owner": {
+      "name": "Craig DeBerg",
+      "email": "craig.deberg@example.com"
+    },
+    "players": [
+      {
+        "name": "Tommy Fleetwood"
+      },
+      {
+        "name": "Cameron Young"
+      },
+      {
+        "name": "Jackson Suber"
+      },
+      {
+        "name": "Gary Woodland"
+      }
+    ]
+  },
+  {
+    "name": "Hawk2",
+    "owner": {
+      "name": "Steven Hakanson",
+      "email": "steven.hakanson@example.com"
+    },
+    "players": [
+      {
+        "name": "Ludvig Aberg"
+      },
+      {
+        "name": "Jordan Spieth"
+      },
+      {
+        "name": "Max Greyserman"
+      },
+      {
+        "name": "Kristoffer Reitan"
+      }
+    ]
+  },
+  {
+    "name": "Texas Wedge (4)",
+    "owner": {
+      "name": "Gunnar Bordeaux",
+      "email": "gunnar.bordeaux@example.com"
+    },
+    "players": [
+      {
+        "name": "Corey Conners"
+      },
+      {
+        "name": "Akshay Bhatia"
+      },
+      {
+        "name": "Jordan Spieth"
+      },
+      {
+        "name": "Joel Dahmen"
+      }
+    ]
+  },
+  {
+    "name": "George",
+    "owner": {
+      "name": "Cookie Kaplan",
+      "email": "cookie.kaplan@example.com"
+    },
+    "players": [
+      {
+        "name": "Hideki Matsuyama"
+      },
+      {
+        "name": "Akshay Bhatia"
+      },
+      {
+        "name": "Andrew Novak"
+      },
+      {
+        "name": "Luke Clanton"
+      }
+    ]
+  },
+  {
+    "name": "SDEPALMA",
+    "owner": {
+      "name": "Mark DePalma",
+      "email": "mark.depalma@example.com"
+    },
+    "players": [
+      {
+        "name": "Rory McIlroy"
+      },
+      {
+        "name": "Andrew Novak"
+      },
+      {
+        "name": "Marco Penge"
+      },
+      {
+        "name": "Neal Shipley"
+      }
+    ]
+  },
+  {
+    "name": "JDEPALMA",
+    "owner": {
+      "name": "Mark DePalma",
+      "email": "mark.depalma@example.com"
+    },
+    "players": [
+      {
+        "name": "Matthew Fitzpatrick"
+      },
+      {
+        "name": "Viktor Hovland"
+      },
+      {
+        "name": "Rico Hoey"
+      },
+      {
+        "name": "Luke Clanton"
+      }
+    ]
+  },
+  {
+    "name": "DRJ #3",
+    "owner": {
+      "name": "David Johnson",
+      "email": "david.johnson@example.com"
+    },
+    "players": [
+      {
+        "name": "Ludvig Aberg"
+      },
+      {
+        "name": "Cameron Young"
+      },
+      {
+        "name": "Johnny Keefer"
+      },
+      {
+        "name": "Ricky Castillo"
+      }
+    ]
+  }
+]

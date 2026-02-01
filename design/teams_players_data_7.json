@@ -1,0 +1,1052 @@
+[
+  {
+    "name": "Edison 1",
+    "owner": {
+      "name": "Matt Edison",
+      "email": "matt.edison@example.com"
+    },
+    "players": [
+      {
+        "name": "Scottie Scheffler"
+      },
+      {
+        "name": "Rickie Fowler"
+      },
+      {
+        "name": "Pierceson Coody"
+      },
+      {
+        "name": "Austin Eckroat"
+      }
+    ]
+  },
+  {
+    "name": "Judge Smails #1",
+    "owner": {
+      "name": "Adam Gloudemans",
+      "email": "adam.gloudemans@example.com"
+    },
+    "players": [
+      {
+        "name": "Scottie Scheffler"
+      },
+      {
+        "name": "Max Greyserman"
+      },
+      {
+        "name": "Pierceson Coody"
+      },
+      {
+        "name": "Adrien Dumont de Chassart"
+      }
+    ]
+  },
+  {
+    "name": "HOMAsexuals",
+    "owner": {
+      "name": "Adam Gloudemans",
+      "email": "adam.gloudemans@example.com"
+    },
+    "players": [
+      {
+        "name": "Scottie Scheffler"
+      },
+      {
+        "name": "Max Homa"
+      },
+      {
+        "name": "Rico Hoey"
+      },
+      {
+        "name": "Luke Clanton"
+      }
+    ]
+  },
+  {
+    "name": "The House of Bogies",
+    "owner": {
+      "name": "MTR",
+      "email": "mtr@example.com"
+    },
+    "players": [
+      {
+        "name": "Scottie Scheffler"
+      },
+      {
+        "name": "Michael Kim"
+      },
+      {
+        "name": "Pierceson Coody"
+      },
+      {
+        "name": "Luke Clanton"
+      }
+    ]
+  },
+  {
+    "name": "Banging The Bark",
+    "owner": {
+      "name": "MTR",
+      "email": "mtr@example.com"
+    },
+    "players": [
+      {
+        "name": "Scottie Scheffler"
+      },
+      {
+        "name": "Akshay Bhatia"
+      },
+      {
+        "name": "Kristoffer Reitan"
+      },
+      {
+        "name": "Johnny Keefer"
+      }
+    ]
+  },
+  {
+    "name": "Foley 1",
+    "owner": {
+      "name": "Mark Foley",
+      "email": "mark.foley@example.com"
+    },
+    "players": [
+      {
+        "name": "Scottie Scheffler"
+      },
+      {
+        "name": "Shane Lowry"
+      },
+      {
+        "name": "Ricky Castillo"
+      },
+      {
+        "name": "Kensei Hirata"
+      }
+    ]
+  },
+  {
+    "name": "Foley 2",
+    "owner": {
+      "name": "Mark Foley",
+      "email": "mark.foley@example.com"
+    },
+    "players": [
+      {
+        "name": "Scottie Scheffler"
+      },
+      {
+        "name": "Adam Scott"
+      },
+      {
+        "name": "Nicolai Hojgaard"
+      },
+      {
+        "name": "Neal Shipley"
+      }
+    ]
+  },
+  {
+    "name": "GivenJustice",
+    "owner": {
+      "name": "Mark Christoffersen",
+      "email": "mark.christoffersen@example.com"
+    },
+    "players": [
+      {
+        "name": "Scottie Scheffler"
+      },
+      {
+        "name": "Aldrich Potgieter"
+      },
+      {
+        "name": "Austin Eckroat"
+      },
+      {
+        "name": "Michael Brennan"
+      }
+    ]
+  },
+  {
+    "name": "Scottie Doesn’t Know I",
+    "owner": {
+      "name": "Justin Marable",
+      "email": "justin.marable@example.com"
+    },
+    "players": [
+      {
+        "name": "Scottie Scheffler"
+      },
+      {
+        "name": "Aldrich Potgieter"
+      },
+      {
+        "name": "Pierceson Coody"
+      },
+      {
+        "name": "Johnny Keefer"
+      }
+    ]
+  },
+  {
+    "name": "Scottie Doesn’t Know II",
+    "owner": {
+      "name": "Justin Marable",
+      "email": "justin.marable@example.com"
+    },
+    "players": [
+      {
+        "name": "Scottie Scheffler"
+      },
+      {
+        "name": "Max McGreevy"
+      },
+      {
+        "name": "Michael Thorbjornsen"
+      },
+      {
+        "name": "Neal Shipley"
+      }
+    ]
+  },
+  {
+    "name": "Scottie Doesn’t Know III",
+    "owner": {
+      "name": "Justin Marable",
+      "email": "justin.marable@example.com"
+    },
+    "players": [
+      {
+        "name": "Scottie Scheffler"
+      },
+      {
+        "name": "Alex Noren"
+      },
+      {
+        "name": "Pierceson Coody"
+      },
+      {
+        "name": "Michael Brennan"
+      }
+    ]
+  },
+  {
+    "name": "Scottie Doesn’t Know IV",
+    "owner": {
+      "name": "Justin Marable",
+      "email": "justin.marable@example.com"
+    },
+    "players": [
+      {
+        "name": "Scottie Scheffler"
+      },
+      {
+        "name": "Max Homa"
+      },
+      {
+        "name": "Marco Penge"
+      },
+      {
+        "name": "Emilio Gonzalez"
+      }
+    ]
+  },
+  {
+    "name": "Scottie Doesn't Know V",
+    "owner": {
+      "name": "Justin Marable",
+      "email": "justin.marable@example.com"
+    },
+    "players": [
+      {
+        "name": "Scottie Scheffler"
+      },
+      {
+        "name": "Akshay Bhatia"
+      },
+      {
+        "name": "Michael Brennan"
+      },
+      {
+        "name": "Johnny Keefer"
+      }
+    ]
+  },
+  {
+    "name": "GIMMIE_PUTZ 5",
+    "owner": {
+      "name": "Ben Lofgren",
+      "email": "ben.lofgren@example.com"
+    },
+    "players": [
+      {
+        "name": "Viktor Hovland"
+      },
+      {
+        "name": "Sahith Theegala"
+      },
+      {
+        "name": "Will Zalatoris"
+      },
+      {
+        "name": "Tom Hoge"
+      }
+    ]
+  },
+  {
+    "name": "SizeWickWave9",
+    "owner": {
+      "name": "Jon Szymanski",
+      "email": "jon.szymanski@example.com"
+    },
+    "players": [
+      {
+        "name": "Tommy Fleetwood"
+      },
+      {
+        "name": "Aaron Rai"
+      },
+      {
+        "name": "Daniel Berger"
+      },
+      {
+        "name": "Si Woo Kim"
+      }
+    ]
+  },
+  {
+    "name": "Eric Bratvold 3",
+    "owner": {
+      "name": "Mark Cotton",
+      "email": "mark.cotton@example.com"
+    },
+    "players": [
+      {
+        "name": "Ben Griffin"
+      },
+      {
+        "name": "Min Woo Lee"
+      },
+      {
+        "name": "Si Woo Kim"
+      },
+      {
+        "name": "Harry Hall"
+      }
+    ]
+  },
+  {
+    "name": "Lisovskis - 2",
+    "owner": {
+      "name": "Brian Lisovskis",
+      "email": "brian.lisovskis@example.com"
+    },
+    "players": [
+      {
+        "name": "Rory McIlroy"
+      },
+      {
+        "name": "J.T. Poston"
+      },
+      {
+        "name": "Andrew Putnam"
+      },
+      {
+        "name": "Dylan Wu"
+      }
+    ]
+  },
+  {
+    "name": "LCW Team 2",
+    "owner": {
+      "name": "Lance Wahlert",
+      "email": "lance.wahlert@example.com"
+    },
+    "players": [
+      {
+        "name": "Ludvig Aberg"
+      },
+      {
+        "name": "Min Woo Lee"
+      },
+      {
+        "name": "Rasmus Neergaard Petersen"
+      },
+      {
+        "name": "Matt McCarty"
+      }
+    ]
+  },
+  {
+    "name": "Sawinski - 3",
+    "owner": {
+      "name": "Ryan Sawinski",
+      "email": "ryan.sawinski@example.com"
+    },
+    "players": [
+      {
+        "name": "Patrick Cantlay"
+      },
+      {
+        "name": "Andrew Novak"
+      },
+      {
+        "name": "Matt McCarty"
+      },
+      {
+        "name": "Pierceson Coody"
+      }
+    ]
+  },
+  {
+    "name": "MDEPALMA",
+    "owner": {
+      "name": "Mark DePalma",
+      "email": "mark.depalma@example.com"
+    },
+    "players": [
+      {
+        "name": "Robert MacIntyre"
+      },
+      {
+        "name": "Shane Lowry"
+      },
+      {
+        "name": "Harry Hall"
+      },
+      {
+        "name": "Matt Wallace"
+      }
+    ]
+  },
+  {
+    "name": "Jack Cotton 1",
+    "owner": {
+      "name": "Mark Cotton",
+      "email": "mark.cotton@example.com"
+    },
+    "players": [
+      {
+        "name": "Rory McIlroy"
+      },
+      {
+        "name": "Jacob Bridgeman"
+      },
+      {
+        "name": "Harry Hall"
+      },
+      {
+        "name": "Michael Brennan"
+      }
+    ]
+  },
+  {
+    "name": "SR Golf 4",
+    "owner": {
+      "name": "Jim Brestel",
+      "email": "jim.brestel@example.com"
+    },
+    "players": [
+      {
+        "name": "Rory McIlroy"
+      },
+      {
+        "name": "Si Woo Kim"
+      },
+      {
+        "name": "Rasmus Hojgaard"
+      },
+      {
+        "name": "Luke Clanton"
+      }
+    ]
+  },
+  {
+    "name": "Hi Pro 3",
+    "owner": {
+      "name": "Denis Vontz",
+      "email": "denis.vontz@example.com"
+    },
+    "players": [
+      {
+        "name": "Sam Burns"
+      },
+      {
+        "name": "Michael Kim"
+      },
+      {
+        "name": "Si Woo Kim"
+      },
+      {
+        "name": "Marco Penge"
+      }
+    ]
+  },
+  {
+    "name": "Bunny # 2",
+    "owner": {
+      "name": "Rick Battles",
+      "email": "rick.battles@example.com"
+    },
+    "players": [
+      {
+        "name": "Ludvig Aberg"
+      },
+      {
+        "name": "Akshay Bhatia"
+      },
+      {
+        "name": "Si Woo Kim"
+      },
+      {
+        "name": "Keita Nakajima"
+      }
+    ]
+  },
+  {
+    "name": "Martha Engel #1",
+    "owner": {
+      "name": "Chris Mullen",
+      "email": "chris.mullen@example.com"
+    },
+    "players": [
+      {
+        "name": "J.J. Spaun"
+      },
+      {
+        "name": "Max Homa"
+      },
+      {
+        "name": "Si Woo Kim"
+      },
+      {
+        "name": "Niklas Norgaard"
+      }
+    ]
+  },
+  {
+    "name": "Cowboys 4",
+    "owner": {
+      "name": "Bruce Bryngelson",
+      "email": "bruce.bryngelson@example.com"
+    },
+    "players": [
+      {
+        "name": "Hideki Matsuyama"
+      },
+      {
+        "name": "Maverick McNealy"
+      },
+      {
+        "name": "Si Woo Kim"
+      },
+      {
+        "name": "Kristoffer Reitan"
+      }
+    ]
+  },
+  {
+    "name": "Lefty's Warriors",
+    "owner": {
+      "name": "Chris Bell",
+      "email": "chris.bell@example.com"
+    },
+    "players": [
+      {
+        "name": "Tommy Fleetwood"
+      },
+      {
+        "name": "Tony Finau"
+      },
+      {
+        "name": "Cameron Davis"
+      },
+      {
+        "name": "Si Woo Kim"
+      }
+    ]
+  },
+  {
+    "name": "Matt Hendrickson 3",
+    "owner": {
+      "name": "Mark Cotton",
+      "email": "mark.cotton@example.com"
+    },
+    "players": [
+      {
+        "name": "J.J. Spaun"
+      },
+      {
+        "name": "Andrew Novak"
+      },
+      {
+        "name": "Si Woo Kim"
+      },
+      {
+        "name": "Luke Clanton"
+      }
+    ]
+  },
+  {
+    "name": "DuffScruff's #3",
+    "owner": {
+      "name": "Tim Scherkenbach",
+      "email": "tim.scherkenbach@example.com"
+    },
+    "players": [
+      {
+        "name": "Tommy Fleetwood"
+      },
+      {
+        "name": "Shane Lowry"
+      },
+      {
+        "name": "Si Woo Kim"
+      },
+      {
+        "name": "Gary Woodland"
+      }
+    ]
+  },
+  {
+    "name": "The Boyz",
+    "owner": {
+      "name": "Ladd Lyngaas",
+      "email": "ladd.lyngaas@example.com"
+    },
+    "players": [
+      {
+        "name": "Justin Thomas"
+      },
+      {
+        "name": "Sam Stevens"
+      },
+      {
+        "name": "Jordan Spieth"
+      },
+      {
+        "name": "Rickie Fowler"
+      }
+    ]
+  },
+  {
+    "name": "LFT4Life 11",
+    "owner": {
+      "name": "James Fronek",
+      "email": "james.fronek@example.com"
+    },
+    "players": [
+      {
+        "name": "Viktor Hovland"
+      },
+      {
+        "name": "Sam Stevens"
+      },
+      {
+        "name": "Davis Thompson"
+      },
+      {
+        "name": "Michael Thorbjornsen"
+      }
+    ]
+  },
+  {
+    "name": "Greedy Pitches 2",
+    "owner": {
+      "name": "Bruce Bryngelson",
+      "email": "bruce.bryngelson@example.com"
+    },
+    "players": [
+      {
+        "name": "Xander Schauffele"
+      },
+      {
+        "name": "Sam Stevens"
+      },
+      {
+        "name": "Michael Thorbjornsen"
+      },
+      {
+        "name": "Neal Shipley"
+      }
+    ]
+  },
+  {
+    "name": "Mingus 2",
+    "owner": {
+      "name": "Zach Mingus",
+      "email": "zach.mingus@example.com"
+    },
+    "players": [
+      {
+        "name": "Akshay Bhatia"
+      },
+      {
+        "name": "Sam Stevens"
+      },
+      {
+        "name": "Billy Horschel"
+      },
+      {
+        "name": "Erik Van Rooyen"
+      }
+    ]
+  },
+  {
+    "name": "Braun 2",
+    "owner": {
+      "name": "John Braun",
+      "email": "john.braun@example.com"
+    },
+    "players": [
+      {
+        "name": "Corey Conners"
+      },
+      {
+        "name": "Sahith Theegala"
+      },
+      {
+        "name": "Brian Harman"
+      },
+      {
+        "name": "Taylor Moore"
+      }
+    ]
+  },
+  {
+    "name": "Bunny # 1",
+    "owner": {
+      "name": "Rick Battles",
+      "email": "rick.battles@example.com"
+    },
+    "players": [
+      {
+        "name": "Rory McIlroy"
+      },
+      {
+        "name": "Sahith Theegala"
+      },
+      {
+        "name": "Luke Clanton"
+      },
+      {
+        "name": "Gordon Sargent"
+      }
+    ]
+  },
+  {
+    "name": "UACATSBB26",
+    "owner": {
+      "name": "John Ryan",
+      "email": "john.ryan@example.com"
+    },
+    "players": [
+      {
+        "name": "Akshay Bhatia"
+      },
+      {
+        "name": "Sahith Theegala"
+      },
+      {
+        "name": "Aaron Rai"
+      },
+      {
+        "name": "Min Woo Lee"
+      }
+    ]
+  },
+  {
+    "name": "Foley 5",
+    "owner": {
+      "name": "Mark Foley",
+      "email": "mark.foley@example.com"
+    },
+    "players": [
+      {
+        "name": "Sahith Theegala"
+      },
+      {
+        "name": "Billy Horschel"
+      },
+      {
+        "name": "Tony Finau"
+      },
+      {
+        "name": "Jordan Spieth"
+      }
+    ]
+  },
+  {
+    "name": "Hawk5",
+    "owner": {
+      "name": "Steven Hakanson",
+      "email": "steven.hakanson@example.com"
+    },
+    "players": [
+      {
+        "name": "Xander Schauffele"
+      },
+      {
+        "name": "Jacob Bridgeman"
+      },
+      {
+        "name": "Nick Dunlap"
+      },
+      {
+        "name": "Frankie Capan III"
+      }
+    ]
+  },
+  {
+    "name": "Justin The Nico Time",
+    "owner": {
+      "name": "Ladd Lyngaas",
+      "email": "ladd.lyngaas@example.com"
+    },
+    "players": [
+      {
+        "name": "Robert MacIntyre"
+      },
+      {
+        "name": "Justin Thomas"
+      },
+      {
+        "name": "Nico Echavarria"
+      },
+      {
+        "name": "Frankie Capan III"
+      }
+    ]
+  },
+  {
+    "name": "Jerry Parupsky 3",
+    "owner": {
+      "name": "Greg Parupsky",
+      "email": "greg.parupsky@example.com"
+    },
+    "players": [
+      {
+        "name": "Robert MacIntyre"
+      },
+      {
+        "name": "Akshay Bhatia"
+      },
+      {
+        "name": "Adam Scott"
+      },
+      {
+        "name": "S.H. Kim"
+      }
+    ]
+  },
+  {
+    "name": "Pool or Pond 6",
+    "owner": {
+      "name": "Mike Murphy",
+      "email": "mike.murphy@example.com"
+    },
+    "players": [
+      {
+        "name": "Corey Conners"
+      },
+      {
+        "name": "Akshay Bhatia"
+      },
+      {
+        "name": "Jacob Bridgeman"
+      },
+      {
+        "name": "Michael Thorbjornsen"
+      }
+    ]
+  },
+  {
+    "name": "Cowley2",
+    "owner": {
+      "name": "Bob Cowley",
+      "email": "bob.cowley@example.com"
+    },
+    "players": [
+      {
+        "name": "Tommy Fleetwood"
+      },
+      {
+        "name": "Keegan Bradley"
+      },
+      {
+        "name": "Daniel Berger"
+      },
+      {
+        "name": "Lee Hodges"
+      }
+    ]
+  },
+  {
+    "name": "Fleetwood Mac",
+    "owner": {
+      "name": "Andrew Murphy",
+      "email": "andrew.murphy@example.com"
+    },
+    "players": [
+      {
+        "name": "Robert MacIntyre"
+      },
+      {
+        "name": "Tommy Fleetwood"
+      },
+      {
+        "name": "Michael Brennan"
+      },
+      {
+        "name": "Neal Shipley"
+      }
+    ]
+  },
+  {
+    "name": "Dead Money1",
+    "owner": {
+      "name": "Gary Bibeau",
+      "email": "gary.bibeau@example.com"
+    },
+    "players": [
+      {
+        "name": "Robert MacIntyre"
+      },
+      {
+        "name": "Cameron Young"
+      },
+      {
+        "name": "Nate Lashley"
+      },
+      {
+        "name": "Neal Shipley"
+      }
+    ]
+  },
+  {
+    "name": "Wayupnortder2",
+    "owner": {
+      "name": "Terry Hanson",
+      "email": "terry.hanson@example.com"
+    },
+    "players": [
+      {
+        "name": "Robert Macintyre"
+      },
+      {
+        "name": "Viktor Hovland"
+      },
+      {
+        "name": "Gary Woodland"
+      },
+      {
+        "name": "Patton Kizzire"
+      }
+    ]
+  },
+  {
+    "name": "Miller #2",
+    "owner": {
+      "name": "Tom Miller",
+      "email": "tom.miller@example.com"
+    },
+    "players": [
+      {
+        "name": "Cameron Young"
+      },
+      {
+        "name": "Tom Kim"
+      },
+      {
+        "name": "Daniel Berger"
+      },
+      {
+        "name": "Harry Hall"
+      }
+    ]
+  },
+  {
+    "name": "Morning Wood",
+    "owner": {
+      "name": "Ladd Lyngaas",
+      "email": "ladd.lyngaas@example.com"
+    },
+    "players": [
+      {
+        "name": "Russell Henley"
+      },
+      {
+        "name": "Jake Knapp"
+      },
+      {
+        "name": "Gary Woodland"
+      },
+      {
+        "name": "Seamus Power"
+      }
+    ]
+  },
+  {
+    "name": "Fore Left 6",
+    "owner": {
+      "name": "Trent Waterman",
+      "email": "trent.waterman@example.com"
+    },
+    "players": [
+      {
+        "name": "Cameron Young"
+      },
+      {
+        "name": "Aldrich Potgieter"
+      },
+      {
+        "name": "Sami Valimaki"
+      },
+      {
+        "name": "Tom Hoge"
+      }
+    ]
+  },
+  {
+    "name": "The BLOB",
+    "owner": {
+      "name": "Greg Theroux",
+      "email": "greg.theroux@example.com"
+    },
+    "players": [
+      {
+        "name": "Rory McIlroy"
+      },
+      {
+        "name": "Jordan Spieth"
+      },
+      {
+        "name": "Tom Hoge"
+      },
+      {
+        "name": "Neal Shipley"
+      }
+    ]
+  },
+  {
+    "name": "Shanky McShankerson 1",
+    "owner": {
+      "name": "Phil Lombardi",
+      "email": "phil.lombardi@example.com"
+    },
+    "players": [
+      {
+        "name": "Rory McIlroy"
+      },
+      {
+        "name": "Aaron Rai"
+      },
+      {
+        "name": "Haotong Li"
+      },
+      {
+        "name": "Ben Silverman"
+      }
+    ]
+  }
+]
