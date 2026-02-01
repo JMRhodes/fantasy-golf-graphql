@@ -31,10 +31,6 @@ import { join } from 'path';
       }),
       inject: [ConfigService],
     }),
-    ServeStaticModule.forRoot({
-      rootPath: join(process.cwd(), 'frontend', 'dist'),
-      exclude: ['graphql', '/graphql/', '/graphql/*'],
-    }),
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
       autoSchemaFile: true,

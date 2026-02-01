@@ -4,6 +4,13 @@ POST https://fantasy-golf-graphql-develop.up.railway.app/graphql
 Content-Type: application/json
 
 {
-  "query": "query GetAllPlayers {\n  players {\n    id\n    name\n    totalPoints\n    wins\n    pgaId\n  }\n}\n",
+  "query": "query GET_Players {
+  getAllPlayers {
+    id
+    name
+    pgaId
+    salary
+  }
+}",
   "variables": {}
 }
