@@ -13,5 +13,6 @@ import { ResultSchema } from 'src/results/schemas/result.schema';
     ]),
   ],
   providers: [TournamentResolver, TournamentService],
+  exports: [TournamentService],
 })
 export class TournamentsModule {}
