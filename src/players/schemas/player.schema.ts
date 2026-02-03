@@ -2,7 +2,6 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Field, ID, ObjectType } from '@nestjs/graphql';
 import { HydratedDocument } from 'mongoose';
 import { IsOptional } from 'class-validator';
-import { Result } from 'src/results/schemas/result.schema';
 
 export type PlayerDocument = HydratedDocument<Player>;
 
@@ -29,10 +28,6 @@ export class Player {
   @IsOptional()
   @Prop({ required: false, default: null, nullable: true })
   avatarUrl: string;
-
-  @Field(() => [Result], { nullable: true })
-  @Prop({ type: [Result] })
-  results: Result[];
 }
 
 export const PlayerSchema = SchemaFactory.createForClass(Player);

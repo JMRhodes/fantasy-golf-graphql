@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Field, ID, ObjectType } from '@nestjs/graphql';
-import { HydratedDocument, Schema as MongooseSchema } from 'mongoose';
+import { HydratedDocument, Schema as MongooseSchema, Types } from 'mongoose';
 import { Owner } from 'src/owners/schemas/owner.schema';
 import { Player } from 'src/players/schemas/player.schema';
 
@@ -24,7 +24,7 @@ export class Team {
     ref: 'Owner',
     required: true,
   })
-  ownerId: Owner;
+  ownerId: Types.ObjectId | Owner;
 
   @Field(() => [Player], { nullable: 'itemsAndList' })
   @Prop([
@@ -33,7 +33,7 @@ export class Team {
       ref: 'Player',
     },
   ])
-  players: Player[];
+  players: Types.ObjectId[] | Player[];
 }
 
 export const TeamSchema = SchemaFactory.createForClass(Team);
