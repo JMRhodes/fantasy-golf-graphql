@@ -24,9 +24,6 @@ class EnvironmentVariables {
   PORT: number;
 
   @IsString()
-  MONGO_URI: string;
-
-  @IsString()
   DATABASE_URL: string;
 }
 
