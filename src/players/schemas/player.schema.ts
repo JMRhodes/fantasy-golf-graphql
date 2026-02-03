@@ -1,9 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Field, ID, ObjectType } from '@nestjs/graphql';
-import { HydratedDocument } from 'mongoose';
 import { IsOptional } from 'class-validator';
-
-export type PlayerDocument = HydratedDocument<Player>;
 
 @ObjectType() // GraphQL Object Type decorator
 @Schema({ timestamps: true }) // Mongoose Schema decorator

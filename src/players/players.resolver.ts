@@ -1,5 +1,12 @@
 import { Player } from './schemas/player.schema';
-import { Resolver, Query, Mutation, Args } from '@nestjs/graphql';
+import {
+  Resolver,
+  Query,
+  Mutation,
+  Args,
+  ResolveField,
+  Parent,
+} from '@nestjs/graphql';
 import { PlayersService } from './players.service';
 import { CreatePlayerInput } from './dtos/create-player.input';
 
@@ -23,6 +30,12 @@ export class PlayersResolver {
     } catch (error) {
       throw new Error('Failed to fetch players', { cause: error });
     }
+  }
+
+  @ResolveField('totalPoints', () => Number)
+  resolveTotalPoints(@Parent() player: Player): number {
+    // Placeholder logic for resolving total points
+    return 0;
   }
 
   @Mutation(() => Player)

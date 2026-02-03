@@ -9,7 +9,6 @@ import * as schema from './db/schema';
 
 @Module({
   imports: [
-    PlayersModule,
     ConfigModule.forRoot({
       isGlobal: true,
       cache: true,
@@ -33,6 +32,7 @@ import * as schema from './db/schema';
       autoSchemaFile: true,
       graphiql: true,
     }),
+    PlayersModule,
   ],
   controllers: [],
   providers: [],
