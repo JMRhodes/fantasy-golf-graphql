@@ -1,9 +1,9 @@
-import { Injectable } from '@nestjs/common';
-import { CreatePlayerInput } from './dtos/create-player.input';
+import { Inject, Injectable } from '@nestjs/common';
 import { Player } from './schemas/player.schema';
-import { InjectModel } from '@nestjs/mongoose';
-import { Model } from 'mongoose';
-
+import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
+import * as schema from '../db/schema';
+import { playersTable } from '../db/schema';
+import { CreatePlayerInput } from './dtos/create-player.input';
 /**
  * The service for managing players.
  * @constructor
@@ -11,35 +11,10 @@ import { Model } from 'mongoose';
  */
 @Injectable()
 export class PlayersService {
-  constructor(@InjectModel(Player.name) private playerModel: Model<Player>) {}
-
-  /**
-   * Creates a new player in the database.
-   *
-   * @param createPlayerInput - The input data for creating a new player.
-   * @returns The newly created player.
-   */
-  async createPlayer(createPlayerInput: CreatePlayerInput): Promise<Player> {
-    const player = new this.playerModel(createPlayerInput);
-    await player.save();
-
-    return player;
-  }
-
-  /**
-   * Creates multiple players in the database.
-   *
-   * @param createPlayerInputs - Array of input data for creating new players.
-   * @returns The newly created players.
-   */
-  async createPlayersBulk(
-    createPlayerInputs: CreatePlayerInput[],
-  ): Promise<Player[]> {
-    const createdPlayers =
-      await this.playerModel.insertMany(createPlayerInputs);
-
-    return createdPlayers as Player[];
-  }
+  constructor(
+    @Inject('DB_DEV')
+    private drizzleDev: PostgresJsDatabase<typeof schema>,
+  ) {}
 
   /**
    * Retrieves all players from the database.
@@ -47,60 +22,16 @@ export class PlayersService {
    * @returns
    */
   async getAllPlayers(): Promise<Player[]> {
-    return this.playerModel.find().exec();
+    const players = await this.drizzleDev.select().from(playersTable);
+    return players as Player[];
   }
 
-  /**
-   * Retrieves a player by their ID.
-   *
-   * @param id - The ID of the player to retrieve.
-   * @throws Error if the player is not found.
-   * @returns
-   */
-  async getPlayerById(id: string): Promise<Player> {
-    const player = await this.playerModel.findById(id).exec();
-    if (!player) {
-      throw new Error(`Player with ID ${id} not found`);
-    }
+  async createPlayer(playerData: CreatePlayerInput): Promise<Player> {
+    const result = await this.drizzleDev
+      .insert(playersTable)
+      .values(playerData)
+      .returning();
 
-    return player;
-  }
-
-  /**
-   * Updates a player's PGA Tour ID.
-   *
-   * @param id - The ID of the player to update.
-   * @param pgaId - The PGA Tour ID to set.
-   * @returns The updated player.
-   */
-  async updatePlayerPgaId(id: string, pgaId: number): Promise<Player> {
-    const player = await this.playerModel
-      .findByIdAndUpdate(id, { pgaId }, { new: true })
-      .exec();
-
-    if (!player) {
-      throw new Error(`Player with ID ${id} not found`);
-    }
-
-    return player;
-  }
-
-  /**
-   * Finds a player by name, or creates a new one if it doesn't exist.
-   *
-   * @param input - The player data (name)
-   * @returns The existing or newly created player
-   */
-  async findOrCreatePlayer(input: { name: string }): Promise<Player> {
-    // Try to find existing player by name
-    let player = await this.playerModel.findOne({ name: input.name }).exec();
-
-    if (!player) {
-      // Player doesn't exist, create new one with default salary of 0
-      player = new this.playerModel({ name: input.name, salary: 0 });
-      await player.save();
-    }
-
-    return player;
+    return result[0] as Player;
   }
 }

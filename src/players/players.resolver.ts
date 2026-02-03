@@ -1,18 +1,7 @@
 import { Player } from './schemas/player.schema';
-import {
-  Resolver,
-  Query,
-  Parent,
-  Args,
-  Mutation,
-  ID,
-  ResolveField,
-} from '@nestjs/graphql';
-import { CreatePlayerInput } from './dtos/create-player.input';
+import { Resolver, Query, Mutation, Args } from '@nestjs/graphql';
 import { PlayersService } from './players.service';
-import { GraphQLError } from 'graphql/error';
-import { Result } from 'src/results/schemas/result.schema';
-import { ResultService } from 'src/results/results.service';
+import { CreatePlayerInput } from './dtos/create-player.input';
 
 /**
  * Resolver for the Player entity
@@ -20,10 +9,7 @@ import { ResultService } from 'src/results/results.service';
  */
 @Resolver(() => Player)
 export class PlayersResolver {
-  constructor(
-    private playersService: PlayersService,
-    private resultsService: ResultService,
-  ) {}
+  constructor(private playersService: PlayersService) {}
 
   /**
    * Fetches all players from the database
@@ -34,87 +20,38 @@ export class PlayersResolver {
     try {
       const players = await this.playersService.getAllPlayers();
       return players;
-    } catch {
-      throw new Error('Failed to fetch players');
+    } catch (error) {
+      throw new Error('Failed to fetch players', { cause: error });
     }
   }
 
-  /**
-   * Fetches a single player by id
-   * @param Args id
-   * @returns
-   */
-  @Query(() => Player)
-  async getPlayer(@Args('id', { type: () => ID }) id: string): Promise<Player> {
-    try {
-      const player = await this.playersService.getPlayerById(id);
-      return player;
-    } catch {
-      throw new GraphQLError('Player not found', {
-        extensions: { code: 'NOT_FOUND' },
-      });
-    }
-  }
-
-  @ResolveField('totalPoints', () => Number)
-  async getTotalPoints(@Parent() player: Player): Promise<number> {
-    const results = await this.getResults(player);
-    return results.reduce((total, result) => total + result.points, 0);
-  }
-
-  @ResolveField('results', () => [Result])
-  async getResults(@Parent() player: Player): Promise<Result[]> {
-    const results = await this.resultsService.getResultsByPlayerId(player.id);
-
-    return results;
-  }
-
-  /**
-   * Creates a new player in the database
-   * @param createPlayerData - The data for the new player
-   * @returns
-   */
   @Mutation(() => Player)
   async createPlayer(
-    @Args('createPlayerData') createPlayerData: CreatePlayerInput,
-  ): Promise<Player> {
-    const player = await this.playersService.createPlayer(createPlayerData);
-    return player;
-  }
-
-  /**
-   * Creates multiple players in the database.
-   * @param createPlayerData - Array of data for the new players
-   * @returns
-   */
-  @Mutation(() => [Player])
-  async createPlayersBulk(
-    @Args({ name: 'createPlayerData', type: () => [CreatePlayerInput] })
-    createPlayerData: CreatePlayerInput[],
-  ): Promise<Player[]> {
-    const players =
-      await this.playersService.createPlayersBulk(createPlayerData);
-    return players;
-  }
-
-  /**
-   * Updates a player's PGA Tour ID
-   * @param id - The ID of the player to update
-   * @param pgaId - The PGA Tour ID to set
-   * @returns The updated player
-   */
-  @Mutation(() => Player)
-  async updatePlayerPgaId(
-    @Args('id', { type: () => ID }) id: string,
-    @Args('pgaId') pgaId: number,
+    @Args('createPlayerInput') createPlayerInput: CreatePlayerInput,
   ): Promise<Player> {
     try {
-      const player = await this.playersService.updatePlayerPgaId(id, pgaId);
-      return player;
-    } catch {
-      throw new GraphQLError('Failed to update player PGA ID', {
-        extensions: { code: 'UPDATE_FAILED' },
-      });
+      const newPlayer =
+        await this.playersService.createPlayer(createPlayerInput);
+      return newPlayer;
+    } catch (error) {
+      throw new Error('Failed to create player', { cause: error });
+    }
+  }
+
+  @Mutation(() => [Player])
+  async createPlayersBulk(
+    @Args({ name: 'createPlayerInputs', type: () => [CreatePlayerInput] })
+    createPlayerInputs: CreatePlayerInput[],
+  ): Promise<Player[]> {
+    try {
+      const createdPlayers: Player[] = [];
+      for (const input of createPlayerInputs) {
+        const newPlayer = await this.playersService.createPlayer(input);
+        createdPlayers.push(newPlayer);
+      }
+      return createdPlayers;
+    } catch (error) {
+      throw new Error('Failed to create players in bulk', { cause: error });
     }
   }
 }
