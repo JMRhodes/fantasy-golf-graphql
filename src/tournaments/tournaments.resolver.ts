@@ -1,5 +1,12 @@
 import { Tournament } from './schemas/tournament.schema';
-import { Resolver, Query, Mutation, Args } from '@nestjs/graphql';
+import {
+  Resolver,
+  Query,
+  Mutation,
+  Args,
+  ResolveField,
+  Parent,
+} from '@nestjs/graphql';
 import { TournamentService } from './tournaments.service';
 import { CreateTournamentInput } from './dtos/create-tournament.dto';
 
@@ -10,6 +17,7 @@ import { CreateTournamentInput } from './dtos/create-tournament.dto';
 @Resolver(() => Tournament)
 export class TournamentResolver {
   constructor(private tournamentService: TournamentService) {}
+
   /**
    * Fetches all tournaments from the database
    * @returns
@@ -24,6 +32,31 @@ export class TournamentResolver {
     }
   }
 
+  @Query(() => Tournament)
+  async getTournamentById(@Args('id') id: string): Promise<Tournament> {
+    try {
+      const tournament = await this.tournamentService.getTournamentById(id);
+      return tournament;
+    } catch (error) {
+      throw new Error('Failed to fetch tournament by ID', { cause: error });
+    }
+  }
+
+  @ResolveField('results', () => [String])
+  results(@Parent() tournament: Tournament): string[] {
+    try {
+      return [];
+    } catch (error) {
+      throw new Error('Failed to fetch tournament results', { cause: error });
+    }
+  }
+
+  /**
+   * Creates a new tournament
+   *
+   * @param createTournamentInput
+   * @returns
+   */
   @Mutation(() => Tournament)
   async createTournament(
     @Args('createTournamentInput') createTournamentInput: CreateTournamentInput,
