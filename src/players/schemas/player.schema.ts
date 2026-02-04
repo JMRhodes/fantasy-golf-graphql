@@ -3,7 +3,7 @@ import { IsOptional } from 'class-validator';
 
 @ObjectType() // GraphQL Object Type decorator
 export class Player {
-  @Field(() => ID) // GraphQL Field for the 'id' (MongoDB's _id)
+  @Field(() => ID)
   id: string;
 
   @Field()

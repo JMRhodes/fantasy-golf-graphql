@@ -1,0 +1,41 @@
+import { Tournament } from './schemas/tournament.schema';
+import { Resolver, Query, Mutation, Args } from '@nestjs/graphql';
+import { TournamentService } from './tournaments.service';
+import { CreateTournamentInput } from './dtos/create-tournament.dto';
+
+/**
+ * Resolver for the Tournament entity
+ * @description This resolver handles all the GraphQL queries and mutations for the Tournament entity
+ */
+@Resolver(() => Tournament)
+export class TournamentResolver {
+  constructor(private tournamentService: TournamentService) {}
+  /**
+   * Fetches all tournaments from the database
+   * @returns
+   */
+  @Query(() => [Tournament])
+  async getAllTournaments(): Promise<Tournament[]> {
+    try {
+      const tournaments = await this.tournamentService.getAllTournaments();
+      return tournaments;
+    } catch (error) {
+      throw new Error('Failed to fetch tournaments', { cause: error });
+    }
+  }
+
+  @Mutation(() => Tournament)
+  async createTournament(
+    @Args('createTournamentInput') createTournamentInput: CreateTournamentInput,
+  ): Promise<Tournament> {
+    try {
+      // Implementation for creating a tournament goes here
+      const tournament = await this.tournamentService.createTournament(
+        createTournamentInput,
+      );
+      return tournament;
+    } catch (error) {
+      throw new Error('Failed to create tournament', { cause: error });
+    }
+  }
+}

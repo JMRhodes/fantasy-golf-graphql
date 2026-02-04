@@ -6,6 +6,7 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { PlayersModule } from './players/players.module';
 import { DrizzlePostgresModule } from '@knaadh/nestjs-drizzle-postgres';
 import * as schema from './db/schema';
+import { TournamentsModule } from './tournaments/tournaments.module';
 
 @Module({
   imports: [
@@ -33,6 +34,7 @@ import * as schema from './db/schema';
       graphiql: true,
     }),
     PlayersModule,
+    TournamentsModule,
   ],
   controllers: [],
   providers: [],
