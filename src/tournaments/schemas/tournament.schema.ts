@@ -1,5 +1,6 @@
 import { Field, ID, ObjectType } from '@nestjs/graphql';
 import { IsOptional } from 'class-validator';
+import { Result } from '../../results/schemas/result.schema';
 
 export type TournamentStatusEnum = 'UPCOMING' | 'IN-PROGRESS' | 'COMPLETED';
 
@@ -27,4 +28,7 @@ export class Tournament {
 
   @Field(() => Date)
   endDate: Date;
+
+  @Field(() => [Result], { nullable: true })
+  results?: Result[];
 }

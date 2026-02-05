@@ -9,6 +9,7 @@ import * as schema from './db/schema';
 import { TournamentsModule } from './tournaments/tournaments.module';
 import { OwnersModule } from './owners/owners.module';
 import { TeamsModule } from './teams/teams.module';
+import { ResultsModule } from './results/results.module';
 
 @Module({
   imports: [
@@ -39,6 +40,7 @@ import { TeamsModule } from './teams/teams.module';
     TournamentsModule,
     OwnersModule,
     TeamsModule,
+    ResultsModule,
   ],
   controllers: [],
   providers: [],

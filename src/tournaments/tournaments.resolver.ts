@@ -9,6 +9,8 @@ import {
 } from '@nestjs/graphql';
 import { TournamentService } from './tournaments.service';
 import { CreateTournamentInput } from './dtos/create-tournament.dto';
+import { Result } from '../results/schemas/result.schema';
+import { ResultsService } from '../results/results.service';
 
 /**
  * Resolver for the Tournament entity
@@ -16,7 +18,10 @@ import { CreateTournamentInput } from './dtos/create-tournament.dto';
  */
 @Resolver(() => Tournament)
 export class TournamentResolver {
-  constructor(private tournamentService: TournamentService) {}
+  constructor(
+    private tournamentService: TournamentService,
+    private resultsService: ResultsService,
+  ) {}
 
   /**
    * Fetches all tournaments from the database
@@ -42,13 +47,9 @@ export class TournamentResolver {
     }
   }
 
-  @ResolveField('results', () => [String])
-  results(@Parent() tournament: Tournament): string[] {
-    try {
-      return [];
-    } catch (error) {
-      throw new Error('Failed to fetch tournament results', { cause: error });
-    }
+  @ResolveField('results', () => [Result])
+  async results(@Parent() tournament: Tournament): Promise<Result[]> {
+    return this.resultsService.getResultsByTournamentId(tournament.id);
   }
 
   /**

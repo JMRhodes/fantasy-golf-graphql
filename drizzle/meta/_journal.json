@@ -8,6 +8,13 @@
       "when": 1770260077659,
       "tag": "0000_pretty_falcon",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1770261897966,
+      "tag": "0001_blue_mindworm",
+      "breakpoints": true
     }
   ]
 }

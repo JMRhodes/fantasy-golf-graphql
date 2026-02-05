@@ -3,4 +3,5 @@ export * from './tournaments.schema';
 export * from './owners.schema';
 export * from './teams.schema';
 export * from './team-players.schema';
+export * from './results.schema';
 export * from './relations';
