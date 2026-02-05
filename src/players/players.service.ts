@@ -1,8 +1,9 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { Player } from './schemas/player.schema';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
+import { eq } from 'drizzle-orm';
 import * as schema from '../db/schema';
-import { playersTable } from '../db/schema';
+import { playersTable, resultsTable } from '../db/schema';
 import { CreatePlayerInput } from './dtos/create-player.input';
 /**
  * The service for managing players.
@@ -24,6 +25,19 @@ export class PlayersService {
   async getAllPlayers(): Promise<Player[]> {
     const players = await this.drizzleDev.select().from(playersTable);
     return players as Player[];
+  }
+
+  async getPlayerTotalPoints(playerId: string): Promise<number> {
+    const results = await this.drizzleDev
+      .select()
+      .from(resultsTable)
+      .where(eq(resultsTable.playerId, playerId));
+
+    if (results.length > 0) {
+      return results.reduce((sum, result) => sum + result.points, 0);
+    }
+
+    return 0;
   }
 
   async createPlayer(playerData: CreatePlayerInput): Promise<Player> {

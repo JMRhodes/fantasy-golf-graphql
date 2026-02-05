@@ -33,9 +33,13 @@ export class PlayersResolver {
   }
 
   @ResolveField('totalPoints', () => Number)
-  resolveTotalPoints(@Parent() player: Player): number {
+  async resolveTotalPoints(@Parent() player: Player): Promise<number> {
     // Placeholder logic for resolving total points
-    return 0;
+    const totalPoints = await this.playersService.getPlayerTotalPoints(
+      player.id,
+    );
+
+    return totalPoints || 0;
   }
 
   @Mutation(() => Player)
