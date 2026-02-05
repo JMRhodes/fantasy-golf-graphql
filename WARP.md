@@ -6,7 +6,7 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
 
 This is a fullstack fantasy golf application consisting of two main components:
 
-- **Backend API** (root directory): A NestJS GraphQL API that handles data persistence and business logic for managing owners, players, teams, tournaments, and results. Built with NestJS, Apollo Server, Mongoose, and MongoDB.
+- **Backend API** (root directory): A NestJS GraphQL API that handles data persistence and business logic for managing owners, players, teams, and tournaments. Built with NestJS, Apollo Server, Drizzle ORM, and PostgreSQL.
 - **Frontend** (`/frontend`): An Astro static site that provides the user interface for the fantasy golf application. Built with Astro 5.x and configured for static site generation (`output: 'static'`).
 
 The API exposes a GraphQL endpoint that the frontend can consume to display and manage fantasy golf data.
@@ -73,33 +73,27 @@ Jest is configured in `package.json` for unit tests and `test/jest-e2e.json` for
 
 Unit tests are expected to live under `src/` with filenames matching `*.spec.ts` (see the Jest `testRegex` in `package.json`). E2E tests should live under `test/` and match `*.e2e-spec.ts`.
 
-### Local MongoDB via Docker
+### Database migrations
 
-MongoDB is provided via the local Docker setup:
+Drizzle Kit is used for database migrations:
 
-- Start MongoDB in the background:
-  - `docker compose up -d`
-- Stop MongoDB:
-  - `docker compose down`
-
-The `docker-compose.yml` file defines a `mongo` service built from the root `Dockerfile`, exposing `27017` and configuring:
-
-- `MONGO_INITDB_ROOT_USERNAME=fantasygolf`
-- `MONGO_INITDB_ROOT_PASSWORD=fantasygolf`
-- `MONGO_INITDB_DATABASE=fantasygolf`
-
-Set `MONGO_URI` in your `.env` (see `.env.example`) to point at this Mongo instance using the above credentials.
+- Generate migrations from schema changes:
+  - `yarn drizzle-kit generate`
+- Apply migrations to the database:
+  - `yarn drizzle-kit migrate`
+- Open Drizzle Studio (database GUI):
+  - `yarn drizzle-kit studio`
 
 ## Environment and configuration
 
 Configuration is centralized via `@nestjs/config` and validated by `env.validation.ts`:
 
-- `.env.example` documents the required variables:
+- Required environment variables:
   - `NODE_ENV` (one of: `local`, `development`, `production`)
   - `PORT` (0–65535)
-  - `MONGO_URI` (MongoDB connection string)
+  - `DATABASE_URL` (PostgreSQL connection string)
 - `ConfigModule.forRoot` (in `src/app.module.ts`) loads process env vars, applies `validate`, and makes them globally available.
-- `MongooseModule.forRootAsync` reads `MONGO_URI` from `ConfigService` to connect to MongoDB.
+- `DrizzlePostgresModule.registerAsync` reads `DATABASE_URL` from `ConfigService` to connect to PostgreSQL.
 
 If validation fails (missing or invalid env vars), the app will throw on startup.
 
@@ -108,7 +102,7 @@ If validation fails (missing or invalid env vars), the app will throw on startup
 ### Framework and runtime
 
 - This is a NestJS (`@nestjs/core`) GraphQL API using the Apollo driver (`@nestjs/apollo`, `@apollo/server`).
-- Persistence is handled via Mongoose (`@nestjs/mongoose`, `mongoose`) against a MongoDB instance.
+- Persistence is handled via Drizzle ORM (`drizzle-orm`, `drizzle-orm/postgres-js`) against a PostgreSQL instance.
 - The GraphQL schema is generated at runtime (`autoSchemaFile: true` in `src/app.module.ts`), based on decorators on TypeScript classes.
 
 ### Application module graph
@@ -116,77 +110,80 @@ If validation fails (missing or invalid env vars), the app will throw on startup
 The root module is `AppModule` (`src/app.module.ts`), which wires together:
 
 - `ConfigModule` (global env configuration + validation via `env.validation.ts`)
-- `MongooseModule` (MongoDB connection using `MONGO_URI`)
+- `DrizzlePostgresModule` (PostgreSQL connection using `DATABASE_URL`, injected as `'DB_DEV'`)
 - `GraphQLModule` (ApolloDriver with code-first schema generation and GraphiQL enabled)
 - Domain feature modules:
   - `OwnersModule`
   - `PlayersModule`
-  - `ResultsModule`
   - `TeamsModule`
   - `TournamentsModule`
 
 Each feature module follows a consistent Nest pattern:
 
-- `*.module.ts` – registers Mongoose models via `MongooseModule.forFeature` and exposes providers.
-- `*.service.ts` – encapsulates MongoDB data access via injected `Model<T>` instances.
+- `*.module.ts` – registers providers and exports services.
+- `*.service.ts` – encapsulates database access via injected `PostgresJsDatabase<typeof schema>` instance (tagged `'DB_DEV'`).
 - `*.resolver.ts` – defines the GraphQL API (queries and mutations) using decorators over the corresponding schema classes and DTOs.
 
-### GraphQL + Mongoose data model
+### Database schema structure
 
-The domain model is expressed twice for each aggregate:
+Drizzle table definitions live in `src/db/schema/`:
+
+- `players.schema.ts` – players table
+- `owners.schema.ts` – owners table
+- `teams.schema.ts` – teams table with FK to owners
+- `team-players.schema.ts` – junction table for teams ↔ players many-to-many relationship
+- `tournaments.schema.ts` – tournaments table with status enum
+- `relations.ts` – Drizzle relation definitions for nested queries
+- `index.ts` – re-exports all schemas and relations
+
+### GraphQL + Drizzle data model
+
+The domain model is expressed in two places:
 
 - **GraphQL types** – `@ObjectType()` and `@Field()`-annotated classes under each module's `schemas/` directory.
-- **Mongoose schemas** – `@Schema()` and `@Prop()` on the same classes, with `SchemaFactory.createForClass` producing actual schemas.
+- **Drizzle schemas** – `pgTable()` definitions in `src/db/schema/` with column types and constraints.
 
 Key aggregates and relationships:
 
 - **Owners** (`src/owners`)
-  - `Owner` schema: name and unique email, with timestamps.
-  - `OwnerService` provides `getAllOwners`, `getOwnersByEmail`, and `createOwner`.
-  - `OwnerResolver` exposes queries for all owners / owners by email, plus a mutation to create owners.
+  - Drizzle: `ownersTable` with `id`, `name`, `email` (unique)
+  - GraphQL: `Owner` type
+  - Service: `getAllOwners`, `getOwnerById`, `getOwnerByEmail`, `createOwner`
 
 - **Players** (`src/players`)
-  - `Player` schema: name, optional PGA id, salary; timestamps.
-  - `PlayersService` provides CRUD-style operations: create single, create bulk, list all, get by id.
-  - `PlayersResolver` exposes queries for all players and by id, and mutations for creating one or many players.
-  - `player-rosters.json` is a large static list of player name + salary data that can be used for seeding.
-
-- **Results** (`src/results`)
-  - `Result` schema: references a `Player` (`player` field, `ObjectId` ref), position, and points.
-  - `ResultService` returns all results, populating `player` on each.
-  - `ResultResolver` exposes a `getAllResults` query. (Tournament-scoped result queries are scaffolded but commented out.)
+  - Drizzle: `playersTable` with `id`, `name`, `pgaId`, `salary`, `avatarUrl`
+  - GraphQL: `Player` type with `totalPoints` resolved field
+  - Service: `getAllPlayers`, `createPlayer`
 
 - **Teams** (`src/teams`)
-  - `Team` schema: optional name and an `ownerId` referencing an `Owner` document.
-  - `TeamsService` handles creation and retrieval, always populating the `ownerId` reference.
-  - `TeamsResolver` exposes mutations to create teams and queries to fetch all teams or by id.
+  - Drizzle: `teamsTable` with `id`, `name`, `ownerId` (FK to owners)
+  - Junction: `teamPlayersTable` with composite PK `(teamId, playerId)` – ensures unique players per team
+  - GraphQL: `Team` type with nested `owner` and `players` fields
+  - Service: `getAllTeams`, `getTeamById`, `getTeamsByOwnerId`, `createTeam` (requires exactly 4 unique player IDs)
+  - Uses Drizzle relations to populate owner and players in queries
 
 - **Tournaments** (`src/tournaments`)
-  - `Tournament` schema: name, optional description, status (`TournamentStatusEnum`), start/end dates, and an array of `results` referencing `Result` documents.
-  - `TournamentService` supports:
-    - Creating tournaments.
-    - Getting all tournaments or a single tournament by id, with `results` and nested `player` populated.
-    - `addResultsToTournament`, which:
-      - Creates `Result` documents from `CreateResultInput[]`.
-      - Appends their `ObjectId`s to `tournament.results`.
-      - Saves and re-populates `results` (and nested players) before returning.
-  - `TournamentResolver` exposes queries for all tournaments and by id, plus mutations for creating tournaments and adding results.
+  - Drizzle: `tournamentsTable` with `id`, `name`, `description`, `status` (enum: UPCOMING, IN-PROGRESS, COMPLETED), `avatarUrl`, `startDate`, `endDate`
+  - GraphQL: `Tournament` type
 
 ### DTOs and validation
 
 Input validation is applied both at the environment level and on GraphQL inputs:
 
 - Env vars are validated through `env.validation.ts` using `class-validator`.
-- GraphQL inputs under each module's `dtos/` directory (e.g., `CreatePlayerInput`, `CreateTournamentInput`, `CreateResultInput`, `CreateOwnerInput`, `CreateTeamInput`) use `class-validator` decorators to enforce string/number types, length constraints, and optional fields.
+- GraphQL inputs under each module's `dtos/` directory (e.g., `CreatePlayerInput`, `CreateOwnerInput`, `CreateTeamInput`) use `class-validator` decorators to enforce string/number types, length constraints, UUIDs, and optional fields.
 
 When adding new mutations or queries, follow the existing pattern:
 
 - Define an `@InputType()` DTO in the module's `dtos/` folder with appropriate validation decorators.
+- Add Drizzle table definition in `src/db/schema/` if new tables are needed.
+- Update `src/db/schema/relations.ts` if new relationships are needed.
 - Extend the `*.service.ts` with the corresponding business logic.
 - Expose GraphQL operations in the `*.resolver.ts` using the DTO and schema types.
 
 ## Notes for future Warp usage
 
 - Prefer Yarn for running scripts, matching the existing README and `package.json` scripts.
-- Reuse the established module pattern (module + service + resolver + schema + DTO) when introducing new domains.
-- Keep environment validation in sync with `.env.example` and any new required configuration keys.
+- Reuse the established module pattern (module + service + resolver + GraphQL schema + DTO + Drizzle schema) when introducing new domains.
+- Keep environment validation in sync with any new required configuration keys.
+- After modifying Drizzle schemas, run `yarn drizzle-kit generate` to create migrations.

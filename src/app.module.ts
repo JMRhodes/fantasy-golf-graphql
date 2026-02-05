@@ -7,6 +7,8 @@ import { PlayersModule } from './players/players.module';
 import { DrizzlePostgresModule } from '@knaadh/nestjs-drizzle-postgres';
 import * as schema from './db/schema';
 import { TournamentsModule } from './tournaments/tournaments.module';
+import { OwnersModule } from './owners/owners.module';
+import { TeamsModule } from './teams/teams.module';
 
 @Module({
   imports: [
@@ -35,6 +37,8 @@ import { TournamentsModule } from './tournaments/tournaments.module';
     }),
     PlayersModule,
     TournamentsModule,
+    OwnersModule,
+    TeamsModule,
   ],
   controllers: [],
   providers: [],
