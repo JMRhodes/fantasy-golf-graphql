@@ -23,4 +23,8 @@ export class Player {
   @Field({ defaultValue: 0 })
   @IsOptional()
   totalPoints?: number;
+
+  @Field({ defaultValue: 0 })
+  @IsOptional()
+  totalWins?: number;
 }

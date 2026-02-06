@@ -33,6 +33,10 @@ export class PlayersService {
         totalPoints: sql<number>`COALESCE(SUM(${resultsTable.points}), 0)`.as(
           'totalPoints',
         ),
+        totalWins:
+          sql<number>`COALESCE(SUM(CASE WHEN ${resultsTable.position} = '1' THEN 1 ELSE 0 END), 0)`.as(
+            'totalWins',
+          ),
       })
       .from(playersTable)
       .leftJoin(resultsTable, eq(playersTable.id, resultsTable.playerId))
