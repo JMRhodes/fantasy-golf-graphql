@@ -1,7 +1,7 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { Player } from './schemas/player.schema';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
-import { eq } from 'drizzle-orm';
+import { eq, sql, desc } from 'drizzle-orm';
 import * as schema from '../db/schema';
 import { playersTable, resultsTable } from '../db/schema';
 import { CreatePlayerInput } from './dtos/create-player.input';
@@ -18,12 +18,27 @@ export class PlayersService {
   ) {}
 
   /**
-   * Retrieves all players from the database.
+   * Retrieves all players from the database, sorted by total points.
    *
    * @returns
    */
   async getAllPlayers(): Promise<Player[]> {
-    const players = await this.drizzleDev.select().from(playersTable);
+    const players = await this.drizzleDev
+      .select({
+        id: playersTable.id,
+        name: playersTable.name,
+        pgaId: playersTable.pgaId,
+        salary: playersTable.salary,
+        avatarUrl: playersTable.avatarUrl,
+        totalPoints: sql<number>`COALESCE(SUM(${resultsTable.points}), 0)`.as(
+          'totalPoints',
+        ),
+      })
+      .from(playersTable)
+      .leftJoin(resultsTable, eq(playersTable.id, resultsTable.playerId))
+      .groupBy(playersTable.id)
+      .orderBy(desc(sql`"totalPoints"`));
+
     return players as Player[];
   }
 

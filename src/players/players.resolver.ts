@@ -1,12 +1,5 @@
 import { Player } from './schemas/player.schema';
-import {
-  Resolver,
-  Query,
-  Mutation,
-  Args,
-  ResolveField,
-  Parent,
-} from '@nestjs/graphql';
+import { Resolver, Query, Mutation, Args } from '@nestjs/graphql';
 import { PlayersService } from './players.service';
 import { CreatePlayerInput } from './dtos/create-player.input';
 
@@ -26,20 +19,11 @@ export class PlayersResolver {
   async getAllPlayers(): Promise<Player[]> {
     try {
       const players = await this.playersService.getAllPlayers();
+
       return players;
     } catch (error) {
       throw new Error('Failed to fetch players', { cause: error });
     }
-  }
-
-  @ResolveField('totalPoints', () => Number)
-  async resolveTotalPoints(@Parent() player: Player): Promise<number> {
-    // Placeholder logic for resolving total points
-    const totalPoints = await this.playersService.getPlayerTotalPoints(
-      player.id,
-    );
-
-    return totalPoints || 0;
   }
 
   @Mutation(() => Player)

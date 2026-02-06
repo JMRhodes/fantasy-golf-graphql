@@ -41,7 +41,8 @@ export class ResultsResolver {
 
   @Mutation(() => [Result])
   async createResultsBulk(
-    @Args('createResultsBulkInput') createResultsBulkInput: CreateResultsBulkInput,
+    @Args('createResultsBulkInput')
+    createResultsBulkInput: CreateResultsBulkInput,
   ): Promise<Result[]> {
     return this.resultsService.createResultsBulk(createResultsBulkInput);
   }

@@ -3,7 +3,7 @@ import { Tournament } from './schemas/tournament.schema';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
 import * as schema from '../db/schema';
 import { tournamentsTable } from '../db/schema';
-import { eq } from 'drizzle-orm';
+import { desc, eq } from 'drizzle-orm';
 import { CreateTournamentInput } from './dtos/create-tournament.dto';
 
 /**
@@ -24,7 +24,10 @@ export class TournamentService {
    * @returns
    */
   async getAllTournaments(): Promise<Tournament[]> {
-    const tournaments = await this.drizzleDev.select().from(tournamentsTable);
+    const tournaments = await this.drizzleDev
+      .select()
+      .from(tournamentsTable)
+      .orderBy(desc(tournamentsTable.startDate));
     return tournaments as Tournament[];
   }
 

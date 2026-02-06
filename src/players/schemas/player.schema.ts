@@ -19,4 +19,8 @@ export class Player {
   @Field(() => String, { nullable: true })
   @IsOptional()
   avatarUrl: string;
+
+  @Field({ defaultValue: 0 })
+  @IsOptional()
+  totalPoints?: number;
 }
