@@ -18,4 +18,11 @@ export class Team {
 
   @Field(() => [Player], { nullable: true })
   players?: Player[];
+
+  // Computed fields (resolved dynamically)
+  @Field(() => Number, { nullable: true })
+  totalPoints?: number;
+
+  @Field(() => Number, { nullable: true })
+  rank?: number;
 }

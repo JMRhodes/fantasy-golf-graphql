@@ -10,6 +10,7 @@ import { TournamentsModule } from './tournaments/tournaments.module';
 import { OwnersModule } from './owners/owners.module';
 import { TeamsModule } from './teams/teams.module';
 import { ResultsModule } from './results/results.module';
+import { TeamsCommand } from './cli/teams/teams.command';
 
 @Module({
   imports: [
@@ -43,6 +44,6 @@ import { ResultsModule } from './results/results.module';
     ResultsModule,
   ],
   controllers: [],
-  providers: [],
+  providers: [TeamsCommand],
 })
 export class AppModule {}

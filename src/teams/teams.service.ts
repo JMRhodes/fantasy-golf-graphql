@@ -1,8 +1,8 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
-import { eq } from 'drizzle-orm';
+import { eq, sql } from 'drizzle-orm';
 import * as schema from '../db/schema';
-import { teamsTable, teamPlayersTable } from '../db/schema';
+import { teamsTable, teamPlayersTable, playersTable, resultsTable } from '../db/schema';
 import { Team } from './schemas/team.schema';
 import { CreateTeamInput } from './dtos/create-team.input';
 
@@ -25,9 +25,32 @@ export class TeamsService {
       },
     });
 
+    // Fetch player stats (totalPoints, totalWins) for all players
+    const playerStats = await this.drizzleDev
+      .select({
+        id: playersTable.id,
+        totalPoints: sql<number>`COALESCE(SUM(${resultsTable.points}), 0)`.as(
+          'totalPoints',
+        ),
+        totalWins:
+          sql<number>`COALESCE(SUM(CASE WHEN ${resultsTable.position} = '1' THEN 1 ELSE 0 END), 0)`.as(
+            'totalWins',
+          ),
+      })
+      .from(playersTable)
+      .leftJoin(resultsTable, eq(playersTable.id, resultsTable.playerId))
+      .groupBy(playersTable.id);
+
+    // Create a map for quick lookup
+    const statsMap = new Map(playerStats.map((stat) => [stat.id, stat]));
+
     return teams.map((team) => ({
       ...team,
-      players: team.teamPlayers.map((tp) => tp.player),
+      players: team.teamPlayers.map((tp) => ({
+        ...tp.player,
+        totalPoints: Number(statsMap.get(tp.player.id)?.totalPoints ?? 0),
+        totalWins: Number(statsMap.get(tp.player.id)?.totalWins ?? 0),
+      })),
     })) as Team[];
   }
 
@@ -46,9 +69,33 @@ export class TeamsService {
 
     if (!team) return null;
 
+    // Fetch player stats for this team's players
+    const playerIds = team.teamPlayers.map((tp) => tp.player.id);
+    const playerStats = await this.drizzleDev
+      .select({
+        id: playersTable.id,
+        totalPoints: sql<number>`COALESCE(SUM(${resultsTable.points}), 0)`.as(
+          'totalPoints',
+        ),
+        totalWins:
+          sql<number>`COALESCE(SUM(CASE WHEN ${resultsTable.position} = '1' THEN 1 ELSE 0 END), 0)`.as(
+            'totalWins',
+          ),
+      })
+      .from(playersTable)
+      .leftJoin(resultsTable, eq(playersTable.id, resultsTable.playerId))
+      .where(sql`${playersTable.id} = ANY(${playerIds})`)
+      .groupBy(playersTable.id);
+
+    const statsMap = new Map(playerStats.map((stat) => [stat.id, stat]));
+
     return {
       ...team,
-      players: team.teamPlayers.map((tp) => tp.player),
+      players: team.teamPlayers.map((tp) => ({
+        ...tp.player,
+        totalPoints: Number(statsMap.get(tp.player.id)?.totalPoints ?? 0),
+        totalWins: Number(statsMap.get(tp.player.id)?.totalWins ?? 0),
+      })),
     } as Team;
   }
 
@@ -65,9 +112,31 @@ export class TeamsService {
       },
     });
 
+    // Fetch player stats for all players in these teams
+    const playerStats = await this.drizzleDev
+      .select({
+        id: playersTable.id,
+        totalPoints: sql<number>`COALESCE(SUM(${resultsTable.points}), 0)`.as(
+          'totalPoints',
+        ),
+        totalWins:
+          sql<number>`COALESCE(SUM(CASE WHEN ${resultsTable.position} = '1' THEN 1 ELSE 0 END), 0)`.as(
+            'totalWins',
+          ),
+      })
+      .from(playersTable)
+      .leftJoin(resultsTable, eq(playersTable.id, resultsTable.playerId))
+      .groupBy(playersTable.id);
+
+    const statsMap = new Map(playerStats.map((stat) => [stat.id, stat]));
+
     return teams.map((team) => ({
       ...team,
-      players: team.teamPlayers.map((tp) => tp.player),
+      players: team.teamPlayers.map((tp) => ({
+        ...tp.player,
+        totalPoints: Number(statsMap.get(tp.player.id)?.totalPoints ?? 0),
+        totalWins: Number(statsMap.get(tp.player.id)?.totalWins ?? 0),
+      })),
     })) as Team[];
   }
 
@@ -96,5 +165,46 @@ export class TeamsService {
 
     // Return the team with relations
     return this.getTeamById(newTeam.id) as Promise<Team>;
+  }
+
+  /**
+   * Get leaderboard with teams sorted by total points (descending)
+   * Computes totalPoints and rank for each team
+   */
+  async getLeaderboard(): Promise<Team[]> {
+    const teams = await this.getAllTeams();
+
+    // Calculate totalPoints for each team
+    const teamsWithPoints = teams.map((team) => ({
+      ...team,
+      totalPoints: this.calculateTeamTotalPoints(team),
+    }));
+
+    // Sort by totalPoints descending (highest first)
+    teamsWithPoints.sort((a, b) => b.totalPoints - a.totalPoints);
+
+    // Assign ranks with tie handling (standard competition ranking: 1, 2, 2, 4)
+    let currentRank = 1;
+    for (let i = 0; i < teamsWithPoints.length; i++) {
+      if (i > 0 && teamsWithPoints[i].totalPoints < teamsWithPoints[i - 1].totalPoints) {
+        currentRank = i + 1; // Jump rank after ties
+      }
+      teamsWithPoints[i].rank = currentRank;
+    }
+
+    return teamsWithPoints;
+  }
+
+  /**
+   * Calculate total points for a team (sum of all players' totalPoints)
+   */
+  calculateTeamTotalPoints(team: Team): number {
+    if (!team.players || team.players.length === 0) {
+      return 0;
+    }
+    return team.players.reduce(
+      (sum, player) => sum + (player.totalPoints || 0),
+      0,
+    );
   }
 }
