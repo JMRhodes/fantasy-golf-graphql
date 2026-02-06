@@ -1,6 +1,6 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
-import { eq } from 'drizzle-orm';
+import { eq, desc } from 'drizzle-orm';
 import * as schema from '../db/schema';
 import { resultsTable } from '../db/schema';
 import { Result } from './schemas/result.schema';
@@ -41,6 +41,7 @@ export class ResultsService {
       with: {
         player: true,
       },
+      orderBy: desc(resultsTable.points),
     });
     return results as Result[];
   }
