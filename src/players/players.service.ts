@@ -67,4 +67,13 @@ export class PlayersService {
 
     return result[0] as Player;
   }
+
+  async deletePlayer(playerId: string): Promise<boolean> {
+    const result = await this.drizzleDev
+      .delete(playersTable)
+      .where(eq(playersTable.id, playerId))
+      .returning();
+
+    return result.length > 0;
+  }
 }

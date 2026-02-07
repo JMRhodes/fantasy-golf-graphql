@@ -12,7 +12,7 @@ export const teamPlayersTable = pgTable(
     playerId: t
       .uuid()
       .notNull()
-      .references(() => playersTable.id),
+      .references(() => playersTable.id, { onDelete: 'cascade' }),
   }),
   (table) => [primaryKey({ columns: [table.teamId, table.playerId] })],
 );

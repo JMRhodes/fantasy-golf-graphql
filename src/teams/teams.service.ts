@@ -46,11 +46,13 @@ export class TeamsService {
 
     return teams.map((team) => ({
       ...team,
-      players: team.teamPlayers.map((tp) => ({
-        ...tp.player,
-        totalPoints: Number(statsMap.get(tp.player.id)?.totalPoints ?? 0),
-        totalWins: Number(statsMap.get(tp.player.id)?.totalWins ?? 0),
-      })),
+      players: team.teamPlayers
+        .map((tp) => ({
+          ...tp.player,
+          totalPoints: Number(statsMap.get(tp.player.id)?.totalPoints ?? 0),
+          totalWins: Number(statsMap.get(tp.player.id)?.totalWins ?? 0),
+        }))
+        .sort((a, b) => (b.salary ?? 0) - (a.salary ?? 0)),
     })) as Team[];
   }
 

@@ -55,7 +55,7 @@ export class TeamsResolver {
   totalPoints(@Parent() team: Team): number {
     // If already computed (from leaderboard query), return it
     if (team.totalPoints !== undefined) {
-      return team.totalPoints;
+      return team.totalPoints as number;
     }
     // Otherwise calculate it (for individual team queries)
     return this.teamsService.calculateTeamTotalPoints(team);
@@ -68,6 +68,6 @@ export class TeamsResolver {
   @ResolveField(() => Number, { nullable: true })
   rank(@Parent() team: Team): number | null {
     // Rank is only computed in leaderboard query context
-    return team.rank ?? null;
+    return (team.rank as number) ?? null;
   }
 }

@@ -55,4 +55,13 @@ export class PlayersResolver {
       throw new Error('Failed to create players in bulk', { cause: error });
     }
   }
+
+  @Mutation(() => Boolean)
+  async deletePlayer(@Args('id') id: string): Promise<boolean> {
+    const deleted = await this.playersService.deletePlayer(id);
+    if (!deleted) {
+      throw new Error(`Player with id ${id} not found`);
+    }
+    return true;
+  }
 }

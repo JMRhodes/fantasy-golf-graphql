@@ -13,7 +13,7 @@ export const resultsTable = pgTable(
     playerId: t
       .uuid()
       .notNull()
-      .references(() => playersTable.id),
+      .references(() => playersTable.id, { onDelete: 'cascade' }),
     position: t.text().notNull(),
     points: t.integer().notNull().default(0),
   }),
